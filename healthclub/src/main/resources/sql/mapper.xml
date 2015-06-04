@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Member">
+	
+	
+	<!-- 아이디 존재 유무 확인하기 위한 SQL -->
+	<select id="count" parameterType="String" resultType="int">
+		select count(*) from users where id= #{id}
+	</select>
+	
+	
+	<!-- 우편번호 검색시 같은동 찾기 -->
+	<select id="selectAllZip" parameterType="String" resultType="mybatis.Zipcode">
+		select * from zipcode where area3 like '%'||#{area3}||'%'
+	</select>
+	
+	
+	<!-- 회원가입 정보를 DB에 insert -->
+	<insert id="insert" parameterType="mybatis.LogUserInfo">
+		insert into users values(#{id}, #{pw},#{name},#{userzipcode},#{address}, #{sex},
+								  #{ph}, #{birth}, #{email},0)
+	</insert>
+	
+	
+</mapper>

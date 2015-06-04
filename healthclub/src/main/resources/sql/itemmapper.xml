@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 헬스제품 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+
+<mapper namespace="item">
+	<!-- 헬스제품 리스트를 전부 가져옴 -->
+	<select id="selectAll" resultType="mybatis.ItemInfo">
+		select * from item
+	</select>
+
+	<!-- 추가한 헬스제품 정보를 저정 -->
+	<insert id="insert" parameterType="mybatis.ItemInfo">
+		insert into item
+		values(#{i_name},#{i_num},#{i_price},#{i_content},sysdate, 0,#{i_imagePath},#{i_imageOrgname} )
+	</insert>
+	
+</mapper>

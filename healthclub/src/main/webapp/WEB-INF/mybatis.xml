@@ -27,7 +27,6 @@
 	<bean id="zipDAO" class="mybatis.ZipDAO" p:sqlSessionFactory-ref="sqlSessionFactory" />
 	<bean id="itemDAO" class="mybatis.ItemDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 	<bean id="noticeDAO" class="mybatis.NoticeDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
-<!-- 
- 	<bean id="fileuploadDAO" class="mybatis.FileUploadDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
- 	 -->
+	<bean id="boardDAO" class="mybatis.BoardDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
+
 </beans>

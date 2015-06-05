@@ -9,6 +9,7 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="controller"/>
+	
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 
 	<bean id="viewResolver"
@@ -16,8 +17,6 @@
 		<property name="prefix" value="/WEB-INF/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
-
 
 	<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
 
@@ -34,7 +33,5 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 
-	<bean id="menuController" class="controller.MenuController" />
-	<bean id="memberInfoValidator" class="controller.MemberInfoValidator" /> -->
+	
 </beans>

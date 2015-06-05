@@ -95,19 +95,6 @@ public class LogUserInfo {
 		this.p_num = p_num;
 	}
 
-	public String toString(){
-		return "Id::"+id+"\n"
-				+"Passwd::"+pw+"\n"
-				+"Name::"+name+"\n"
-				+"userzipcode::"+userzipcode+"\n"
-				+"Address::"+address+"\n"
-				+"sex::"+sex+"\n"
-				+"ph::"+ph+"\n"
-				+"birth::"+birth+"\n"
-				+"email::"+email+"\n"
-				+"p_num::"+p_num;		
-	}
-	
 	LogUserInfo() {
 	}
 

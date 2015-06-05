@@ -120,14 +120,14 @@ public class MenuController {
 	 */
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	public String Idform(@RequestParam("id") String id,
-			@RequestParam("pw") String pw, HttpSession s, Model m) {
+			@RequestParam("pw") String pw, HttpSession session, Model m) {
 
 		try {
 			LogUserInfo l = dao.selOne(id);
 			if (l.getId().equals(id)) {
 				if (l.getPw().equals(pw)) {
-					s.setAttribute("id", id);
-					s.setAttribute("pw", pw);
+					session.setAttribute("id", id);
+					session.setAttribute("pw", pw);
 					/*return "file/success";*/
 					return "login/main";
 				}

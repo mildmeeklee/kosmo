@@ -35,4 +35,6 @@ public class LogUserDAO extends SqlSessionDaoSupport {
 		LogUserInfo l = getSqlSession().selectOne("users.selectOneUser", id);
 		return l;
 	}
+	
+
 }

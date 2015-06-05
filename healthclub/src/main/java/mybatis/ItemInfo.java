@@ -78,26 +78,7 @@ public class ItemInfo {
 	public ItemInfo() {
 		// TODO Auto-generated constructor stub
 	}
-	public String toString(){
-		return "i_name::"+i_name+"\n"
-				+"i_num::"+i_num+"\n"
-				+"i_price::"+i_price+"\n"
-				+"i_content::"+i_content+"\n"
-				+"i_time::"+i_time+"\n"
-				+"i_count::"+i_count+"\n"
-				+"i_imagePath::"+i_imagePath+"\n"
-				+"i_imageOrgname::"+i_imageOrgname+"\n"
-				;
-	}
-
-	/*public ItemInfo(){}
-	ItemInfo(String subject, String content , String file_orgname , String file_path) {
-		this.subject = subject;
-		this.content = content;
-		this.file_orgname = file_orgname;
-		this.file_path = file_path;
-	}
-	*/
+	
 	/**
 	 * submissionForm에서 등록한 제품값을 DB값에 저장하는 생성자
 	 */

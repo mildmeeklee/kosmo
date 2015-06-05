@@ -28,7 +28,7 @@
 			<font size="5">
 			<b>&diams;소개 | 
 			<a href="notice.do">&diams;공지사항</a>| 
-			 &diams;aa | 
+			<a href="boardlist.do">&diams;게시판</a> | 
 			 &diams;aa |
 			 <a href="itemlist.do">&diams;헬스제품</b></a>
 			</b></font>

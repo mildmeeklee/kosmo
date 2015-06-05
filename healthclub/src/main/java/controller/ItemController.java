@@ -90,7 +90,7 @@ public class ItemController {
 			e.printStackTrace();
 		}
 		
-		//?
+		
 		dao.insert(i_name, i_num, i_price, i_content, file.getOriginalFilename(), f.getPath());
 		List<ItemInfo> itemtable = dao.selectAll();
 		m.addAttribute("itemtable", itemtable);

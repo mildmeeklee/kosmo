@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 공지사항 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<mapper namespace="notice">
+	
+	<!-- 공지사항  리스트를 전부 가져옴 -->
+	<select id="selectAll" resultType="mybatis.NoticeInfo">
+		select * from notice
+	</select>
+	
+	<!-- 글번호와 같은 레코드를 가져옴 -->
+	<select id="selectOne" resultType="mybatis.NoticeInfo">
+		select * from notice where n_num =#{n_num}
+	</select>
+	
+	<!-- 작성한 공지사항을 DB에 저장 -->
+	<insert id="insert" parameterType="mybatis.NoticeInfo">
+		insert into notice
+		values(notice_seq.nextval,#{n_name},#{n_content},sysdate)
+	</insert>
+	
+	<!-- 장성되어 있는 공지사항을 delete -->
+	<delete id="delete" parameterType="mybatis.NoticeInfo">
+		delete from notice where n_num =#{n_num}
+	</delete>
+	
+</mapper>

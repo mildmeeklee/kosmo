@@ -17,7 +17,8 @@
 <hr color="red" size="2" width=100%></center>
 </header>
 
-<a href="itemsubmit.do"> 제품 올리기 upload</a>
+<a href="itemsubmit.do"> 제품 올리기 upload</a></br>
+	<a href="noticelist_m.do"> 관리자 홈페이지 관리 upload</a>
 
 </body>
 </html>

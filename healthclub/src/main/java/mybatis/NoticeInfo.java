@@ -42,4 +42,11 @@ public class NoticeInfo {
 	}
 	
 	public NoticeInfo(){}
+	/**
+	 * 작성한 공지사항을 DB에 저장
+	 */
+	public NoticeInfo(String n_name, String n_content){
+		this.n_name= n_name;
+		this.n_content= n_content;
+	}
 }

@@ -26,11 +26,18 @@
 		<hr color="red" size="2" width=100%>
 		<center>
 			<font size="5">
-			<b>&diams;家俺 | &diams;aa | &diams;aa | &diams;aa |<a href="itemlist.do">&diams;秋胶力前</b></a>
+			<b>&diams;家俺 | 
+			<a href="notice.do">&diams;傍瘤荤亲</a>| 
+			 &diams;aa | 
+			 &diams;aa |
+			 <a href="itemlist.do">&diams;秋胶力前</b></a>
 			</b></font>
 			<hr color="red" size="2" width=100%>
 		</center>
 	</header>
+	
+	<a href="itemsubmit.do"> 力前 棵府扁 upload</a></br>
+	<a href="noticelist_m.do"> 包府磊 权其捞瘤 包府 upload</a>
 
 
 

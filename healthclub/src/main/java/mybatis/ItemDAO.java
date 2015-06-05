@@ -17,11 +17,7 @@ public class ItemDAO extends SqlSessionDaoSupport {
 	}
 	
 	/**
-	 * 
-	 * @param subject
-	 * @param content
-	 * @param file_orgname
-	 * @param file_path
+	 * DB에 제품 등록을 함  
 	 */
 	public void insert(String i_name, int i_num, int i_price, String i_content, String i_imagePath, String i_imageOrgname){
 	

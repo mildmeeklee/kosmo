@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
+<%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +41,10 @@
 	<a href="noticelist_m.do"> 包府磊 权其捞瘤 包府 upload</a>
 
 
+	<hr/>
+	<decorator:body />
+	aa
+	<hr/>
 
 </body>
 </html>

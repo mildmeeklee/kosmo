@@ -13,7 +13,7 @@
 			<td>${noticecontent.n_name}</td>
 		</tr>
 		<tr>
-			<td colspan="2">${noticecontent.n_content}</td>
+			<td colspan="2"><textarea rows="40" cols="20">${noticecontent.n_content}</textarea> </td>
 		</tr>
 	</table>
 	

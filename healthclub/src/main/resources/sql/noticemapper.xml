@@ -26,4 +26,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from notice where n_num =#{n_num}
 	</delete>
 	
+	<!-- 장성되어 있는 공지사항을 Update -->
+	<update id="update" parameterType="mybatis.NoticeInfo">
+		update notice set n_name=#{n_name}, n_content=#{n_content}
+		where n_num= #{n_num}
+	</update>
 </mapper>

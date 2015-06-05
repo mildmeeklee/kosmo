@@ -37,4 +37,11 @@ public class NoticeDAO extends SqlSessionDaoSupport {
 	public void delete(int n_num) {
 		getSqlSession().delete("notice.delete", n_num);
 	}
+	
+	/**
+	 * 공지사항을 DB에서  update
+	 */
+	public void update(NoticeInfo ni) {
+		getSqlSession().update("notice.update", ni);
+	}
 }

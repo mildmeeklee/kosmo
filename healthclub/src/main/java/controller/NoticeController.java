@@ -97,5 +97,33 @@ public class NoticeController {
 		return "redirect:noticelist_m.do";
 	}
 	
+	/**
+	 * 홈페이지 관리 페이지 -> 수정페이지 이동
+	 */
+	@RequestMapping(value="noticeupdateM.do",  method = RequestMethod.GET)
+	public String noticeupdateM(@RequestParam("n_num") int n_num, Model m){
+		
+		NoticeInfo ni = dao.selectOne(n_num);
+		m.addAttribute("noticeupdate",ni);
+		
+		return "notice/update";
+	}
+	
+	/**
+	 * 홈페이지 관리 수정페이지 -> 수정
+	 */
+	@RequestMapping(value="noticeupdate.do",  method = RequestMethod.POST)
+	public String noticeupdate(@RequestParam("n_num") int n_num, 
+			@RequestParam("n_name") String n_name,
+			@RequestParam("n_content") String n_content){
+		
+		NoticeInfo ni= new NoticeInfo(n_name, n_content);
+		ni.setN_num(n_num);
+		dao.update(ni);
+		
+		return "redirect:noticelist_m.do";
+	}
+	
+	
 	
 }

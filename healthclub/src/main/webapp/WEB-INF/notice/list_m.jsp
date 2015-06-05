@@ -22,7 +22,7 @@
 				<td> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
 				<td> ${noticelist.n_date}</td>
 				<td> <input type="button" value="수정" 
-						onclick= "javascript:window.location='noticeupdate.do'"></td>
+						onclick= "javascript:window.location='noticeupdateM.do?n_num=${noticelist.n_num}'"></td>
 				<td> <input type="button" value="삭제" 
 						onclick= "javascript:window.location='noticedelete.do?n_num=${noticelist.n_num}'"></td>
 			</tr>

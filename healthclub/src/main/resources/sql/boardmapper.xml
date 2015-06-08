@@ -16,4 +16,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(board_seq.nextval,#{b_name},#{b_content},#{b_id}, 0,sysdate)
 	</insert>
 	
+	<!-- 글번호와 같은 레코드를 가져옴 -->
+	<select id="selectOne" resultType="mybatis.BoardInfo">
+		select * from board where b_num =#{b_num}
+	</select>
+	
 </mapper>

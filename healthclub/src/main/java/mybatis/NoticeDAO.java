@@ -15,7 +15,7 @@ public class NoticeDAO extends SqlSessionDaoSupport {
 	}
 
 	/**
-	 * 공지사항에 올려놓은 공지들을 모두 가져옴
+	 * 공지사항 한개의 내용을 가져옴
 	 */
 	public NoticeInfo selectOne(int n_num) {
 		NoticeInfo ni = getSqlSession().selectOne("notice.selectOne", n_num);

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import mybatis.BoardDAO;
 import mybatis.BoardInfo;
 import mybatis.LogUserDAO;
+import mybatis.NoticeInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -60,6 +61,39 @@ public class BoardController{
 		
 		dao.insert(b_name, b_content, b_id);
 		return "redirect:boardlist.do";
+	}
+	
+	/**
+	 * 게시판글 내용보기
+	 */
+	@RequestMapping(value = "boardcontent.do", method=RequestMethod.GET)
+	public String boardcontent(
+			@RequestParam("b_num") int b_num, Model m){
+		
+		BoardInfo boardcontent = dao.selectOne(b_num);
+		m.addAttribute("boardcontent" ,boardcontent);
+		
+		return "board/content";
+	}
+	
+	/**
+	 *  게시판 글 수정페이지 이동
+	 */
+	@RequestMapping(value="boardupdateM.do",  method = RequestMethod.GET)
+	public String boardupdateM(
+			@RequestParam("b_id") String b_id,
+			@RequestParam("b_num") int b_num,
+			HttpSession session, Model m){
+		
+		String id = (String)session.getAttribute("id");
+		
+		if(id.equals(b_id)){
+			BoardInfo boardcontent = dao.selectOne(b_num);
+			m.addAttribute("boardcontent" ,boardcontent);
+			return "board/update";
+		}else{
+			return "login/main";
+		}
 	}
 	
 }

@@ -19,7 +19,7 @@
 		<c:forEach var="boardlist" items="${boardlist }">
 			<tr>
 				<td>${boardlist.b_num }</td>
-				<td><a href="boardcontent.do?n_num=${boardlist.b_num}">
+				<td><a href="boardcontent.do?b_num=${boardlist.b_num}">
 						${boardlist.b_name}</a></td>
 				<td>${boardlist.b_id}</td>
 				<td>${boardlist.b_count}</td>

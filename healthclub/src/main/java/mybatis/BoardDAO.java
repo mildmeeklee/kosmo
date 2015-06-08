@@ -21,4 +21,21 @@ public class BoardDAO extends SqlSessionDaoSupport{
 		BoardInfo bi = new BoardInfo(b_name, b_conten, id);
 		getSqlSession().insert("board.insert", bi);
 	}
+	
+	/**
+	 * 작성한 게시판글을 수정
+	 */
+	public void update(String b_name, String b_conten, String id){
+		BoardInfo bi = new BoardInfo(b_name, b_conten, id);
+		getSqlSession().update("board.update", bi);
+	}
+	
+	/**
+	 * 게시판글 한개의 관한 내용을 가져옴(글번호로)
+	 */
+	public BoardInfo selectOne(int b_num) {
+		BoardInfo bi = getSqlSession().selectOne("board.selectOne", b_num);
+		return bi;
+	}
+	
 }

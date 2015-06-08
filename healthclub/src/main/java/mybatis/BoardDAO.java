@@ -25,8 +25,7 @@ public class BoardDAO extends SqlSessionDaoSupport{
 	/**
 	 * 작성한 게시판글을 수정
 	 */
-	public void update(String b_name, String b_conten, String id){
-		BoardInfo bi = new BoardInfo(b_name, b_conten, id);
+	public void update(BoardInfo bi){
 		getSqlSession().update("board.update", bi);
 	}
 	
@@ -36,6 +35,13 @@ public class BoardDAO extends SqlSessionDaoSupport{
 	public BoardInfo selectOne(int b_num) {
 		BoardInfo bi = getSqlSession().selectOne("board.selectOne", b_num);
 		return bi;
+	}
+	
+	/**
+	 * 작성한 게시판글을 삭제
+	 */
+	public void delete(int b_num){
+		getSqlSession().update("board.delete", b_num);
 	}
 	
 }

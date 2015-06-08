@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 
 <decorators defaultdir="/WEB-INF/login">
-    <!-- http://localhost:8100/healthclub/itemlist.do -->
-   <!-- /WEB-INF/item/list.jsp -->
+	<!-- http://localhost:8100/healthclub/itemlist.do -->
+	<!-- /WEB-INF/item/list.jsp -->
 	<decorator name="main" page="main.jsp">
 		<!-- <pattern>/WEB-INF/login/* </pattern> -->
-		<pattern>*itemlist.*</pattern>
+		<pattern>*login.do</pattern>
 	</decorator>
-	<!-- /WEB-INF/login/main.jsp  -->
+	<!-- /WEB-INF/login/main.jsp -->
 
+	<decorator name="item" page="/WEB-INF/item/main.jsp">
+		<pattern>*item*</pattern>
+	</decorator>
+	
+	<decorator name="item" page="/WEB-INF/board/main.jsp">
+		<pattern>*board*</pattern>
+	</decorator>
+	
+	
+	<decorator name="news" page="/WEB-INF/notice/main.jsp">
+		<pattern>*notice*</pattern>
+	</decorator>
 	<excludes>
 	</excludes>
 

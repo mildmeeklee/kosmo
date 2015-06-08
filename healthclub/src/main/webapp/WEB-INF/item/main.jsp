@@ -26,7 +26,8 @@ width:79% min-height:400px;
 }
 </style>
 <body>
-	<header>
+<div id="layout">
+	<div id="top">
 		<center>
 			<h2>bangbang</h2>
 		</center>
@@ -53,16 +54,25 @@ width:79% min-height:400px;
 			</b></font>
 			<hr color="red" size="2" width=100%>
 		</center>
-	</header>
-	
+</div>
+
 	<a href="itemsubmit.do"> 力前 棵府扁 upload</a></br>
 	<a href="noticelist_m.do"> 包府磊 权其捞瘤 包府 upload</a>
-
-
-	<hr/>
-
 	
-	<hr/>
+	<div id="sidebar">
+	<p align="center">
+	<input type="button" value="傍瘤荤亲" onclick="javascript:window.location='weightItem.do'"><br><br>
 
+	</p>
+	</div>
+	<!-- --------------------------------------------- -->
+	<div id="section"> <decorator:body /> </div>
+	
+<div id="footer">
+
+			aaaaaaaaaaa
+</div>
+
+	</div>
 </body>
 </html>

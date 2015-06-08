@@ -24,5 +24,6 @@
 	
 	<input type="button" value="목록" onclick="javascript:window.location='boardlist.do'"> 
 	<input type="button" value="수정" onclick="javascript:window.location='boardupdateM.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'" />
+	<input type="button" value="삭제" onclick="javascript:window.location='boarddelete.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'">
 </body>
 </html>

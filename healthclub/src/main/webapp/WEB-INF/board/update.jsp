@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<form action="boardupdate.do?b_num=${boardcontent.b_num }" method="POST">
 	<table border="1">
 		<tr>
 			<td>글번호 :: ${boardcontent.b_num}</td>
@@ -22,7 +23,7 @@
 			${boardcontent.b_content}</textarea> </td>
 		</tr>
 	</table>
-	
-	<input type="button" value="수정하기" onclick="javascript:window.location='boardlist.do'"> 
+	<input type="submit" value="수정하기">
+	</form> 
 </body>
 </html>

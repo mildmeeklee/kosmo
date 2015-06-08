@@ -5,7 +5,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="http://code.jquery.com/jquery.js"></script>
 <title>Insert title here</title>
+<style>
+
+#container{
+
+	width:80%;
+	margin:20px auto;
+}
+#navi{
+	width:200px;
+	float:left;
+}
+#navi ul{
+	height:460px;
+}
+#navi li{
+	list-style-type:none;
+
+	float:left;
+}
+#navi li img{
+	border:3px solid black;
+}
+#navi{
+	overflow:hidden;
+}
+#navi .pageWrap{
+	width:900px;
+}
+#navi .pageWrap .page{
+	width:300px;
+	float:left;
+}
+#navi p{
+	clear:both;
+	width:300px;
+	padding:10px 0;
+	text-align:center;
+}
+#navi p img{
+	cursor:pointer;
+}
+#main{
+	width:650px;
+	float:left;
+}
+#main img{
+	position:absolute;
+	border:3px solid white;
+}
+#talk{
+	float: right;
+}
+
+</style>
+<script type="text/javascript">
+$(function(){
+	$("#navi a").click(function(){
+		$("#main img").before("<img src='"+$(this).attr("href")+"' alt=''>");
+		$("#main img:last").fadeOut("fast",function(){
+			$(this).remove();
+		});
+		return false;
+	})
+	$("img.next").click(function(){
+		$("#navi .pageWrap").animate({
+			marginLeft : parseInt($("#navi .pageWrap").css("margin-left"))-300+"px"
+		},"fast");
+	});
+	$("img.prev").click(function(){
+		$("#navi .pageWrap").animate({
+			marginLeft : parseInt($("#navi .pageWrap").css("margin-left"))+300+"px"
+		},"fast");
+	});
+});
+</script>
+
+
 </head>
 <style>
 #layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;
@@ -26,7 +104,7 @@ width:79% min-height:400px;
 }
 </style>
 <body>
-	<header>
+
 		<center>
 			<h2>bangbang</h2>
 		</center>
@@ -53,16 +131,54 @@ width:79% min-height:400px;
 			</b></font>
 			<hr color="red" size="2" width=100%>
 		</center>
-	</header>
-	
-	<a href="itemsubmit.do"> 제품 올리기 upload</a></br>
-	<a href="noticelist_m.do"> 관리자 홈페이지 관리 upload</a>
-
-
-	<hr/>
 
 	
-	<hr/>
+<!-- 	<a href="itemsubmit.do"> 제품 올리기 upload</a></br>
+	<a href="noticelist_m.do"> 관리자 홈페이지 관리 upload</a> -->
+	
+	<div id="container">
+			<div id="navi">
+				<div class="pageWrap">
+					<div  class="page">
+						<ul>
+							
+							<li><a href="images/photo1.jpg"><img src="images/photo1_thum.jpg" alt="샹제리아" /></a></li>
+							<li><a href="images/photo2.jpg"><img src="images/photo2_thum.jpg" alt="장미" /></a></li>
+							<li><a href="images/photo3.jpg"><img src="images/photo3_thum.jpg" alt="바다" /></a></li>
+							<li><a href="images/photo4.jpg"><img src="images/photo4_thum.jpg" alt="문" /></a></li>
+							
+						</ul>
+						<p><img src="images/btn_next.jpg" alt="次へ" class="next" /></p>
+					</div>
+					<div  class="page">
+						<ul>
+							<li><a href="images/photo9.jpg"><img src="images/photo9_thum.jpg" alt="손" /></a></li>
+							<li><a href="images/photo10.jpg"><img src="images/photo10_thum.jpg" alt="마루" /></a></li>
+							<li><a href="images/photo11.jpg"><img src="images/photo11_thum.jpg" alt="나무" /></a></li>
+							<li><a href="images/photo12.jpg"><img src="images/photo12_thum.jpg" alt="잎" /></a></li>
+							
+						</ul>
+						<p><img src="images/btn_prev.jpg" alt="前へ" class="prev" /> <img src="images/btn_next.jpg" alt="次へ" class="next" /></p>
+					</div>
+					<div  class="page">
+						<ul>
+							<li><a href="images/photo17.jpg"><img src="images/photo17_thum.jpg" alt="꽃" /></a></li>
+							<li><a href="images/photo18.jpg"><img src="images/photo18_thum.jpg" alt="꽃" /></a></li>
+							<li><a href="images/photo19.jpg"><img src="images/photo19_thum.jpg" alt="꽃" /></a></li>
+							<li><a href="images/photo19.jpg"><img src="images/photo19_thum.jpg" alt="꽃" /></a></li>
+						</ul>
+						<p><img src="images/btn_prev.jpg" alt="앞으로" class="prev" /></p>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<img src="images/photo1.jpg" alt="" />
+			</div>
+			<div id="talk">
+				여기에 1:1 대화시스템을 넣겠다.
+				ㅎㅎㅎ
+			</div>
+		</div>
 
 </body>
 </html>

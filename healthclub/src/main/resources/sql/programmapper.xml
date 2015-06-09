@@ -3,16 +3,16 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 스케줄 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
-<mapper namespace="schedule">
+<mapper namespace="program">
 	
 	<!-- 작성한 프로그램을 DB에 저장 -->
-	<insert id="insert" parameterType="mybatis.ScheduleInfo">
+	<insert id="insert" parameterType="mybatis.ProgramInfo">
 		insert into programt
 		values(#{p_name},#{p_teacher},#{p_time},#{p_content},program_seq.nextval,3)
 	</insert>
 	
 	<!-- 프로그램 리스트를 전부 가져옴 -->
-	<select id="selectAll" resultType="mybatis.ScheduleInfo">
+	<select id="selectAll" resultType="mybatis.ProgramInfo">
 		select * from programt
 	</select>
 	

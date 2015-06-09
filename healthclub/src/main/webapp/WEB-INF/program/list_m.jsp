@@ -19,14 +19,14 @@
 			<td colspan="2">관리</td>
 		</tr>
 		
-		<c:forEach var = "schedulelist" items="${schedulelist }">
+		<c:forEach var = "programlist" items="${programlist }">
 			<tr>
-				<td> ${schedulelist.p_name}</td>
-				<td> ${schedulelist.p_teacher}</td>
-				<td> ${schedulelist.p_time}</td>
-				<td> ${schedulelist.p_content}</td>
-				<td> ${schedulelist.p_num}</td>
-				<td> ${schedulelist.p_position}</td>
+				<td> ${programlist.p_name}</td>
+				<td> ${programlist.p_teacher}</td>
+				<td> ${programlist.p_time}</td>
+				<td> ${programlist.p_content}</td>
+				<td> ${programlist.p_num}</td>
+				<td> ${programlist.p_position}</td>
 				
 				<td> <input type="button" value="수정" 
 						onclick= "javascript:window.location='noticeupdateM.do?n_num=${noticelist.n_num}'"></td>
@@ -36,7 +36,7 @@
 		</c:forEach>
 		
 		<tr>
-			<td colspan="7"><input type="button" value="프로그램등록" onclick= "javascript:window.location='schedulewriteM.do'"></td>
+			<td colspan="7"><input type="button" value="프로그램등록" onclick= "javascript:window.location='programwriteM.do'"></td>
 		</tr>
 		
 		

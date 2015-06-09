@@ -1,6 +1,6 @@
 package mybatis;
 
-public class ScheduleInfo {
+public class ProgramInfo {
 
 	private String p_name;
 	private String p_teacher;
@@ -47,6 +47,6 @@ public class ScheduleInfo {
 		this.p_position = p_position;
 	}
 	
-	public ScheduleInfo(){};
+	public ProgramInfo(){};
 
 }

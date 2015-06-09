@@ -2,8 +2,8 @@ package controller;
 
 import java.util.List;
 
-import mybatis.ScheduleDAO;
-import mybatis.ScheduleInfo;
+import mybatis.ProgramDAO;
+import mybatis.ProgramInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,40 +13,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class ScheduleController {
+public class ProgramController {
 
 	@Autowired
-	ScheduleDAO dao;
+	ProgramDAO dao;
 
-	public void setDao(ScheduleDAO dao) {
+	public void setDao(ProgramDAO dao) {
 		this.dao = dao;
 	}
 
 	/**
 	 * 관리자 page -> 프로그램 관리 page 이동
 	 */
-	@RequestMapping(value = "schedulelist_m.do", method = RequestMethod.GET)
-	public String schedulelist_m() {
-		return "schedule/list_m";
+	@RequestMapping(value = "programlist_m.do", method = RequestMethod.GET)
+	public String schedulelist_m(Model m) {
+		List<ProgramInfo> si1 = dao.selectAll();
+		m.addAttribute("programlist", si1);
+		return "program/list_m";
 	}
 
 	/**
 	 * 프로그램 관리 page -> 프로그램 등록 page
 	 */
-	@RequestMapping(value = "schedulewriteM.do", method = RequestMethod.GET)
+	@RequestMapping(value = "programwriteM.do", method = RequestMethod.GET)
 	public String schedulewriteM() {
-		return "schedule/write";
+		return "program/write";
 	}
 
 	/**
 	 * 프로그램 등록 page -> 프로그램등록
 	 */
-	@RequestMapping(value = "schedulewrite.do", method = RequestMethod.POST)
-	public String schedulewrite(ScheduleInfo si, Model m) {
-
+	@RequestMapping(value = "programwrite.do", method = RequestMethod.POST)
+	public String schedulewrite(ProgramInfo si) {
 		dao.insert(si);
-		List<ScheduleInfo> si1 = dao.selectAll();
-		m.addAttribute("schedulelist", si1);
-		return "schedule/list_m";
+		return "redirect:programlist_m.do";
 	}
 }

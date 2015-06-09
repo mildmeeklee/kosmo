@@ -37,7 +37,7 @@
 
 <a href="itemsubmit.do"> 제품 올리기 upload</a></br>
 <a href="noticelist_m.do"> 관리자 홈페이지 관리 upload</a></br>
-<a href="schedulelist_m.do"> 프로그램 관리 upload</a>
+<a href="programlist_m.do"> 프로그램 관리 upload</a>
 
 <div class="c">
       <h1>Enjoy the video</h1>

@@ -155,16 +155,11 @@ public class MenuController {
 					
 					List<BoardInfo> boardlist = dao3.selectAll();
 					m.addAttribute("boardlist", boardlist);
-					System.out.println(boardlist);
 					List<ItemInfo> itemtable = dao4.selectAll();
 					m.addAttribute("itemtable", itemtable);
-					System.out.println(itemtable);
 					List<NoticeInfo> noticelist = dao5.selectAll(); 
 					m.addAttribute("noticelist", noticelist );
-					System.out.println(noticelist);
 					
-					
-					/*return "file/success";*/
 					return "login/main";
 				}
 				return "login/logerror";

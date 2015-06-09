@@ -186,7 +186,14 @@ public class MenuController {
 	 * 로그인 되어있는 main page에서  ->logout로 넘어감
 	 */
 	@RequestMapping(value="logout.do" , method=RequestMethod.GET)
-	public String logout(HttpSession s){
+	public String logout(HttpSession s , Model m){
+		List<BoardInfo> boardlist = dao3.selectAll();
+		m.addAttribute("boardlist", boardlist);
+		List<ItemInfo> itemtable = dao4.selectAll();
+		m.addAttribute("itemtable", itemtable);
+		List<NoticeInfo> noticelist = dao5.selectAll(); 
+		m.addAttribute("noticelist", noticelist );
+		
 		s.invalidate();
 		return "login/main";
 	}

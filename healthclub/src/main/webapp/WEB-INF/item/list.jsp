@@ -59,6 +59,7 @@
 			</c:forEach>
 
 	</table>
+		${page}
 	<br>
 	<br>
 

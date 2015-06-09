@@ -255,7 +255,7 @@
 				</tr>
 				<c:forEach var="boardlist" items="${boardlist}">
 					<tr>
-						<td>${boardlist.b_name}</td>
+						<td><a href="boardcontent.do?b_num=${boardlist.b_num}">${boardlist.b_name}</a></td>
 					</tr>
 				</c:forEach>
 			</table>
@@ -281,7 +281,7 @@
 				</tr>
 				<c:forEach var="noticelist" items="${noticelist}">
 					<tr>
-						<td>${noticelist.n_name}</td>
+						<td><a href="noticecontent.do?n_num=${noticelist.n_num}">${noticelist.n_name}</a></td>
 					</tr>
 				</c:forEach>
 			</table>

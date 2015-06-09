@@ -18,6 +18,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 작성되어 있는 게시판글을 Delete -->
 	<delete id="delete" parameterType="mybatis.CommentInfo">
-		delete from board where b_num= #{b_num}
+		delete from commentt where c_num= #{c_num}
 	</delete>
 </mapper>

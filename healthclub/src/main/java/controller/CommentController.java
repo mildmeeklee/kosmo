@@ -19,6 +19,7 @@ public class CommentController {
 
 	@Autowired
 	CommentDAO dao;
+
 	public void setDao(CommentDAO dao) {
 		this.dao = dao;
 	}
@@ -26,17 +27,43 @@ public class CommentController {
 	/**
 	 * 코맨트 작성
 	 */
-	@RequestMapping(value="commentwrite", method = RequestMethod.POST)
-	public String commentwrite(
-			@RequestParam("c_bnum") int c_bnum,
-			@RequestParam("c_content") String c_content,
-			HttpSession session){
+	@RequestMapping(value = "commentwrite", method = RequestMethod.POST)
+	public String commentwrite(@RequestParam("c_bnum") int c_bnum,
+			@RequestParam("c_content") String c_content, HttpSession session) {
+
+		String id = (String) session.getAttribute("id");
+
+		if (id != null) {
+			CommentInfo ci = new CommentInfo(id, c_content, c_bnum);
+			dao.insert(ci);
+
+			return "redirect:boardlist.do";
+		} else {
+			return "redirect:loginForm.do";
+		}
+
+	}
+
+	/**
+	 * 코맨트 삭제
+	 */
+	@RequestMapping(value = "commentdelete.do", method = RequestMethod.GET)
+	public String commentdelete(
+			@RequestParam("c_id") String c_id,
+			@RequestParam("c_num") int c_num, 
+			HttpSession session) {
 		
 		String id = (String) session.getAttribute("id");
-		CommentInfo ci = new CommentInfo(id, c_content, c_bnum);
-		dao.insert(ci);
-		
-		return "redirect:boardlist.do";
-		
+
+		if (id != null) {
+			if (id.equals(c_id)) {
+				dao.delete(c_num);
+				return "redirect:boardlist.do";
+			}else{ 
+				System.out.println("::본인이 작성한 것만 삭제가 되지요::");
+				return "redirect:boardlist.do";
+			}
+		}
+		return "redirect:loginForm.do";
 	}
-}  
+}

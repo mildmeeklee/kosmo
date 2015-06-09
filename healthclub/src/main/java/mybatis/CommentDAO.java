@@ -20,5 +20,12 @@ public class CommentDAO extends SqlSessionDaoSupport{
 		List<CommentInfo> ci = getSqlSession().selectList("comment.selectAll",c_bnum);
 		return ci;
 	}
+
+	/**
+	 * 코멘트 삭제
+	 */
+	public void delete(int c_num) {
+		getSqlSession().delete("comment.delete", c_num);
+	}
 	
 }

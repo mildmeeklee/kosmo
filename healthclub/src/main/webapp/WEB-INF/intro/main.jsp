@@ -61,10 +61,14 @@ width:79% min-height:400px;
 	
 	<div id="sidebar">
 	<p align="center">
-	<input type="button" value="회사소개" onclick="javascript:window.location='introcompanyIntro.do'"><br><br>
+	<input type="button" value="회사소개" onclick="javascript:window.location='introcompanyIntro.do'"><br>
+	
 	<input type="button" value="헬스프로그램" onclick="javascript:window.location='introhealthProgram.do'"><br>
+	
 	<input type="button" value="프로그램 강사" onclick="javascript:window.location='introprogramTeacher.do'"><br>
+	
 	<input type="button" value="시설" onclick="javascript:window.location='introfacility.do'"><br>
+	
 	<input type="button" value="제휴회사" onclick="javascript:window.location='introalianceBusiness.do'"><br>
 	</p>
 	</div>

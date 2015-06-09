@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@
 			<tr>
 				<td> ${noticelist.n_num }</td>
 				<td> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
-				<td> ${noticelist.n_date}</td>
+				<td><fmt:formatDate value="${noticelist.n_date}" type="date" var="date"/>${date}</td>
 			</tr>
 		</c:forEach>
 

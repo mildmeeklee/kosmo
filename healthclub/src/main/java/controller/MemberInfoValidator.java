@@ -15,6 +15,7 @@ public class MemberInfoValidator implements Validator {
 
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
+		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pw", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required");
@@ -24,8 +25,14 @@ public class MemberInfoValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "birth", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "ph", "required");
-
+		
+		
+		
 		LogUserInfo logUserInfo = (LogUserInfo) target;
-
+		
+		if(!(logUserInfo.getPw().equals(logUserInfo.getPw2().toString()))){
+			errors.rejectValue("pw2","checkcheck",new Object[]{50},"비밀번호가 맞지 않습니다.");
+		}
+		
 	}
 }

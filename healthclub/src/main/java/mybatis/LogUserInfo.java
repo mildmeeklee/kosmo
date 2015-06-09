@@ -4,6 +4,7 @@ import java.util.*;
 public class LogUserInfo {
 	String id;
 	String pw;
+	String pw2;
 	String name;
 	String userzipcode;
 	String address;
@@ -30,7 +31,13 @@ public class LogUserInfo {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-
+	
+	public String getPw2() {
+		return pw2;
+	}
+	public void setPw2(String pw2) {
+		this.pw2 = pw2;
+	}
 	
 	public String getName() {
 		return name;

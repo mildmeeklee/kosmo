@@ -64,8 +64,9 @@
 			
 			<tr>
 				<td width="200">비밀번호 확인</td>
-				<td width="400"><input type="text" name="pw2" size="15"
-					maxlength="12"></td>
+				<td width="400"><form:input path="pw2" size="15" maxlength="15" /> 
+				<form:errors path="pw2" />
+					</td>
 			</tr>
 
 			<tr>

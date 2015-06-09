@@ -29,4 +29,5 @@
 	<bean id="noticeDAO" class="mybatis.NoticeDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 	<bean id="boardDAO" class="mybatis.BoardDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 	<bean id="commentDAO" class="mybatis.CommentDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
+	<bean id="scheduleDAO" class="mybatis.ScheduleDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 </beans>

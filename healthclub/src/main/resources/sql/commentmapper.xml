@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 코맨트 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<mapper namespace="comment">
+	
+	<!-- 글번호에 맞는 코맨트 리스트를 전부 가져옴 -->
+	<select id="selectAll" resultType="mybatis.CommentInfo">
+		select * from commentt where c_bnum=#{c_bnum}
+	</select>
+	
+	<!-- 작성 게시판글을 DB에 저장 -->
+	<insert id="insert" parameterType="mybatis.CommentInfo">
+		insert into commentt
+		values(comment_seq.nextval,#{c_id},#{c_content},sysdate,#{c_bnum})
+	</insert>
+	
+	<!-- 작성되어 있는 게시판글을 Delete -->
+	<delete id="delete" parameterType="mybatis.CommentInfo">
+		delete from board where b_num= #{b_num}
+	</delete>
+</mapper>

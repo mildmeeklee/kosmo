@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import mybatis.BoardDAO;
 import mybatis.BoardInfo;
+import mybatis.CommentDAO;
+import mybatis.CommentInfo;
 import mybatis.LogUserDAO;
 import mybatis.NoticeInfo;
 
@@ -24,9 +26,14 @@ public class BoardController {
 	 */
 	@Autowired
 	BoardDAO dao;
-
 	public void setDao(BoardDAO dao) {
 		this.dao = dao;
+	}
+	
+	@Autowired
+	CommentDAO dao1;
+	public void setDao1(CommentDAO dao1) {
+		this.dao1 = dao1;
 	}
 
 	/**
@@ -70,11 +77,15 @@ public class BoardController {
 	 * 게시판글 내용보기
 	 */
 	@RequestMapping(value = "boardcontent.do", method = RequestMethod.GET)
-	public String boardcontent(@RequestParam("b_num") int b_num, Model m) {
+	public String boardcontent(
+			@RequestParam("b_num") int b_num, 
+			Model m) {
 
 		BoardInfo boardcontent = dao.selectOne(b_num);
 		m.addAttribute("boardcontent", boardcontent);
-
+		
+		List<CommentInfo> commentInfo = dao1.selectAll(b_num);
+		m.addAttribute("commentInfo", commentInfo);
 		return "board/content";
 	}
 

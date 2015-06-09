@@ -5,6 +5,9 @@
 <html>
 <head>
 <title>Insert title here</title>
+<script>
+
+</script>
 </head>
 <body>
 	<form action="boardwrite.do" method="POST">

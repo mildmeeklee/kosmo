@@ -10,17 +10,18 @@ public class CommentPagingService {
 	private int endCount;	 // 한 페이지에서 보여줄 게시글의 끝 번호
 	private int startPage;	 // 시작 페이지
 	private int endPage;	 // 마지막 페이지
-
+	private int b_num;
 	private StringBuffer pagingHtml;
 
 	// 페이징 생성자
 	public CommentPagingService(int currentPage, int totalCount, int blockCount,
-			int blockPage) {
+			int blockPage , int b_num) {
 
 		this.blockCount = blockCount;
 		this.blockPage = blockPage;
 		this.currentPage = currentPage;
 		this.totalCount = totalCount;
+		this.b_num = b_num;
 
 		// 전체 페이지 수
 		totalPage = (int) Math.ceil((double) totalCount / blockCount);
@@ -49,7 +50,7 @@ public class CommentPagingService {
 		// 이전 block 페이지
 		pagingHtml = new StringBuffer();
 		if (currentPage > blockPage) {
-			pagingHtml.append("<a href=/healthclub/notice.do?p="
+			pagingHtml.append("<a href=/healthclub/boardcontent.do?b_num="+b_num+"&p="
 					+ (startPage - 1) + ">");
 			pagingHtml.append("이전");
 			pagingHtml.append("</a>");
@@ -68,9 +69,9 @@ public class CommentPagingService {
 				pagingHtml.append("</font></b>");
 			} else {
 				pagingHtml
-						.append("&nbsp;<a href='/healthclub/notice.do?p=");
+						.append("&nbsp;<a href=/healthclub/boardcontent.do?b_num="+b_num+"&p=");
 				pagingHtml.append(i);
-				pagingHtml.append("'>");
+				pagingHtml.append(">");
 				pagingHtml.append(i);
 				pagingHtml.append("</a>");
 			}
@@ -82,7 +83,7 @@ public class CommentPagingService {
 
 		// 다음 block 페이지
 		if (totalPage - startPage >= blockPage) {
-			pagingHtml.append("<a href=/healthclub/notice.do?p="
+			pagingHtml.append("<a href=/healthclub/boardcontent.do?b_num="+b_num+"&p="
 					+ (endPage + 1) + ">");
 			pagingHtml.append("다음");
 			pagingHtml.append("</a>");

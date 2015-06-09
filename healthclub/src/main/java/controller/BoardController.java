@@ -48,7 +48,6 @@ public class BoardController {
 	public String board(
 			@RequestParam(value = "p", defaultValue = "1") String p, Model m) {
 		List<BoardInfo> boardlist = dao.selectAll();
-
 		int a = Integer.parseInt(p);
 		int b = boardlist.size();
 		BoardPagingService paging = new BoardPagingService(a, b, e, d);
@@ -107,7 +106,7 @@ public class BoardController {
 		int a = Integer.parseInt(p);
 		int b = commentInfo.size();
 
-		CommentPagingService paging = new CommentPagingService(a, b, f, g);
+		CommentPagingService paging = new CommentPagingService(a, b, f, g,b_num);
 		String page = paging.getPagingHtml().toString();
 		if (paging.getEndCount() < b)
 			b = paging.getEndCount() + 1;

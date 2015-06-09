@@ -4,8 +4,14 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import mybatis.BoardDAO;
+import mybatis.BoardInfo;
+import mybatis.ItemDAO;
+import mybatis.ItemInfo;
 import mybatis.LogUserDAO;
 import mybatis.LogUserInfo;
+import mybatis.NoticeDAO;
+import mybatis.NoticeInfo;
 import mybatis.ZipDAO;
 import mybatis.Zipcode;
 
@@ -39,7 +45,25 @@ public class MenuController {
 	public void setDao(ZipDAO dao2) {
 		this.dao2 = dao2;
 	}
+	
+	@Autowired
+	BoardDAO dao3;
 
+	public void setDao(BoardDAO dao3) {
+		this.dao3 = dao3;
+	}
+	
+	@Autowired
+	ItemDAO dao4;
+	public void setDao(ItemDAO dao4) {
+		this.dao4 = dao4;
+	}
+	
+	@Autowired
+	NoticeDAO dao5;
+	public void setDao(NoticeDAO dao5) {
+		this.dao5 = dao5;
+	}
 	
 	
 
@@ -128,6 +152,18 @@ public class MenuController {
 				if (l.getPw().equals(pw)) {
 					session.setAttribute("id", id);
 					session.setAttribute("pw", pw);
+					
+					List<BoardInfo> boardlist = dao3.selectAll();
+					m.addAttribute("boardlist", boardlist);
+					System.out.println(boardlist);
+					List<ItemInfo> itemtable = dao4.selectAll();
+					m.addAttribute("itemtable", itemtable);
+					System.out.println(itemtable);
+					List<NoticeInfo> noticelist = dao5.selectAll(); 
+					m.addAttribute("noticelist", noticelist );
+					System.out.println(noticelist);
+					
+					
 					/*return "file/success";*/
 					return "login/main";
 				}
@@ -158,6 +194,22 @@ public class MenuController {
 	public String logout(HttpSession s){
 		s.invalidate();
 		return "login/main";
+	}
+	
+	/**
+	 * bangbang 클릭시 main 페이지로 이동
+	 */
+	
+	@RequestMapping(value="MainPage.do", method = RequestMethod.GET)
+	public String MainPage(Model m){
+		
+		List<BoardInfo> boardlist = dao3.selectAll();
+		m.addAttribute("boardlist", boardlist);
+		List<ItemInfo> itemtable = dao4.selectAll();
+		m.addAttribute("itemtable", itemtable);
+		List<NoticeInfo> noticelist = dao5.selectAll(); 
+		m.addAttribute("noticelist", noticelist );
+		return "login/main"; 
 	}
 	
 }

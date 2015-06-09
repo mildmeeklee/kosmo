@@ -12,7 +12,9 @@ public class ItemDAO extends SqlSessionDaoSupport {
 	 * 제품 리스트에 올려놓은 제품들을 모두 가져옴
 	 */
 	public List<ItemInfo> selectAll() {
+		
 		List<ItemInfo> list = getSqlSession().selectList("item.selectAll");
+		
 		return list;
 	}
 	

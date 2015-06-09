@@ -44,4 +44,13 @@ public class BoardDAO extends SqlSessionDaoSupport{
 		getSqlSession().update("board.delete", b_num);
 	}
 	
+	/**
+	 * 조회수 증가
+	 */
+	
+	public void up(int b_num) {
+		getSqlSession().update("board.b_countUp", b_num);
+		
+	}
+	
 }

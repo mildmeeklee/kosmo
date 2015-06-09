@@ -96,6 +96,7 @@ public class BoardController {
 
 		BoardInfo boardcontent = dao.selectOne(b_num);
 		m.addAttribute("boardcontent", boardcontent);
+		dao.up(b_num);
 		
 		List<CommentInfo> commentInfo = dao1.selectAll(b_num);
 		int a = Integer.parseInt(p);

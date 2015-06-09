@@ -73,4 +73,8 @@ public class BoardInfo {
 		this.b_content = b_conten;
 		this.b_id = b_id;
 	}
+	
+	public BoardInfo(int b_num){
+		this.b_num=b_num;
+	}
 }

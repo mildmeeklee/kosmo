@@ -1,6 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html>
+<head>
+   <style>
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+      .youtubeWrap {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+      }
+      .youtubeWrap iframe {
+        position: absolute;
+        width: 1000px;
+        height: 500px;
+      }
+    </style>
+</head>
 <body>
 <header>
 <center><h2>bangbang</h2></center>
@@ -9,7 +27,7 @@
 				 
 <hr color="red" size="2" width=100%>
 <center><font size="5">
-<b>&diams;소개 |
+<b><a href="introcompanyIntro.do">&diams;소개 |
  <a href="notice.do">&diams;공지사항</a>|
  <a href="boardlist.do">&diams;게시판</a> | 
   &diams;aa | 
@@ -19,6 +37,16 @@
 
 <a href="itemsubmit.do"> 제품 올리기 upload</a></br>
 	<a href="noticelist_m.do"> 관리자 홈페이지 관리 upload</a>
+
+<div class="c">
+      <h1>Enjoy the video</h1>
+      <div class="youtubeWrap">
+        <iframe src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+</div>
+
+	
 
 </body>
 </html>

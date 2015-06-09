@@ -27,7 +27,7 @@ public class CommentController {
 	/**
 	 * 코맨트 작성
 	 */
-	@RequestMapping(value = "commentwrite", method = RequestMethod.POST)
+	@RequestMapping(value = "commentwrite.do", method = RequestMethod.POST)
 	public String commentwrite(@RequestParam("c_bnum") int c_bnum,
 			@RequestParam("c_content") String c_content, HttpSession session) {
 
@@ -50,15 +50,17 @@ public class CommentController {
 	@RequestMapping(value = "commentdelete.do", method = RequestMethod.GET)
 	public String commentdelete(
 			@RequestParam("c_id") String c_id,
-			@RequestParam("c_num") int c_num, 
+			@RequestParam("c_num") int c_num,
+			@RequestParam("c_bnum") int c_bnum,
 			HttpSession session) {
 		
 		String id = (String) session.getAttribute("id");
-
+		int b_num = c_bnum;
+		
 		if (id != null) {
 			if (id.equals(c_id)) {
 				dao.delete(c_num);
-				return "redirect:boardlist.do";
+				return "redirect:boardcontent.do?b_num="+b_num;
 			}else{ 
 				System.out.println("::본인이 작성한 것만 삭제가 되지요::");
 				return "redirect:boardlist.do";

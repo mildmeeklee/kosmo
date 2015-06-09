@@ -52,6 +52,8 @@
 				<td>${commentInfo.c_content}"></td>
 				<td>${commentInfo.c_id}</td>
 				<td>${commentInfo.c_date}</td>
+				<td><input type="button" value="삭제" 
+				onclick="javascript:window.location='commentdelete.do?c_id=${commentInfo.c_id}&c_num=${commentInfo.c_num }&c_bnum=${commentInfo.c_bnum }'"></td>
 			</tr>
 		</c:forEach>
 	</table>

@@ -39,7 +39,7 @@ public class CommentController {
 
 			return "redirect:boardlist.do";
 		} else {
-			return "redirect:loginForm.do";
+			return "login/loginForm";
 		}
 
 	}
@@ -59,7 +59,7 @@ public class CommentController {
 		
 		if (id != null) {
 			if (id.equals(c_id)) {
-				dao.delete(c_num);
+				dao.deleteC(c_num);
 				return "redirect:boardcontent.do?b_num="+b_num;
 			}else{ 
 				System.out.println("::본인이 작성한 것만 삭제가 되지요::");

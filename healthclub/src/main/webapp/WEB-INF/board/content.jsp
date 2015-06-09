@@ -34,7 +34,7 @@
 	<form action="commentwrite.do?c_bnum=${boardcontent.b_num}" method="POST">
 	<table border="1">
 		<tr>
-			<td><input type="text" name="c_content" value="코맨트를 입력해 주세요">
+			<td><input type="text" name="c_content" value="코맨트를 입력해 주세요" >
 				<input type="submit" value="작성"> </td>
 		</tr>
 	</table>

@@ -16,8 +16,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(comment_seq.nextval,#{c_id},#{c_content},sysdate,#{c_bnum})
 	</insert>
 	
-	<!-- 작성되어 있는 게시판글을 Delete -->
-	<delete id="delete" parameterType="mybatis.CommentInfo">
+	<!-- 작성되어 있는 코맨트 Delete -->
+	<delete id="deleteC" parameterType="mybatis.CommentInfo">
 		delete from commentt where c_num= #{c_num}
 	</delete>
+	
+	<!-- 작성되어 있는 코맨트 Delete -->
+	<delete id="deleteB" parameterType="mybatis.CommentInfo">
+		delete from commentt where c_bnum= #{b_num}
+	</delete>
+	
 </mapper>

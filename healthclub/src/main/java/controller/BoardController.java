@@ -26,12 +26,14 @@ public class BoardController {
 	 */
 	@Autowired
 	BoardDAO dao;
+
 	public void setDao(BoardDAO dao) {
 		this.dao = dao;
 	}
-	
+
 	@Autowired
 	CommentDAO dao1;
+
 	public void setDao1(CommentDAO dao1) {
 		this.dao1 = dao1;
 	}
@@ -41,10 +43,12 @@ public class BoardController {
 	 */
 	int e = 5;
 	int d = 5;
+
 	@RequestMapping(value = "boardlist.do", method = RequestMethod.GET)
-	public String board(@RequestParam(value="p", defaultValue="1") String p, Model m) {
+	public String board(
+			@RequestParam(value = "p", defaultValue = "1") String p, Model m) {
 		List<BoardInfo> boardlist = dao.selectAll();
-		
+
 		int a = Integer.parseInt(p);
 		int b = boardlist.size();
 		BoardPagingService paging = new BoardPagingService(a, b, e, d);
@@ -53,7 +57,7 @@ public class BoardController {
 			b = paging.getEndCount() + 1;
 		// 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
 		boardlist = boardlist.subList(paging.getStartCount(), b);
-		m.addAttribute("page",page);
+		m.addAttribute("page", page);
 		m.addAttribute("boardlist", boardlist);
 		return "board/list";
 	}
@@ -89,27 +93,28 @@ public class BoardController {
 	 */
 	int f = 5;
 	int g = 5;
+
 	@RequestMapping(value = "boardcontent.do", method = RequestMethod.GET)
-	public String boardcontent(@RequestParam(value="p", defaultValue="1") String p ,
-			@RequestParam("b_num") int b_num, 
-			Model m) {
+	public String boardcontent(
+			@RequestParam(value = "p", defaultValue = "1") String p,
+			@RequestParam("b_num") int b_num, Model m) {
 
 		BoardInfo boardcontent = dao.selectOne(b_num);
 		m.addAttribute("boardcontent", boardcontent);
 		dao.up(b_num);
-		
+
 		List<CommentInfo> commentInfo = dao1.selectAll(b_num);
 		int a = Integer.parseInt(p);
 		int b = commentInfo.size();
-	
+
 		CommentPagingService paging = new CommentPagingService(a, b, f, g);
 		String page = paging.getPagingHtml().toString();
 		if (paging.getEndCount() < b)
 			b = paging.getEndCount() + 1;
 		// 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
 		commentInfo = commentInfo.subList(paging.getStartCount(), b);
-		m.addAttribute("page",page);
-		
+		m.addAttribute("page", page);
+
 		m.addAttribute("commentInfo", commentInfo);
 		return "board/content";
 	}
@@ -123,13 +128,17 @@ public class BoardController {
 
 		String id = (String) session.getAttribute("id");
 
-		if (id.equals(b_id)) {
-			BoardInfo boardcontent = dao.selectOne(b_num);
-			m.addAttribute("boardcontent", boardcontent);
-			return "board/update";
-		} else {
-			return "login/main";
+		if (id != null) {
+			if (id.equals(b_id)) {
+				BoardInfo boardcontent = dao.selectOne(b_num);
+				m.addAttribute("boardcontent", boardcontent);
+				return "board/update";
+			} else {
+				System.out.println("::아이디가 다릅니다::");
+				return "login/loginForm";
+			}
 		}
+		return "login/loginForm";
 	}
 
 	/**
@@ -158,6 +167,7 @@ public class BoardController {
 		if (id != null) {
 			if (id.equals(b_id)) {
 				dao.delete(b_num);
+				dao1.deleteB(b_num);
 				return "redirect:boardlist.do";
 			} else {
 				return "redirect:boardlist.do";

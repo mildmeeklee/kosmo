@@ -22,9 +22,8 @@
 				<td> ${noticelist.n_date}</td>
 			</tr>
 		</c:forEach>
-		
-		
-		
+
 	</table>
+	${page}
 </body>
 </html>

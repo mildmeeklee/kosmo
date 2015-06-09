@@ -43,7 +43,7 @@ public class ItemController {
       int a = Integer.parseInt(p);
       int b = itemtable.size();
    
-      PagingService paging = new PagingService(a, b, e, d);
+      ItemPagingService paging = new ItemPagingService(a, b, e, d);
       String page = paging.getPagingHtml().toString();
       if (paging.getEndCount() < b)
          b = paging.getEndCount() + 1;

@@ -28,10 +28,23 @@ public class NoticeController {
 	/**
 	 * main page -> 공지사항으로 이동
 	 */
+	int e = 5;
+	int d = 5;
 	@RequestMapping(value="notice.do",  method = RequestMethod.GET)
-	public String noticelist(Model m){
+	public String noticelist(@RequestParam(value="p", defaultValue="1") String p ,Model m){
 		
 		List<NoticeInfo> noticelist = dao.selectAll(); 
+		int a = Integer.parseInt(p);
+		int b = noticelist.size();
+	
+		NoticePagingService paging = new NoticePagingService(a, b, e, d);
+		String page = paging.getPagingHtml().toString();
+		if (paging.getEndCount() < b)
+			b = paging.getEndCount() + 1;
+		// 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
+		noticelist = noticelist.subList(paging.getStartCount(), b);
+		m.addAttribute("page",page);
+		
 		m.addAttribute("noticelist", noticelist );
 		return "notice/list";
 	}

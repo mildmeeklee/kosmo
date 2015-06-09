@@ -68,7 +68,10 @@ width:79% min-height:400px;
 	<!-- --------------------------------------------- -->
 	<div id="section"> <decorator:body /> </div>
 	
+<div id="footer">
 
+			aaaaaaaaaaa
+</div>
 
 	</div>
 </body>

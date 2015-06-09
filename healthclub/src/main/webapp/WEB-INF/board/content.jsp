@@ -54,6 +54,7 @@
 				<td>${commentInfo.c_date}</td>
 			</tr>
 		</c:forEach>
-	</table>	
+	</table>
+	${page}	
 </body>
 </html>

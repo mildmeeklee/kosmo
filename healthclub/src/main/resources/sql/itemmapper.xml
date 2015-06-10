@@ -14,8 +14,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM item WHERE i_time >= SYSDATE-7
 	</select>
 	
-	<select id="selecthealthArticle" resultType="mybatis.ItemInfo">
+	<select id="itemweight" resultType="mybatis.ItemInfo">
 		SELECT * FROM item WHERE i_distinction like '보충제'
+	</select>
+	
+	<select id="itemhealthArticle" resultType="mybatis.ItemInfo">
+		SELECT * FROM item WHERE i_distinction like '헬스용품'
+	</select>
+	
+	<select id="itemhealthWear" resultType="mybatis.ItemInfo">
+		SELECT * FROM item WHERE i_distinction like '헬스의류'
 	</select>
 	
 

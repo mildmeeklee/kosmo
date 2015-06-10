@@ -9,11 +9,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAll" resultType="mybatis.ItemInfo">
 		select * from item
 	</select>
+	
+	<select id="selectAlllist" resultType="mybatis.ItemInfo">
+		SELECT * FROM item WHERE i_time >= SYSDATE-7
+	</select>
 
 	<!-- 추가한 헬스제품 정보를 저정 -->
 	<insert id="insert" parameterType="mybatis.ItemInfo">
 		insert into item
-		values(#{i_name},#{i_num},#{i_price},#{i_content},sysdate, 0,#{i_imagePath},#{i_imageOrgname} )
+		values(#{i_name},seq_item_i_num.nextval,#{i_price},#{i_content},sysdate-8, 0,#{i_imagePath},#{i_imageOrgname},#{i_distinction} )
 	</insert>
 	
 </mapper>

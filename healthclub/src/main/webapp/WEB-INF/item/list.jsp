@@ -1,60 +1,70 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(function(){
 
+	
+	$("select").change(function(){
+		url = $(this).val();
+	    open(url , "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+	});
+});
+</script>
+<select>
+	<option value="itemlist.do" selected>Á¦Ç° ¸ñ·Ï</option>
+	<option value="itemtoplist.do">ÃÖ½Å»óÇ°</option>
+	<option value="itempopularity.do">ÀÎ±â»óÇ°</option>
+</select>
+
+<p><span>ÀÌ¸§</span></p>
 
 
 	<table border="1" cellpadding="15px">
 		<tr align="center">
-			<th>ì œí’ˆëª…</th>
-			<th>ì œí’ˆë²ˆí˜¸</th>
-			<th>ì œí’ˆê°€ê²©</th>
-			<th>ì œí’ˆë‚´ìš©</th>
-			<th>ë“±ë¡ì‹œê°„</th>
-			<th>ì¡°íšŒìˆ˜</th>
-			<th>ì œí’ˆì´ë¯¸ì§€</th>
-			<th colspan="3">ê´€ë¦¬í•˜ê¸°</th>
-		
-			
+			<th>Á¦Ç°¸í</th>
+			<th>Á¦Ç°¹øÈ£</th>
+			<th>Á¦Ç°°¡°İ</th>
+			<th>Á¦Ç°³»¿ë</th>
+			<th>µî·Ï½Ã°£</th>
+			<th>Á¶È¸¼ö</th>
+			<th>Á¦Ç°ÀÌ¹ÌÁö</th>
+	
 			<c:forEach var="item" items="${itemtable}">
 				<tr>
 					<td align="center">${item.i_name}</td>
 					<td align="center">${item.i_num}</td>
 					<td align="center">${item.i_price}</td>
 					<td align="center">${item.i_content}</td>
-					<td align="center">${item.i_time}</td>
+					<td align="center"><fmt:formatDate type="date" value="${item.i_time}" var="date"/>${date }</td>
 					<td align="center">${item.i_count}</td>
-					<td>${item.i_imageOrgname}</td>
-					<td>${item.i_imagePath }</td>
-					<!-- /Proj/ <- í”„ë¡œì íŠ¸ëª…ì ê¸° -->
-					<td><img src="/Proj/image/${item.i_imagePath }" width="100" height="100">
-					<td>
+					<td><img src="/healthclub/image/${item.i_imagePath }" width="100" height="100">
+					<%-- <td>
 						<form action="selone.do" method="post">
 							<input type="hidden" name="num" value="${file.num }">
-							<button type="submit">ìˆ˜ì •í•˜ê¸°</button>
+							<button type="submit">¼öÁ¤ÇÏ±â</button>
 						</form>
 					</td>
 					<td>
 						<form action="del.do" method="post">
 							<input type="hidden" name="num" value="${file.num }">
-							<button>ì‚­ì œ í•˜ê¸°</button>
+							<button>»èÁ¦ ÇÏ±â</button>
 						</form>
 					</td>
 					<td>
 						<form action="down.do" method="post">
 							<input type="hidden" name="path2" value="${file.file_path}">
-							<button>ë‹¤ìš´ ë°›ê¸°</button>
+							<button>´Ù¿î ¹Ş±â</button>
 						</form>
-					</td>
+					</td> --%>
 				</tr>
 			</c:forEach>
 
@@ -62,10 +72,5 @@
 		${page}
 	<br>
 	<br>
-
-	<br>
-	<br>
-
-
 </body>
 </html>

@@ -62,23 +62,52 @@ public class ItemController {
    public String form() {
       return "item/submissionForm";
    }
-
+   /**
+    * 최신상품
+    */
+   int q = 5;   //itemlist.do -> PagingService(blockCount);
+   int w = 5;  //itemlist.do ->PagingService(blockPage);
+   @RequestMapping(value = "itemtoplist.do", method = RequestMethod.GET)
+   public String weight(@RequestParam(value="p", defaultValue="1") String p , Model m) {
+	      List<ItemInfo> itemtable = dao.selectAlllist();
+	      
+	      int a = Integer.parseInt(p);
+	      int b = itemtable.size();
+	   
+	      ItemPagingService paging = new ItemPagingService(a, b, q, w);
+	      String page = paging.getPagingHtml().toString();
+	      if (paging.getEndCount() < b)
+	         b = paging.getEndCount() + 1;
+	      // 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
+	      itemtable = itemtable.subList(paging.getStartCount(), b);
+	      m.addAttribute("page",page);
+	      m.addAttribute("itemtable", itemtable);
+	      
+      return "item/toplist";
+   }
+   /**
+    * 인기상품
+    */
+   @RequestMapping(value = "popularity.do", method = RequestMethod.GET)
+   public String healthArticle() {
+      return "item/popularity";
+   } 
    /**
     * 제품등록시 -> DB로 저장
     */
    @RequestMapping(value = "saveitem.do", method = RequestMethod.POST)
    public String submitReport1(
          @RequestParam("i_name") String i_name,
-         @RequestParam("i_num") int i_num,
          @RequestParam("i_price") int i_price,
          @RequestParam("i_content") String i_content,
          @RequestParam("file") MultipartFile file,
+         @RequestParam("i_distinction") String i_distinction,
          Model m){
       
       //파일 저장시 확인후 저장 (같은 파일 있는지?)
-      File f = new File("C:/Won/spring/Proj/src/main/webapp/image", file.getOriginalFilename());
+      File f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", file.getOriginalFilename());
       if (f.exists()) {
-         f = new File("C:/Won/spring/Proj/src/main/webapp/image", inTime + file.getOriginalFilename() );
+         f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", inTime + file.getOriginalFilename() );
       }
       try {
          file.transferTo(f);
@@ -91,7 +120,7 @@ public class ItemController {
       }
       
       
-      dao.insert(i_name, i_num, i_price, i_content, file.getOriginalFilename(), f.getPath());
+      dao.insert(i_name,i_price, i_content, file.getOriginalFilename(), f.getPath() , i_distinction );
       List<ItemInfo> itemtable = dao.selectAll();
       m.addAttribute("itemtable", itemtable);
       

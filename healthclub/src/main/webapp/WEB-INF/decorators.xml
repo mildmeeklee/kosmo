@@ -9,7 +9,7 @@
 	</decorator>
 	<!-- /WEB-INF/login/main.jsp -->
 
-	<decorator name="item" page="/WEB-INF/item/main.jsp">
+	<decorator name="board" page="/WEB-INF/item/main.jsp">
 		<pattern>*item*</pattern>
 	</decorator>
 	

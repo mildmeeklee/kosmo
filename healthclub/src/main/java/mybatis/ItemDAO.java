@@ -14,17 +14,27 @@ public class ItemDAO extends SqlSessionDaoSupport {
 	public List<ItemInfo> selectAll() {
 		
 		List<ItemInfo> list = getSqlSession().selectList("item.selectAll");
+	
+		return list;
+	}
+	
+	/**
+	 * 제품 일주일동안 올린 최신 리스트를 가져옴
+	 */
+	public List<ItemInfo> selectAlllist() {
 		
+		List<ItemInfo> list = getSqlSession().selectList("item.selectAlllist");
+
 		return list;
 	}
 	
 	/**
 	 * DB에 제품 등록을 함  
 	 */
-	public void insert(String i_name, int i_num, int i_price, String i_content, String i_imagePath, String i_imageOrgname){
+	public void insert(String i_name, int i_price, String i_content, String i_imagePath, String i_imageOrgname,String i_distinction ){
 	
-		ItemInfo il = new ItemInfo(i_name,i_num, i_price, i_content, i_imagePath, i_imageOrgname);
-		
+		ItemInfo il = new ItemInfo(i_name, i_price, i_content, i_imagePath, i_imageOrgname, i_distinction);
+
 		getSqlSession().insert("item.insert", il);
 		
 	}

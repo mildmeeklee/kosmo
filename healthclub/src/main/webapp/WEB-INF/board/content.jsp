@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@
 		</tr>
 		<tr>
 			<td>작성자 :: ${boardcontent.b_id}</td>
-			<td>날짜 :: ${boardcontent.b_date}</td>
+			<td><fmt:formatDate type="date" value="${boardcontent.b_date}" var="date"/>날짜 ::${date } </td>
 			<td>조회수 :: ${boardcontent.b_count}</td>
 		</tr>
 		<tr>

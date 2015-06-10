@@ -12,11 +12,12 @@
 	<h3>@RequestParam 사용</h3>
 	<form action="saveitem.do" method="post" enctype="multipart/form-data"><br/>
 		제품명 : <input type="text" name="i_name" /> <br />
-		제품번호 : <input type="text" name="i_num" /> <br/>
 		가격 : <input type="text" name="i_price" /><br/>
 		제품내용 : <input type="textArea" size="500" name="i_content" /> <br />
-		리포트파일:<input type="file" name="file" /> <br /> 
-		
+		리포트파일:<input type="file" name="file" /><br /> 
+		<input type="radio" name="i_distinction" value="보충제" checked="checked"> 보충제<br/>
+		<input type="radio" name="i_distinction" value="헬스용품"> 헬스용품<br/>
+		<input type="radio" name="i_distinction" value="헬스의류"> 헬스의류<br/>
 		<input type="submit" />
 	</form> 
 </body>

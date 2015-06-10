@@ -18,13 +18,12 @@
         height: 500px;
       }
     </style>
+
 </head>
 <body>
 <header>
 <center><h2>bangbang</h2></center>
 <p align="right"><a href="loginForm.do">login</a> | 
-				
-				 
 <hr color="red" size="2" width=100%>
 <center><font size="5">
 <b><a href="introcompanyIntro.do">&diams;소개 |

@@ -85,6 +85,25 @@ public class ItemController {
 	      
       return "item/toplist";
    }
+	   
+   @RequestMapping(value = "itemcount.do", method = RequestMethod.GET)
+   public String count(@RequestParam(value="p", defaultValue="1") String p , Model m) {
+	      List<ItemInfo> itemtable = dao.selectcount();
+	      
+	      int a = Integer.parseInt(p);
+	      int b = itemtable.size();
+	   
+	      ItemPagingService paging = new ItemPagingService(a, b, q, w);
+	      String page = paging.getPagingHtml().toString();
+	      if (paging.getEndCount() < b)
+	         b = paging.getEndCount() + 1;
+	      // 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
+	      itemtable = itemtable.subList(paging.getStartCount(), b);
+	      m.addAttribute("page",page);
+	      m.addAttribute("itemtable", itemtable);
+	      
+      return "item/count";
+   }
    /**
     * 보충제
     */
@@ -152,6 +171,20 @@ public class ItemController {
 	      
 	   
       return "item/weight";
+   } 
+   
+   /**
+    * 헬스용품 클릭시 내용
+    */
+   @RequestMapping(value = "itemcontent.do", method = RequestMethod.GET)
+   public String itemcontent (@RequestParam("i_num") int i_num,Model m) {
+	   ItemInfo item = dao.selOne(i_num);
+	   dao.up(i_num);
+	
+	      m.addAttribute("item", item);
+	      
+	   
+      return "item/content";
    } 
    
    /**

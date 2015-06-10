@@ -20,14 +20,14 @@ public class ItemInfo {
 		this.i_name = i_name;
 	}
 
-	
+
 	public int getI_num() {
 		return i_num;
 	}
 	public void setI_num(int i_num) {
 		this.i_num = i_num;
 	}
-
+	
 	public int getI_price() {
 		return i_price;
 	}
@@ -43,8 +43,7 @@ public class ItemInfo {
 		this.i_content = i_content;
 	}
 
-	
-	public Date getI_time() {
+	public Date getI_time() { 
 		return i_time;
 	}
 	public void setI_time(Date i_time) {
@@ -90,6 +89,10 @@ public class ItemInfo {
 	/**
 	 * submissionForm에서 등록한 제품값을 DB값에 저장하는 생성자
 	 */
+	ItemInfo(int i_num){
+		this.i_num=i_num;
+	}
+	
 	ItemInfo(String i_name, int i_price, String i_content, String i_imagePath, String i_imageOrgname ,String i_distinction){
 	
 		this.i_name= i_name;

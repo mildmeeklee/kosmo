@@ -26,6 +26,17 @@ public class ItemDAO extends SqlSessionDaoSupport {
 
 		return list;
 	}
+	
+	/**
+	 * 최신상품 리스트
+	 */
+	public List<ItemInfo> selectcount() {
+
+		List<ItemInfo> list = getSqlSession().selectList("item.selectcount");
+
+		return list;
+	}
+
 
 	/**
 	 * 보충제 리스트
@@ -59,6 +70,22 @@ public class ItemDAO extends SqlSessionDaoSupport {
 
 		return list;
 	}
+	
+	/**
+	 * 아이템 내용
+	 */
+	public ItemInfo selOne(int i_num) {
+		ItemInfo l = getSqlSession().selectOne("item.selectOneitem", i_num);
+		return l;
+	}
+	/**
+	 * 아이템 조회수
+	 */
+	public void up(int i_num) {
+		getSqlSession().update("item.i_countUp", i_num);
+		
+	}
+	
 	
 	/**
 	 * DB에 제품 등록을 함

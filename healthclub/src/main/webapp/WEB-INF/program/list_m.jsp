@@ -10,8 +10,10 @@
 <body>
 	<table border="1">
 		<tr>
+			<th>종류</th>
 			<th>프로그램이름</th>
 			<th>강사</th>
+			<th>요일</th>
 			<th>시간</th>
 			<th>내용</th>
 			<th>고유번호</th>
@@ -21,15 +23,15 @@
 		
 		<c:forEach var = "programlist" items="${programlist }">
 			<tr>
+				<td> ${programlist.p_group}</td>
 				<td> ${programlist.p_name}</td>
 				<td> ${programlist.p_teacher}</td>
+				<td> ${programlist.p_day}</td>
 				<td> ${programlist.p_time}</td>
 				<td> ${programlist.p_content}</td>
 				<td> ${programlist.p_num}</td>
 				<td> ${programlist.p_position}</td>
 				
-				<td> <input type="button" value="수정" 
-						onclick= "javascript:window.location='noticeupdateM.do?n_num=${noticelist.n_num}'"></td>
 				<td> <input type="button" value="삭제" 
 						onclick= "javascript:window.location='noticedelete.do?n_num=${noticelist.n_num}'"></td>
 			</tr>

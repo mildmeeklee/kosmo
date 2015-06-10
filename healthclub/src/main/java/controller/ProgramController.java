@@ -45,6 +45,8 @@ public class ProgramController {
 	 */
 	@RequestMapping(value = "programwrite.do", method = RequestMethod.POST)
 	public String schedulewrite(ProgramInfo si) {
+		String p_position = si.getP_day()+"_"+si.getP_time();
+		si.setP_position(p_position);
 		dao.insert(si);
 		return "redirect:programlist_m.do";
 	}

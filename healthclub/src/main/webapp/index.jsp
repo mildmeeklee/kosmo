@@ -26,12 +26,14 @@
 				
 				 
 <hr color="red" size="2" width=100%>
-<center><font size="5">
-<b><a href="introcompanyIntro.do">&diams;소개 |
- <a href="notice.do">&diams;공지사항</a>|
- <a href="boardlist.do">&diams;게시판</a> | 
-  &diams;aa | 
-  <a href="itemlist.do">&diams;헬스제품</a></font>
+<center>
+  <font size="5">
+	<a href="introcompanyIntro.do">&diams;소개</a> |
+ 	<a href="notice.do">&diams;공지사항</a>|
+	<a href="boardlist.do">&diams;게시판</a> | 
+  	<a href="schedule.do">&diams;스케줄러</a> |  
+    <a href="itemlist.do">&diams;헬스제품</a>
+  </font>
 <hr color="red" size="2" width=100%></center>
 </header>
 

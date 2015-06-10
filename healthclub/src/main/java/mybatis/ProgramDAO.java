@@ -13,6 +13,9 @@ public class ProgramDAO extends SqlSessionDaoSupport {
 		getSqlSession().insert("program.insert",si);
 	}
 
+	/**
+	 * DB에 저장된 프로그램을 모두 가져옴
+	 */
 	public List<ProgramInfo> selectAll() {
 		List<ProgramInfo> si = getSqlSession().selectList("program.selectAll");
 		return si;

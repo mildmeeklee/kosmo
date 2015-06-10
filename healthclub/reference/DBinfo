@@ -1,0 +1,81 @@
+소개테이블
+1. 프로그램이름
+2. 설명
+3. 시간
+4. 강사이름
+
+회원가입 테이블 [ Users ]
+1. 아이디[ id ]	primary key
+2. 비밀번호[ pw ]
+3. 이름 [ name ]
+4. 우편번호 [ userzipcode ]
+5. 주소 [ address ]
+6. 성별 [ sex ] 
+7. 전화번호 [ ph ]
+8. 생년월일 [ birth ]
+9. 이메일 [ email ]
+10. 프로그램 고유번호 [ p_num ] foreign key
+
+우편번호 테이블 [ zipcode ] 
+1. 우편번호 [ zipcode ]
+2. 주소1	 [ area1 ] 시
+3. 주소2 [ area2 ] 군/구
+4. 주소3 [ area3 ] 동읍면리
+5. 주소4 [ area4 ] 나머지주소
+
+공지사항 테이블 [ notice ] 
+1. 글번호 [ n_num ] primary key-> sqen?? 중간에 비는거 어떻게? primary key
+2. 게시판제목 [ n_name ]
+3. 내용	[ n_content ]
+4. 날짜 [ n_date ]
+
+INSERT INTO SEQUENCE_TABLE_ORACLE (SEQ,TITLE)
+VALUES(SEQ.NEXTVAL,'제목1');
+
+게시판 테이블 [ board ]
+1. 글번호 [ b_num ] -> sqen?? 중간에 비는거 어떻게?
+2. 제목 [ b_name ]
+3. 내용 [ b_content ]
+4. 작성자 아이디 [ b_id ] 
+5. 조횟수 [ b_count ] 
+6. 날짜 [ b_date ]
+
+
+
+코멘트 테이블 [ commentt ]
+1. 내용 [ c_content ]
+2. 아이디 [ c_id ]
+3. 코멘트 번호 [ c_num ]
+4. 코멘트 시간 [ c_date ]
+5. 게시판 글번호 저장 [ c_bnum ]
+
+프로그램 테이블 [ programt ]
+1. 프로그램 종류 [ p_group ]
+2. 운동명 [ p_name ]
+3. 강사명 [ p_teacher ]
+4. 요일 [ p_day ]
+5. 시간   [ p_time ]
+6. 내용   [ p_content ]
+7. 고유번호 [ p_num ] primary key 0
+8. 좌표 [ p_postion ]
+
+제품 테이블 [ item ]
+제품명 [ i_name ]
+제품번호 [ i_num ] primary key
+가격   [ i_price ]
+제품내용 [ i_content ]
+시간 [ i_time ] Date
+조회수 [ i_count ]
+파일경로 [i_imagePath]
+파일이름 [i_imageOrgname]
+제품카테고리 i_distinction varchar(200)
+ 
+
+카트테이블 [ shoppingbasket ]
+아이디  [ s_id ] primary key
+제품번호 [ i_num ] 
+수량 [ s_num ]
+가격 [ s_sum ]
+
+
+			  

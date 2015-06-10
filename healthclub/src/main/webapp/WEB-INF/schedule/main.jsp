@@ -10,6 +10,7 @@
 <script src="js/schedule.js"></script>
 </head>
 <body>
+<form action="schedulesave.do" method="POST">
 <table border="1"  width="200" align="center">
 	<tr>
 		<td > </td>
@@ -92,13 +93,23 @@
 		<td class="col" title="FRI_2100-2200"></td>
 	</tr>
 </table>
-
+<input type="submit" value="저장하기">
+</form>
+<select id ="pselect">
+	<option value="-----" selected>프로그램선택</option>
+	<option value="-----">헬스</option>
+	<option value="-----">요가</option>
+	<option value="-----">PT</option>
+</select>
 <table>
+	
 	<c:forEach var="programInfo" items="${programInfo}">
 	<tr>
 		<td><input type="button" class="programselect" value="${programInfo.p_name}">${programInfo.p_position}</td>
 		<td><input type="hidden"  class ="programselect1" 
-				value="${programInfo.p_position}" title="${programInfo.p_group}" name="${programInfo.p_name}"></td>
+				value="${programInfo.p_position}" title="${programInfo.p_group}" 
+				name="${programInfo.p_name}" id="${programInfo.p_num}" >
+				</td>
 	</tr>
 	</c:forEach>
 </table>

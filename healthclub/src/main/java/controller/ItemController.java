@@ -86,11 +86,26 @@ public class ItemController {
       return "item/toplist";
    }
    /**
-    * 인기상품
+    * 보충제
     */
-   @RequestMapping(value = "popularity.do", method = RequestMethod.GET)
-   public String healthArticle() {
-      return "item/popularity";
+   @RequestMapping(value = "itemweight.do", method = RequestMethod.GET)
+   public String healthArticle(@RequestParam(value="p", defaultValue="1") String p , Model m) {
+	   List<ItemInfo> itemtable = dao.selecthealthArticle();
+	      
+	      int a = Integer.parseInt(p);
+	      int b = itemtable.size();
+	   
+	      ItemPagingService paging = new ItemPagingService(a, b, q, w);
+	      String page = paging.getPagingHtml().toString();
+	      if (paging.getEndCount() < b)
+	         b = paging.getEndCount() + 1;
+	      // 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
+	      itemtable = itemtable.subList(paging.getStartCount(), b);
+	      m.addAttribute("page",page);
+	      m.addAttribute("itemtable", itemtable);
+	      
+	   
+      return "item/weight";
    } 
    /**
     * 제품등록시 -> DB로 저장

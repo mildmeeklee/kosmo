@@ -28,6 +28,13 @@ public class ItemDAO extends SqlSessionDaoSupport {
 		return list;
 	}
 	
+		public List<ItemInfo> selecthealthArticle() {
+
+		List<ItemInfo> list = getSqlSession().selectList("item.selecthealthArticle");
+
+		return list;
+	}
+	
 	/**
 	 * DB에 제품 등록을 함  
 	 */
@@ -38,6 +45,8 @@ public class ItemDAO extends SqlSessionDaoSupport {
 		getSqlSession().insert("item.insert", il);
 		
 	}
+	
+	
 	/*
 	public void delet(int num){
 		getSqlSession().delete("Member.del",num);

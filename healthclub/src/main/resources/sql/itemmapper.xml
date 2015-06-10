@@ -13,11 +13,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAlllist" resultType="mybatis.ItemInfo">
 		SELECT * FROM item WHERE i_time >= SYSDATE-7
 	</select>
+	
+	<select id="selecthealthArticle" resultType="mybatis.ItemInfo">
+		SELECT * FROM item WHERE i_distinction like '보충제'
+	</select>
+	
 
 	<!-- 추가한 헬스제품 정보를 저정 -->
 	<insert id="insert" parameterType="mybatis.ItemInfo">
 		insert into item
-		values(#{i_name},seq_item_i_num.nextval,#{i_price},#{i_content},sysdate-8, 0,#{i_imagePath},#{i_imageOrgname},#{i_distinction} )
+		values(#{i_name},seq_item_i_num.nextval,#{i_price},#{i_content},sysdate, 0,#{i_imagePath},#{i_imageOrgname},#{i_distinction} )
 	</insert>
 	
 </mapper>

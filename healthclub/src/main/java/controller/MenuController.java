@@ -179,7 +179,7 @@ public class MenuController {
 		LogUserInfo l = dao.selOne(id);
 		m.addAttribute("userlist",l);
 	
-		return "login/userlist";
+		return "mypage/mylist";
 	}
 	
 	/**

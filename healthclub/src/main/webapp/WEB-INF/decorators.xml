@@ -17,6 +17,10 @@
 		<pattern>*board*</pattern>
 	</decorator>
 	
+	<decorator name="item" page="/WEB-INF/mypage/main.jsp">
+		<pattern>*mypage*</pattern>
+	</decorator>
+	
 	
 	<decorator name="news" page="/WEB-INF/notice/main.jsp">
 		<pattern>*notice*</pattern>

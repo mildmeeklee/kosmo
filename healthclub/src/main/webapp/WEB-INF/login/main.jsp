@@ -73,6 +73,7 @@
 #bottom {
 	clear: both;
 	backgroundcolor: #d9d9d9;
+	margin-left: 100px;
 }
 
 #bottom2 {
@@ -251,8 +252,10 @@
 		</div>
 	</div>
 
+
 	<div id="bottom">
-		<div id="bottom2">
+		<div id="bottom2" >
+			<font size="5">		
 			<table>
 				<tr>
 					<th>게시판</th>
@@ -268,7 +271,7 @@
 		<div id="bottom3">
 			<table>
 				<tr>
-					<th>게시판</th>
+					<th>최신 아이템</th>
 				</tr>
 				<c:forEach var="itemtable" items="${itemtable}">
 					<tr>
@@ -281,14 +284,16 @@
 		<div id="bottom4">
 			<table>
 				<tr>
-					<th>게시판</th>
+					<th>공지사항</th>
 				</tr>
+		
 				<c:forEach var="noticelist" items="${noticelist}">
 					<tr>
 						<td><a href="noticecontent.do?n_num=${noticelist.n_num}">${noticelist.n_name}</a></td>
 					</tr>
 				</c:forEach>
 			</table>
+	
 		</div>
 	</div>
 

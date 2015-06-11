@@ -60,6 +60,7 @@ public class BoardController {
 		m.addAttribute("boardlist", boardlist);
 		return "board/list";
 	}
+	
 
 	/**
 	 * 게시판 list -> 게시판글 write page

@@ -14,6 +14,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM item WHERE i_time >= SYSDATE-7
 	</select>
 	
+	<!-- 4개의 글 가져오기 -->
+	<select id="select3" resultType="mybatis.ItemInfo">
+		select * from item where ROWNUM &lt; 3 ORDER BY i_date desc 
+	</select>
+	
+	
 	<select id="selectcount" resultType="mybatis.ItemInfo">
 		SELECT * FROM item where i_count >= 25
 	</select>

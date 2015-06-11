@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 글번호에 맞는 코맨트 리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.CommentInfo">
-		select * from commentt where c_bnum=#{c_bnum}
+		select * from commentt where c_bnum=#{c_bnum} ORDER BY c_date desc
 	</select>
 	
 	<!-- 작성 게시판글을 DB에 저장 -->

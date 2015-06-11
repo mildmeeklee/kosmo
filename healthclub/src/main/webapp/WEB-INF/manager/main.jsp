@@ -31,9 +31,11 @@
 				<button id="send_msg">send</button>
 				</div>
 			</li>
-
 		</ul>
 	</div>
-
+	  <form>
+	  <input id="in" type="text"/>
+      <input id="ch" type="button" value="동영상 변경"/>
+	  </form>
 </body>
 </html>

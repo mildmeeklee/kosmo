@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="item">
 	<!-- 헬스제품 리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.ItemInfo">
-		select * from item
+		select * from item ORDER BY i_time desc
 	</select>
 	
 	<select id="selectAlllist" resultType="mybatis.ItemInfo">

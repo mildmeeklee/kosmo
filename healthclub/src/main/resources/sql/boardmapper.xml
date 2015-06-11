@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 게시판 리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.BoardInfo">
-		select * from board
+		select * from board ORDER BY b_date desc
 	</select>
 	
 	<!-- 작성 게시판글을 DB에 저장 -->

@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 공지사항  리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.NoticeInfo">
-		select * from notice
+		select * from notice ORDER BY n_date desc
 	</select>
 	
 	<!-- 글번호와 같은 레코드를 가져옴 -->

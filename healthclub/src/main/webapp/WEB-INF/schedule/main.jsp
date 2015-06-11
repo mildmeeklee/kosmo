@@ -23,8 +23,8 @@
 	
 	<tr >
 		<td>1400-1500</td>
-		<td class="col" title="MON_1400_1500"></td>
-		<td class="col" title="TUE_1400_1500"></td>
+		<td><input type="text" class="col" title ="MON_1400_1500"  name="name" value=""></td>
+		<td><input type="text" class="col" title ="TUE_1400_1500"  name="name" value=""></td>
 		<td class="col" title="WED_1400_1500"></td>
 		<td class="col" title="THU_1400_1500"></td>
 		<td class="col" title="FRI_1400_1500"></td>

@@ -17,6 +17,6 @@ public class ScheduleDAO extends SqlSessionDaoSupport{
 	 */
 	public int selcetCount(String id) {
 		int i =getSqlSession().selectOne("schedule.selectCount", id);
-		return 0;
+		return i;
 	}
 }

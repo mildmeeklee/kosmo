@@ -31,4 +31,5 @@
 	<bean id="commentDAO" class="mybatis.CommentDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 	<bean id="programDAO" class="mybatis.ProgramDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 	<bean id="CartDAO" class="mybatis.CartDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
+	<bean id="scheduleDAO" class="mybatis.ScheduleDAO" p:sqlSessionFactory-ref="sqlSessionFactory"/>
 </beans>

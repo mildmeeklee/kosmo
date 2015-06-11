@@ -17,7 +17,7 @@ $(function(){
 	   p_num = $(".programselect1:eq("+i+")").attr("id");
 	   
 	  
-	   $(".col[title='"+p_position+"']").text(p_name+"["+p_num+"]");
+	   $(".col[title='"+p_position+"']").attr("value",p_name+"["+p_num+"]");
 	   
 	   if(p_group == "헬스"){
 		   $(".col[title='"+p_position+"']").css("background-color", "red");

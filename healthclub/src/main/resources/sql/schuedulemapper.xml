@@ -17,8 +17,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<!-- 프로그램 리스트를 전부 가져옴 -->
-	<select id="selectCount" resultType="mybatis.ScheduleInfo">
-		select count(*) from schedule where schedule_id=#{id}
+	<select id="selectCount" parameterType="String" resultType="int">
+		select count(*) from schedule where schedule_id=#{schedule_id}
 	</select>
 	
 </mapper>

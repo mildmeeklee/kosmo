@@ -21,6 +21,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from board where b_num =#{b_num}
 	</select>
 	
+	<!-- 4개의 글 가져오기 -->
+	<select id="select3" resultType="mybatis.BoardInfo">
+		select * from board where ROWNUM &lt; 3 ORDER BY b_date desc 
+	</select>
+	
 	<!-- 작성되어 있는 게시판글을 Update -->
 	<update id="update" parameterType="mybatis.BoardInfo">
 		update board set b_name=#{b_name}, b_content=#{b_content}

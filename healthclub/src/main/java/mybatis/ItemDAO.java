@@ -20,12 +20,24 @@ public class ItemDAO extends SqlSessionDaoSupport {
 	/**
 	 * 최신상품 리스트
 	 */
-	public List<ItemInfo> selectAlllist() {
+	public List<ItemInfo> selectThree() {
 
 		List<ItemInfo> list = getSqlSession().selectList("item.selectAlllist");
 
 		return list;
 	}
+	
+	/**
+	 * 최신상품 리스트
+	 */
+	public List<ItemInfo> selectAlllist() {
+
+		List<ItemInfo> list = getSqlSession().selectList("item.select3");
+
+		return list;
+	}
+	
+
 	
 	/**
 	 * 최신상품 리스트

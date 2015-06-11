@@ -51,14 +51,7 @@ $(function(){
       <div class="youtubeWrap">
         <iframe id="if" src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
       </div>
-
-
 </div>
-
-	
-
 </body>
 </html>
 
-<!--  <a href="login/userlist2.do">mypage</a> |
-				 <a>cart</a></p> -->

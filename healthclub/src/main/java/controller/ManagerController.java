@@ -97,4 +97,17 @@ public class ManagerController {
 			return "redirect:boardManager.do";
 
 		}
+	
+		@RequestMapping(value = "chatadmin.do", method = RequestMethod.GET)
+		public String chatadmin(){
+			return "manager/chatadmin";
+
+		}
+
+			@RequestMapping(value = "videoch.do", method = RequestMethod.GET)
+			public String videoch(){
+				return "manager/videoch";
+
+			}
+
 }

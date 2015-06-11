@@ -52,6 +52,10 @@
 			<td>E-mail</td>
 		 <td align="center">${userlist.getEmail() }</td> 
 		</tr>
+		
+		<tr>
+			<td>
+		</tr>
 	</table>
 </body>
 </html>

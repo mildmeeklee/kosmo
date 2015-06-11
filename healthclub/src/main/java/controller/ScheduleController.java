@@ -58,10 +58,8 @@ public class ScheduleController {
 	 */
 	@RequestMapping(value = "schedulesave.do", method = RequestMethod.POST)
 	public String schedulesave(
-			@RequestParam("name") String name,
 			ScheduleInfo si, HttpSession session) {
 		
-		System.out.println(name);
 		String id = (String) session.getAttribute("id");
 
 		int idCk = dao1.selcetCount(id);

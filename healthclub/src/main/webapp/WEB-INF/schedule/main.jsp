@@ -20,77 +20,117 @@
 		<td>THU</td>
 		<td>FRI</td>
 	</tr>
-	
+	 
 	<tr >
 		<td>1400-1500</td>
-		<td><input type="text" class="col" title ="MON_1400_1500"  name="name" value=""></td>
-		<td><input type="text" class="col" title ="TUE_1400_1500"  name="name" value=""></td>
-		<td class="col" title="WED_1400_1500"></td>
-		<td class="col" title="THU_1400_1500"></td>
-		<td class="col" title="FRI_1400_1500"></td>
+		<td name="MON_1400_1500">
+		<input type="hidden" class="col" name ="MON_1400_1500" value=""></td>
+		<td name="TUE_1400_1500" >
+		<input type="hidden" class="col" name ="TUE_1400_1500" value=""></td>
+		<td name="WED_1400_1500" >
+		<input type="hidden" class="col" name ="WED_1400_1500" value=""></td>
+		<td name="THU_1400_1500" >
+		<input type="hidden" class="col" name ="THU_1400_1500" value=""></td>
+		<td name="FRI_1400_1500" >
+		<input type="hidden" class="col" name ="FRI_1400_1500" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>1500-1600</td>
-		<td class="col" title="MON_1500_1600"></td>
-		<td class="col" title="TUE_1500_1600"></td>
-		<td class="col" title="WED_1500_1600"></td>
-		<td class="col" title="THU_1500_1600"></td>
-		<td class="col" title="FRI_1500_1600"></td>
+		<td name="MON_1500_1600" >
+		<input type="hidden" class="col" name ="MON_1500_1600" value=""></td>
+		<td name="TUE_1500_1600" >
+		<input type="hidden" class="col" name ="TUE_1500_1600" value=""></td>
+		<td name="WED_1500_1600" >
+		<input type="hidden" class="col" name ="WED_1500_1600" value=""></td>
+		<td name="THU_1500_1600" >
+		<input type="hidden" class="col" name ="THU_1500_1600" value=""></td>
+		<td name="FRI_1500_1600" >
+		<input type="hidden" class="col" name ="FRI_1500_1600" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>1600-1700</td>
-		<td class="col" title="MON_1600_1700"></td>
-		<td class="col" title="TUE_1600_1700"></td>
-		<td class="col" title="WED_1600_1700"></td>
-		<td class="col" title="THU_1600_1700"></td>
-		<td class="col" title="FRI_1600_1700"></td>
+		<td name="MON_1600_1700" >
+		<input type="hidden" class="col" name ="MON_1600_1700" value=""></td>
+		<td name="TUE_1600_1700" >
+		<input type="hidden" class="col" name ="TUE_1600_1700" value=""></td>
+		<td name="WED_1600_1700" >
+		<input type="hidden" class="col" name ="WED_1600_1700" value=""></td>
+		<td name="THU_1600_1700" >
+		<input type="hidden" class="col" name ="THU_1600_1700" value=""></td>
+		<td name="FRI_1600_1700" >
+		<input type="hidden" class="col" name ="FRI_1600_1700" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>1700-1800</td>
-		<td class="col" title="MON_1700_1800"></td>
-		<td class="col" title="TUE_1700_1800"></td>
-		<td class="col" title="WED_1700_1800"></td>
-		<td class="col" title="THU_1700_1800"></td>
-		<td class="col" title="FRI_1700_1800"></td>
+		<td name="MON_1700_1800" >
+		<input type="hidden" class="col" name ="MON_1700_1800" value=""></td>
+		<td name="TUE_1700_1800" >
+		<input type="hidden" class="col" name ="TUE_1700_1800" value=""></td>
+		<td name="WED_1700_1800" >
+		<input type="hidden" class="col" name ="WED_1700_1800" value=""></td>
+		<td name="THU_1700_1800" >
+		<input type="hidden" class="col" name ="THU_1700_1800" value=""></td>
+		<td name="FRI_1700_1800" >
+		<input type="hidden" class="col" name ="FRI_1700_1800" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>1800-1900</td>
-		<td class="col" title="MON_1800_1900"></td>
-		<td class="col" title="TUE_1800_1900"></td>
-		<td class="col" title="WED_1800_1900"></td>
-		<td class="col" title="THU_1800_1900"></td>
-		<td class="col" title="FRI_1800_1900"></td>
+		<td name="MON_1800_1900" >
+		<input type="hidden" class="col" name ="MON_1800_1900" value=""></td>
+		<td name="TUE_1800_1900" >
+		<input type="hidden" class="col" name ="TUE_1800_1900" value=""></td>
+		<td name="WED_1800_1900" >
+		<input type="hidden" class="col" name ="WED_1800_1900" value=""></td>
+		<td name="THU_1800_1900" >
+		<input type="hidden" class="col" name ="THU_1800_1900" value=""></td>
+		<td name="FRI_1800_1900" >
+		<input type="hidden" class="col" name ="FRI_1800_1900" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>1900-2000</td>
-		<td class="col" title="MON_1900_2000"></td>
-		<td class="col" title="TUE_1900_2000"></td>
-		<td class="col" title="WED_1900_2000"></td>
-		<td class="col" title="THU_1900_2000"></td>
-		<td class="col" title="FRI_1900_2000"></td>
+		<td name="MON_1900_2000" >
+		<input type="hidden" class="col" name ="MON_1900_2000" value=""></td>
+		<td name="TUE_1900_2000" >
+		<input type="hidden" class="col" name ="TUE_1900_2000" value=""></td>
+		<td name="WED_1900_2000" >
+		<input type="hidden" class="col" name ="WED_1900_2000" value=""></td>
+		<td name="THU_1900_2000" >
+		<input type="hidden" class="col" name ="THU_1900_2000" value=""></td>
+		<td name="FRI_1900_2000" >
+		<input type="hidden" class="col" name ="FRI_1900_2000" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>2000-2100</td>
-		<td class="col" title="MON_2000_2100"></td>
-		<td class="col" title="TUE_2000_2100"></td>
-		<td class="col" title="WED_2000_2100"></td>
-		<td class="col" title="THU_2000_2100"></td>
-		<td class="col" title="FRI_2000_2100"></td>
+		<td name="MON_2000_2100" >
+		<input type="hidden" class="col" name ="MON_2000_2100" value=""></td>
+		<td name="TUE_2000_2100" >
+		<input type="hidden" class="col" name ="TUE_2000_2100" value=""></td>
+		<td name="WED_2000_2100" >
+		<input type="hidden" class="col" name ="WED_2000_2100" value=""></td>
+		<td name="THU_2000_2100" >
+		<input type="hidden" class="col" name ="THU_2000_2100" value=""></td>
+		<td name="FRI_2000_2100" >
+		<input type="hidden" class="col" name ="FRI_2000_2100" value=""></td>
 	</tr>
 	
 	<tr>
 		<td>2100-2200</td>
-		<td class="col" title="MON_2100_2200"></td>
-		<td class="col" title="TUE_2100_2200"></td>
-		<td class="col" title="WED_2100_2200"></td>
-		<td class="col" title="THU_2100_2200"></td>
-		<td class="col" title="FRI_2100_2200"></td>
+		<td name="MON_2100_2200" >
+		<input type="hidden" class="col" name ="MON_2100_2200" value=""></td>
+		<td name="TUE_2100_2200" >
+		<input type="hidden" class="col" name ="TUE_2100_2200" value=""></td>
+		<td name="WED_2100_2200" >
+		<input type="hidden" class="col" name ="WED_2100_2200" value=""></td>
+		<td name="THU_2100_2200" >
+		<input type="hidden" class="col" name ="THU_2100_2200" value=""></td>
+		<td name="FRI_2100_2200" >
+		<input type="hidden" class="col" name ="FRI_2100_2200" value=""></td>
 	</tr>
 </table>
 <input type="submit" value="저장하기">
@@ -108,8 +148,7 @@
 		<td><input type="button" class="programselect" value="${programInfo.p_name}">${programInfo.p_position}</td>
 		<td><input type="hidden"  class ="programselect1" 
 				value="${programInfo.p_position}" title="${programInfo.p_group}" 
-				name="${programInfo.p_name}" id="${programInfo.p_num}" >
-				</td>
+				name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
 	</tr>
 	</c:forEach>
 </table>

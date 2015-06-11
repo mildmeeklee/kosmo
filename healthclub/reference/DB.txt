@@ -18,8 +18,9 @@ sex varchar2(20),
 ph varchar2(50),
 birth varchar2(10),
 email varchar2(30),
-p_num number references program(p_num)  <---변경대기중
+user_schedule varchar2(20)
 );
+
 
 create table program(
 p_num   number primary key,

@@ -44,7 +44,6 @@ public class ScheduleController {
 	@RequestMapping(value = "schedule.do", method = RequestMethod.GET)
 	public String schedule(ProgramInfo pi, Model m, HttpSession session) {
 
-		
 		if (session.getAttribute("id") != null) {
 			List<ProgramInfo> pi1 = dao.selectAll();
 			m.addAttribute("programInfo", pi1);
@@ -57,49 +56,49 @@ public class ScheduleController {
 	 * ������ page ����� -> ������ DB�� ����
 	 */
 	@RequestMapping(value = "schedulesave.do", method = RequestMethod.POST)
-	public String schedulesave(
-			ScheduleInfo si, HttpSession session) {
-		
+	public String schedulesave(ScheduleInfo si, HttpSession session) {
+
 		String id = (String) session.getAttribute("id");
 
-		int idCk = dao1.selcetCount(id);
-		if (idCk == 0) {
+		String idCk = dao1.selcetOne(id);
+		if (id.equals(idCk)) {
+
+			System.out.println("�ش� ���̵�� ����� �������� �ֽ��ϴ�.");
+			return "login/loginForm";
+		}
 			si.setSchedule_id(id);
 			dao1.insert(si);
 
 			return "login/main";
-		} 
-			System.out.println("�ش� ���̵�� ����� �������� �ֽ��ϴ�.");
-			return "login/loginForm";
-		
+
 	}
-	
-	
+
 	/**
-	 * mildmeeklee  2015.06.11
-	 * add ajax controller
+	 * mildmeeklee 2015.06.11 add ajax controller
+	 * 
 	 * @param program
 	 * @param response
 	 */
-	@RequestMapping(value = "schedulesave.do", method = RequestMethod.GET, headers="accept=application/json")
-	public void getAjax(@RequestParam(value = "program") String program, HttpServletResponse response) {
-		System.out.println("getAjax id :: "+program);
-		
+	@RequestMapping(value = "schedulesave.do", method = RequestMethod.GET, headers = "accept=application/json")
+	public void getAjax(@RequestParam(value = "program") String program,
+			HttpServletResponse response) {
+		System.out.println("getAjax id :: " + program);
+
 		String p_group = null;
-		if(program.equals("h")){
-			p_group ="헬스";
-			System.out.println("h = p_group :: "+p_group);
-		}else if (program.equals("y")) {
-			p_group ="요가";
-			System.out.println("y = p_group :: "+p_group);
-		}else{
-			p_group ="PT";
-			System.out.println("PT = p_group :: "+p_group);
+		if (program.equals("h")) {
+			p_group = "헬스";
+			System.out.println("h = p_group :: " + p_group);
+		} else if (program.equals("y")) {
+			p_group = "요가";
+			System.out.println("y = p_group :: " + p_group);
+		} else {
+			p_group = "PT";
+			System.out.println("PT = p_group :: " + p_group);
 		}
 		List<ProgramInfo> list = dao.selectProgramList(p_group);
-		for(ProgramInfo a :list){
+		for (ProgramInfo a : list) {
 			System.out.println(a.toString());
-			
+
 		}
 		ObjectMapper mapper = new ObjectMapper();
 		response.setContentType("text/xml; charset= utf-8");

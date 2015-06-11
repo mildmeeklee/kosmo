@@ -15,8 +15,8 @@ public class ScheduleDAO extends SqlSessionDaoSupport{
 	/**
 	 * schedule DB에 내가 저장한 스케줄표가 있나 확인
 	 */
-	public int selcetCount(String id) {
-		int i =getSqlSession().selectOne("schedule.selectCount", id);
+	public String selcetOne(String id) {
+		String i =getSqlSession().selectOne("schedule.selectCount", id);
 		return i;
 	}
 }

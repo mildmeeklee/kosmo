@@ -16,9 +16,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{FRI_1400_1500,jdbcType=VARCHAR},#{FRI_1500_1600,jdbcType=VARCHAR},#{FRI_1600_1700,jdbcType=VARCHAR},#{FRI_1700_1800,jdbcType=VARCHAR},#{FRI_1800_1900,jdbcType=VARCHAR},#{FRI_1900_2000,jdbcType=VARCHAR},#{FRI_2000_2100,jdbcType=VARCHAR},#{FRI_2100_2200,jdbcType=VARCHAR})
 	</insert>
 	
-	<!-- 프로그램 리스트를 전부 가져옴 -->
-	<select id="selectCount" parameterType="String" resultType="int">
-		select count(*) from schedule where schedule_id=#{schedule_id}
+	<!-- 지정한 아이디 값의 레코드를 뽑아옴 -->
+	<select id="selectCount" parameterType="String" resultType="String">
+		select schedule_id from schedule where schedule_id=#{schedule_id}
 	</select>
 	
 </mapper>

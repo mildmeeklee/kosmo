@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 게시판 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<mapper namespace="cart">
+
+	<!-- 게시판 리스트를 전부 가져옴 -->
+	<select id="selectAll" resultType="mybatis.CartInfo" parameterType="mybatis.CartInfo">
+		select * from shoppingbasket where s_id  = #{s_id}
+	</select> 
+	
+	<!-- 작성 게시판글을 DB에 저장 -->
+	<insert id="insert" parameterType="mybatis.CartInfo">
+		insert into shoppingbasket
+		values(#{s_id},#{i_tem},#{s_num},#{s_sum})
+	</insert>
+	
+	<select id="selectTwo" resultType="mybatis.CartInfo" parameterType="mybatis.CartInfo">
+		select sum(s_num) as s_num ,sum(s_sum) as s_sum from shoppingbasket where s_id = #{s_id}
+
+	</select> 
+
+</mapper>

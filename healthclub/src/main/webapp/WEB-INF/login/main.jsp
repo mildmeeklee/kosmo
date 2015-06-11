@@ -163,7 +163,7 @@
 	<c:if test="${id !=null }">
 		<p align="right">
 			${id }ดิ |<a href="logout.do">logout</a> | <a
-				href="mypage.do?id=${id}">my page</a> | <a>cart</a>
+				href="mypage.do?id=${id}">my page</a> | <a href="cartlist.do?s_id=${id}">cart</a>
 		</p>
 	</c:if>
 

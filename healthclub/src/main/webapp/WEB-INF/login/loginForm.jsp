@@ -69,8 +69,7 @@ function openConfirmid(userinput) {
     <TD colspan="2" >
       <INPUT type=submit value="로그인">
       <INPUT type=reset value="다시입력">
-      <input type="button" value="회원가입" OnClick="openConfirmid(this.form)">
-     </TD>
+    </TD>
    </TR>
 </TABLE>
 </form>

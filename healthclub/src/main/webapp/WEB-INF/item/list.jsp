@@ -64,8 +64,9 @@ $(function(){
 					</td> --%>
 				</tr>
 			</c:forEach>
-
+	
 	</table>
+
 		${page}
 	<br>
 	<br>

@@ -83,7 +83,7 @@ public class ItemController {
 	      m.addAttribute("page",page);
 	      m.addAttribute("itemtable", itemtable);
 	      
-      return "item/toplist";
+      return "item/list";
    }
 	   
    @RequestMapping(value = "itemcount.do", method = RequestMethod.GET)
@@ -102,7 +102,7 @@ public class ItemController {
 	      m.addAttribute("page",page);
 	      m.addAttribute("itemtable", itemtable);
 	      
-      return "item/count";
+      return "item/list";
    }
    /**
     * ∫∏√Ê¡¶
@@ -124,7 +124,7 @@ public class ItemController {
 	      m.addAttribute("itemtable", itemtable);
 	      
 	   
-      return "item/weight";
+      return "item/list";
    } 
    
    /**
@@ -147,7 +147,7 @@ public class ItemController {
 	      m.addAttribute("itemtable", itemtable);
 	      
 	   
-      return "item/weight";
+      return "item/list";
    }
    
    /**
@@ -170,7 +170,7 @@ public class ItemController {
 	      m.addAttribute("itemtable", itemtable);
 	      
 	   
-      return "item/weight";
+      return "item/list";
    } 
    
    /**

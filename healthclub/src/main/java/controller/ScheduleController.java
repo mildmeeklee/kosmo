@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import mybatis.ProgramDAO;
 import mybatis.ProgramInfo;
+import mybatis.ScheduleDAO;
+import mybatis.ScheduleInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +20,14 @@ public class ScheduleController {
 
 	@Autowired
 	ProgramDAO dao;
-
 	public void setDao(ProgramDAO dao) {
 		this.dao = dao;
+	}
+	
+	@Autowired
+	ScheduleDAO dao1;
+	public void setDao(ScheduleDAO dao1){
+		this.dao1=dao1;
 	}
 
 	/**
@@ -41,7 +48,14 @@ public class ScheduleController {
 	 * 스케줄 page 저장시 -> 스케줄 DB에 저장
 	 */
 	@RequestMapping(value="schedulesave.do", method=RequestMethod.POST)
-	public String schedulesave(){
+	public String schedulesave(ScheduleInfo si, HttpSession session){
+		
+		String id = (String) session.getAttribute("id");
+		
+		int idCk = dao1.selcetCount(id);
+		
+		si.setSchedule_id(id);
+		dao1.insert(si);
 		
 		return "login/loginForm";
 	}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 스케줄 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<mapper namespace="schedule">
+	
+	<!-- 작성한 스케줄을 DB에 저장 -->
+	<insert id="insert" parameterType="mybatis.ScheduleInfo">
+		insert into schedule
+		values(#{schedule_id},
+		#{MON_1400_1500,jdbcType=VARCHAR},#{MON_1500_1600,jdbcType=VARCHAR},#{MON_1600_1700,jdbcType=VARCHAR},#{MON_1700_1800,jdbcType=VARCHAR},#{MON_1800_1900,jdbcType=VARCHAR},#{MON_1900_2000,jdbcType=VARCHAR},#{MON_2000_2100,jdbcType=VARCHAR},#{MON_2100_2200,jdbcType=VARCHAR},
+		#{TUE_1400_1500,jdbcType=VARCHAR},#{TUE_1500_1600,jdbcType=VARCHAR},#{TUE_1600_1700,jdbcType=VARCHAR},#{TUE_1700_1800,jdbcType=VARCHAR},#{TUE_1800_1900,jdbcType=VARCHAR},#{TUE_1900_2000,jdbcType=VARCHAR},#{TUE_2000_2100,jdbcType=VARCHAR},#{TUE_2100_2200,jdbcType=VARCHAR},
+		#{WED_1400_1500,jdbcType=VARCHAR},#{WED_1500_1600,jdbcType=VARCHAR},#{WED_1600_1700,jdbcType=VARCHAR},#{WED_1700_1800,jdbcType=VARCHAR},#{WED_1800_1900,jdbcType=VARCHAR},#{WED_1900_2000,jdbcType=VARCHAR},#{WED_2000_2100,jdbcType=VARCHAR},#{WED_2100_2200,jdbcType=VARCHAR},
+		#{THU_1400_1500,jdbcType=VARCHAR},#{THU_1500_1600,jdbcType=VARCHAR},#{THU_1600_1700,jdbcType=VARCHAR},#{THU_1700_1800,jdbcType=VARCHAR},#{THU_1800_1900,jdbcType=VARCHAR},#{THU_1900_2000,jdbcType=VARCHAR},#{THU_2000_2100,jdbcType=VARCHAR},#{THU_2100_2200,jdbcType=VARCHAR},
+		#{FRI_1400_1500,jdbcType=VARCHAR},#{FRI_1500_1600,jdbcType=VARCHAR},#{FRI_1600_1700,jdbcType=VARCHAR},#{FRI_1700_1800,jdbcType=VARCHAR},#{FRI_1800_1900,jdbcType=VARCHAR},#{FRI_1900_2000,jdbcType=VARCHAR},#{FRI_2000_2100,jdbcType=VARCHAR},#{FRI_2100_2200,jdbcType=VARCHAR})
+	</insert>
+	
+	<!-- 프로그램 리스트를 전부 가져옴 -->
+	<select id="selectCount" resultType="mybatis.ScheduleInfo">
+		select count(*) from schedule where schedule_id=#{id}
+	</select>
+	
+</mapper>

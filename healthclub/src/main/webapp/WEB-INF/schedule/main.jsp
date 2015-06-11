@@ -23,74 +23,74 @@
 	
 	<tr >
 		<td>1400-1500</td>
-		<td class="col" title="MON_1400-1500"></td>
-		<td class="col" title="TUE_1400-1500"></td>
-		<td class="col" title="WED_1400-1500"></td>
-		<td class="col" title="THU_1400-1500"></td>
-		<td class="col" title="FRI_1400-1500"></td>
+		<td class="col" title="MON_1400_1500"></td>
+		<td class="col" title="TUE_1400_1500"></td>
+		<td class="col" title="WED_1400_1500"></td>
+		<td class="col" title="THU_1400_1500"></td>
+		<td class="col" title="FRI_1400_1500"></td>
 	</tr>
 	
 	<tr>
 		<td>1500-1600</td>
-		<td class="col" title="MON_1500-1600"></td>
-		<td class="col" title="TUE_1500-1600"></td>
-		<td class="col" title="WED_1500-1600"></td>
-		<td class="col" title="THU_1500-1600"></td>
-		<td class="col" title="FRI_1500-1600"></td>
+		<td class="col" title="MON_1500_1600"></td>
+		<td class="col" title="TUE_1500_1600"></td>
+		<td class="col" title="WED_1500_1600"></td>
+		<td class="col" title="THU_1500_1600"></td>
+		<td class="col" title="FRI_1500_1600"></td>
 	</tr>
 	
 	<tr>
 		<td>1600-1700</td>
-		<td class="col" title="MON_1600-1700"></td>
-		<td class="col" title="TUE_1600-1700"></td>
-		<td class="col" title="WED_1600-1700"></td>
-		<td class="col" title="THU_1600-1700"></td>
-		<td class="col" title="FRI_1600-1700"></td>
+		<td class="col" title="MON_1600_1700"></td>
+		<td class="col" title="TUE_1600_1700"></td>
+		<td class="col" title="WED_1600_1700"></td>
+		<td class="col" title="THU_1600_1700"></td>
+		<td class="col" title="FRI_1600_1700"></td>
 	</tr>
 	
 	<tr>
 		<td>1700-1800</td>
-		<td class="col" title="MON_1700-1800"></td>
-		<td class="col" title="TUE_1700-1800"></td>
-		<td class="col" title="WED_1700-1800"></td>
-		<td class="col" title="THU_1700-1800"></td>
-		<td class="col" title="FRI_1700-1800"></td>
+		<td class="col" title="MON_1700_1800"></td>
+		<td class="col" title="TUE_1700_1800"></td>
+		<td class="col" title="WED_1700_1800"></td>
+		<td class="col" title="THU_1700_1800"></td>
+		<td class="col" title="FRI_1700_1800"></td>
 	</tr>
 	
 	<tr>
 		<td>1800-1900</td>
-		<td class="col" title="MON_1800-1900"></td>
-		<td class="col" title="TUE_1800-1900"></td>
-		<td class="col" title="WED_1800-1900"></td>
-		<td class="col" title="THU_1800-1900"></td>
-		<td class="col" title="FRI_1800-1900"></td>
+		<td class="col" title="MON_1800_1900"></td>
+		<td class="col" title="TUE_1800_1900"></td>
+		<td class="col" title="WED_1800_1900"></td>
+		<td class="col" title="THU_1800_1900"></td>
+		<td class="col" title="FRI_1800_1900"></td>
 	</tr>
 	
 	<tr>
 		<td>1900-2000</td>
-		<td class="col" title="MON_1900-2000"></td>
-		<td class="col" title="TUE_1900-2000"></td>
-		<td class="col" title="WED_1900-2000"></td>
-		<td class="col" title="THU_1900-2000"></td>
-		<td class="col" title="FRI_1900-2000"></td>
+		<td class="col" title="MON_1900_2000"></td>
+		<td class="col" title="TUE_1900_2000"></td>
+		<td class="col" title="WED_1900_2000"></td>
+		<td class="col" title="THU_1900_2000"></td>
+		<td class="col" title="FRI_1900_2000"></td>
 	</tr>
 	
 	<tr>
 		<td>2000-2100</td>
-		<td class="col" title="MON_2000-2100"></td>
-		<td class="col" title="TUE_2000-2100"></td>
-		<td class="col" title="WED_2000-2100"></td>
-		<td class="col" title="THU_2000-2100"></td>
-		<td class="col" title="FRI_2000-2100"></td>
+		<td class="col" title="MON_2000_2100"></td>
+		<td class="col" title="TUE_2000_2100"></td>
+		<td class="col" title="WED_2000_2100"></td>
+		<td class="col" title="THU_2000_2100"></td>
+		<td class="col" title="FRI_2000_2100"></td>
 	</tr>
 	
 	<tr>
 		<td>2100-2200</td>
-		<td class="col" title="MON_2100-2200"></td>
-		<td class="col" title="TUE_2100-2200"></td>
-		<td class="col" title="WED_2100-2200"></td>
-		<td class="col" title="THU_2100-2200"></td>
-		<td class="col" title="FRI_2100-2200"></td>
+		<td class="col" title="MON_2100_2200"></td>
+		<td class="col" title="TUE_2100_2200"></td>
+		<td class="col" title="WED_2100_2200"></td>
+		<td class="col" title="THU_2100_2200"></td>
+		<td class="col" title="FRI_2100_2200"></td>
 	</tr>
 </table>
 <input type="submit" value="저장하기">

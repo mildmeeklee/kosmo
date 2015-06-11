@@ -7,17 +7,21 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 public class ProgramDAO extends SqlSessionDaoSupport {
 
 	/**
-	 * ÀÛ¼ºÇÑ ÇÁ·Î±×·¥À» DB¿¡ ÀúÀå
+	 * ï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 */
 	public void insert(ProgramInfo si){
 		getSqlSession().insert("program.insert",si);
 	}
 
 	/**
-	 * DB¿¡ ÀúÀåµÈ ÇÁ·Î±×·¥À» ¸ðµÎ °¡Á®¿È
+	 * DBï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public List<ProgramInfo> selectAll() {
 		List<ProgramInfo> si = getSqlSession().selectList("program.selectAll");
 		return si;
+	}
+	public List<ProgramInfo> selectProgramList(String program){
+		List<ProgramInfo> list = getSqlSession().selectList("program.selectProgramList", program);
+		return list;		
 	}
 }

@@ -1,7 +1,9 @@
 package controller;
 
+import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import mybatis.ProgramDAO;
@@ -15,6 +17,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
 public class ScheduleController {
@@ -34,7 +39,7 @@ public class ScheduleController {
 	}
 
 	/**
-	 * main page -> ½ºÄÉÁÙ page ÀÌµ¿
+	 * main page -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ page ï¿½Ìµï¿½
 	 */
 	@RequestMapping(value = "schedule.do", method = RequestMethod.GET)
 	public String schedule(ProgramInfo pi, Model m, HttpSession session) {
@@ -49,7 +54,7 @@ public class ScheduleController {
 	}
 
 	/**
-	 * ½ºÄÉÁÙ page ÀúÀå½Ã -> ½ºÄÉÁÙ DB¿¡ ÀúÀå
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ page ï¿½ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 */
 	@RequestMapping(value = "schedulesave.do", method = RequestMethod.POST)
 	public String schedulesave(
@@ -66,9 +71,47 @@ public class ScheduleController {
 
 			return "login/main";
 		} 
-			System.out.println("ÇØ´ç ¾ÆÀÌµð·Î ÀúÀåµÈ ½ºÄÉÁÙÀÌ ÀÖ½À´Ï´Ù.");
+			System.out.println("ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 			return "login/loginForm";
 		
+	}
+	
+	
+	/**
+	 * mildmeeklee  2015.06.11
+	 * add ajax controller
+	 * @param program
+	 * @param response
+	 */
+	@RequestMapping(value = "schedulesave.do", method = RequestMethod.GET, headers="accept=application/json")
+	public void getAjax(@RequestParam(value = "program") String program, HttpServletResponse response) {
+		System.out.println("getAjax id :: "+program);
+		
+		String p_group = null;
+		if(program.equals("h")){
+			p_group ="í—¬ìŠ¤";
+			System.out.println("h = p_group :: "+p_group);
+		}else if (program.equals("y")) {
+			p_group ="ìš”ê°€";
+			System.out.println("y = p_group :: "+p_group);
+		}else{
+			p_group ="PT";
+			System.out.println("PT = p_group :: "+p_group);
+		}
+		List<ProgramInfo> list = dao.selectProgramList(p_group);
+		for(ProgramInfo a :list){
+			System.out.println(a.toString());
+			
+		}
+		ObjectMapper mapper = new ObjectMapper();
+		response.setContentType("text/xml; charset= utf-8");
+		try {
+			response.getWriter().print(mapper.writeValueAsString(list));
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

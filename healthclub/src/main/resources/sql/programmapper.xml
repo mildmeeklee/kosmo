@@ -15,5 +15,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAll" resultType="mybatis.ProgramInfo">
 		select * from programt
 	</select>
-	
+	<select id="selectProgramList" parameterType="String" resultType="mybatis.ProgramInfo">
+	    SELECT * FROM PROGRAMT where p_group=#{p_group}
+    </select>
 </mapper>

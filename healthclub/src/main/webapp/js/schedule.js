@@ -17,8 +17,8 @@ $(function(){
 	   p_num = $(".programselect1:eq("+i+")").attr("id");
 	   
 	  
-	   $(".col[title='"+p_position+"']").attr("value",p_name+"["+p_num+"]");
-	   
+	   var aa =$(".col[title='"+p_position+"']").attr("value",p_name+"["+p_num+"]");
+	   alert(aa);
 	   if(p_group == "헬스"){
 		   $(".col[title='"+p_position+"']").css("background-color", "red");
 	   }else if(p_group == "요가"){

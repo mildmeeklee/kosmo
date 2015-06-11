@@ -51,7 +51,7 @@ function openConfirmid(userinput) {
 <br><br><br><br>
 
 
-<form name="myform2" action="login.do" method="post">
+<form name="myform2" action="Manager.do" method="post">
 <TABLE cellSpacing=1 cellPadding=1 width="260" border=1 align="center" >
  
   <TR height="30"> 
@@ -64,7 +64,7 @@ function openConfirmid(userinput) {
   <TR height="30">
     <TD width="110"  align=center>비밀번호</TD>
     <TD width="150"  align=center>
-      <INPUT type=password name="passwd"  size="15" maxlength="12"></TD></TR>
+      <INPUT type=pw name="pw"  size="15" maxlength="12"></TD></TR>
   <TR height="30">
     <TD colspan="2" >
       <INPUT type=submit value="로그인">

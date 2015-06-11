@@ -22,13 +22,13 @@
 				<td align="center">${cartlist.s_sum}</td>
 			
 				<td>
-					<form action="del.do" method="post">
+					<form action="upcart.do" method="post">
 						<input type="hidden" name="num" value="${file.num }">
 						<button>수정</button>
 					</form>
 				</td>
 				<td>
-					<form action="down.do" method="post">
+					<form action="delcart.do" method="post">
 						<input type="hidden" name="path2" value="${file.file_path}">
 						<button>삭제</button>
 					</form>

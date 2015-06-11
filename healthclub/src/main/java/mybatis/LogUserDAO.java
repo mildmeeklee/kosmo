@@ -35,6 +35,13 @@ public class LogUserDAO extends SqlSessionDaoSupport {
 		LogUserInfo l = getSqlSession().selectOne("users.selectOneUser", id);
 		return l;
 	}
-	
+
+	/**
+	 * DB의 id값 비교
+	 */
+	public LogUserInfo selOneManager(String id) {
+		LogUserInfo l = getSqlSession().selectOne("users.selectOneManager", id);
+		return l;
+	}
 
 }

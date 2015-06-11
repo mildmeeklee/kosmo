@@ -30,5 +30,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectOneUser" parameterType="String" resultType="mybatis.LogUserInfo">
 		select * from users where id = #{id}
 	</select>
-	
+
+	<select id="selectOneManager" parameterType="String" resultType="mybatis.LogUserInfo">
+		select * from users where id = 1
+	</select>
 </mapper>

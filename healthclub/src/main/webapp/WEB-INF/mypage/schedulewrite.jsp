@@ -6,6 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-작성하러가
+<h1 align="center">작성된 스케줄표가 없습니다.</h1>
+<input type="button" value="스케줄 작성하러가기" onclick="javascript:window.location='schedulewrite.do'">
 </body>
 </html>

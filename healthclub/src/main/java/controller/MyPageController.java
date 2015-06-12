@@ -50,4 +50,10 @@ public class MyPageController {
 		}
 		return "mypage/schedulewrite";
 	}
+	
+	@RequestMapping(value="schedulewrite.do", method=RequestMethod.GET)
+	public String schedulewrite(){
+		return "redirect:schedule.do";
+		
+	}
 }

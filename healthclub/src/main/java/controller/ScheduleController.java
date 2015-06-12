@@ -78,7 +78,7 @@ public class ScheduleController {
 	 * 
 	 * @param program
 	 * @param response
-	 */
+	 
 	@RequestMapping(value = "schedulesave.do", method = RequestMethod.GET, headers = "accept=application/json")
 	public void getAjax(@RequestParam(value = "program") String program,
 			HttpServletResponse response) {
@@ -110,5 +110,6 @@ public class ScheduleController {
 			e.printStackTrace();
 		}
 	}
+	*/
 
 }

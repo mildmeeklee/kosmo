@@ -5,20 +5,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 게시판 관련 SQLㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
 <mapper namespace="cart">
 
-	<!-- 게시판 리스트를 전부 가져옴 -->
+	<!-- cart 리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.CartInfo" parameterType="mybatis.CartInfo">
-		select * from shoppingbasket where s_id  = #{s_id}
+		select * from cart where s_id  = #{s_id}
 	</select> 
 	
-	<!-- 작성 게시판글을 DB에 저장 -->
+	<!-- DB에 저장 -->
 	<insert id="insert" parameterType="mybatis.CartInfo">
-		insert into shoppingbasket
-		values(#{s_id},#{i_tem},#{s_num},#{s_sum})
+		insert into cart
+		values(#{s_id},#{i_item},#{s_num},#{s_sum},cart_seq.nextval)
 	</insert>
 	
 	<select id="selectTwo" resultType="mybatis.CartInfo" parameterType="mybatis.CartInfo">
-		select sum(s_num) as s_num ,sum(s_sum) as s_sum from shoppingbasket where s_id = #{s_id}
-
-	</select> 
-
+		select sum(s_num) as s_num ,sum(s_sum) as s_sum from cart where s_id = #{s_id}
+	</select>
+	
+	<select id="select1" resultType="mybatis.CartInfo" parameterType="mybatis.CartInfo">
+	    select * from cart where cart_num = #{cart_num}
+	 </select>
+	
+	<!-- Delete -->
+	<delete id="delete" parameterType="int">
+		delete from cart where cart_num = #{cart_num}
+	</delete>
+	
+	<update id="up" parameterType="int">
+	    update cart set s_num=#{s_num}, s_sum=#{s_sum}
+		where cart_num= #{cart_num}
+	</update>
 </mapper>

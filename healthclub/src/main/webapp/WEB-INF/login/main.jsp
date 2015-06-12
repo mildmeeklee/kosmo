@@ -275,7 +275,7 @@
 				</tr>
 				<c:forEach var="itemtable" items="${itemtable}">
 					<tr>
-						<td>${itemtable.i_name}</td>
+						<td><a href="itemcontent.do?i_num=${itemtable.i_num}">${itemtable.i_name}</a></td>
 					</tr>
 				</c:forEach>
 			</table>

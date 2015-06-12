@@ -18,7 +18,7 @@
 		</tr> 
 
 		<tr>
-			<td>?</td>
+			<td>가격</td>
 			<td align="center">${item. getI_price() }</td>  
 		</tr>
 		<tr>
@@ -46,7 +46,7 @@
 			<option id="5" value="5"> 5개</option>
 		</select>
 
-		<input name="i_tem" type="hidden" value="${item.getI_num() }"/>
+		<input name="i_item" type="hidden" value="${item.getI_num() }"/>
 		<input name="s_id" type="hidden" value="${id }"/>
 		<input type="submit" value="확인">
 	</form>

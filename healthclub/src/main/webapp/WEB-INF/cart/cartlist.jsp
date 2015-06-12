@@ -17,20 +17,26 @@
 		<c:forEach var="cartlist" items="${cartlist}">
 			<tr>
 				<td align="center">${cartlist.s_id}</td>
-				<td align="center">${cartlist.i_tem}</td>
+				<td align="center">${cartlist.i_item}</td>
 				<td align="center">${cartlist.s_num}</td>
 				<td align="center">${cartlist.s_sum}</td>
-			
+
 				<td>
 					<form action="upcart.do" method="post">
-						<input type="hidden" name="num" value="${file.num }">
+						<input name="cart_num" type="hidden" value="${cartlist.cart_num}">
 						<button>수정</button>
 					</form>
 				</td>
 				<td>
 					<form action="delcart.do" method="post">
-						<input type="hidden" name="path2" value="${file.file_path}">
+						<input name="cart_num" type="hidden" value="${cartlist.cart_num}">
 						<button>삭제</button>
+					</form>
+				</td>
+					<td>
+					<form action="buycart.do" method="POST">
+						<input name="cart_num" type="hidden" value="${cartlist.cart_num}">
+						<button>구매하기</button>
 					</form>
 				</td>
 			</tr>
@@ -40,14 +46,9 @@
 			<td>${sum.s_num}</td>
 			<td>가격</td>
 			<td>${sum.s_sum}</td>
-				<td>
-				<form action="selone.do" method="post">
-					<input type="hidden" name="num" value="${file.num }">
-					<button type="submit">구매하기</button>
-				</form>
-				</td>
 		</tr>
-		
 	</table>
+
+
 </body>
 </html>

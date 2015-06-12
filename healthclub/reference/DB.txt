@@ -111,12 +111,18 @@ p_num number primary key,
 p_position varchar2(50)
 );
 
-create table shoppingbasket(
+create sequence cart_seq 
+increment by 1
+start with 1;
+
+create table cart(
 s_id varchar2(50),
 i_item number,
 s_num number,
-s_sum number
+s_sum number,
+cart_num number primary key
 )
+
 
 create table schedule(
 schedule_id varchar2(20),

@@ -44,24 +44,6 @@ $(function(){
 					<td align="center">${item.i_count}</td>
 					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imagePath }" width="100" height="100">				
 					</a></td>
-					<%-- <td>
-						<form action="selone.do" method="post">
-							<input type="hidden" name="num" value="${file.num }">
-							<button type="submit">수정하기</button>
-						</form>
-					</td>
-					<td>
-						<form action="del.do" method="post">
-							<input type="hidden" name="num" value="${file.num }">
-							<button>삭제 하기</button>
-						</form>
-					</td>
-					<td>
-						<form action="down.do" method="post">
-							<input type="hidden" name="path2" value="${file.file_path}">
-							<button>다운 받기</button>
-						</form>
-					</td> --%>
 				</tr>
 			</c:forEach>
 	

@@ -135,21 +135,46 @@
 </table>
 <input type="submit" value="저장하기">
 </form>
-<select id ="pselect">
+<!-- <select id ="pselect">
 	<option value="-----" selected>프로그램선택</option>
 	<option value="h">헬스</option>
 	<option value="y">요가</option>
 	<option value="p">PT</option>
 </select>
-<table id="program_feedback">
-	<%-- <c:forEach var="programInfo" items="${programInfo}">
-	<tr>
-		<td><input type="button" class="programselect" value="${programInfo.p_name}">${programInfo.p_position} | ${programInfo.p_teacher} | ${programInfo.p_day} | ${programInfo.p_time}</td>
-		<td><input type="hidden"  class ="programselect1" 
-				value="${programInfo.p_position}" title="${programInfo.p_group}" 
-				name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
-	</tr>
-	</c:forEach> --%>
+<table id="program_feedback"> -->
+<table>	
+	 	<c:forEach var="programInfo" items="${programInfo}">
+	 		<c:if test="${programInfo.p_group =='헬스'}">
+			<tr>	<td>[ㅡㅡㅡㅡ${programInfo.p_group}ㅡㅡㅡㅡ]</td>
+					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+							시간 :: ${programInfo.p_position} | 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+					<td><input type="hidden"  class ="programselect1" 
+						value="${programInfo.p_position}" title="${programInfo.p_group}" 
+						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
+			</tr>
+			</c:if>
+			
+			<c:if test="${programInfo.p_group =='요가'}">
+			<tr>	<td>[ㅡㅡㅡㅡ${programInfo.p_group}ㅡㅡㅡㅡ]</td>
+					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+							시간 :: ${programInfo.p_position} | 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+					<td><input type="hidden"  class ="programselect1" 
+						value="${programInfo.p_position}" title="${programInfo.p_group}" 
+						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
+			</tr>
+			</c:if>
+			
+			<c:if test="${programInfo.p_group =='PT'}">
+			<tr>	<td>[ㅡㅡㅡㅡ${programInfo.p_group}ㅡㅡㅡㅡ]</td>
+					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+							시간 :: ${programInfo.p_position} | 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+					<td><input type="hidden"  class ="programselect1" 
+						value="${programInfo.p_position}" title="${programInfo.p_group}" 
+						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
+			</tr>
+			</c:if> 
+		</c:forEach> 
+		
 </table>
 
 </body>

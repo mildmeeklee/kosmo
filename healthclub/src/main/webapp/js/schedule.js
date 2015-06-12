@@ -1,8 +1,7 @@
 
-
 $(function(){
 
-	$(document).on('click', '.programselect' , function() {		 
+   $(".programselect").click(function(){
 	   var i =  $(".programselect").index(this);
 	   var p_position;
 	   var p_group;
@@ -15,32 +14,33 @@ $(function(){
 	   p_name = $(".programselect1:eq("+i+")").attr("name");
 	   p_num = $(".programselect1:eq("+i+")").attr("id");
 	   
+	  
 	   $("input[name='"+p_position+"']").attr("value", p_num );
-	   
+	 
 	   if(p_group == "헬스"){
-		   $("td[name='"+p_position+"']").html('');
+		  
 		   $("td[name='"+p_position+"']").css("background-color", "red")
 		   .append("<span>"+p_name+"</span>");
 	   }else if(p_group == "요가"){
-		   $("td[name='"+p_position+"']").html('');
+		  
 		   $("td[name='"+p_position+"']").css("background-color", "yellow")
 		   .append("<span>"+p_name+"</span>");
 	   }else{
-		   $("td[name='"+p_position+"']").html('');
+		
 		   $("td[name='"+p_position+"']").css("background-color", "green")
 		   .append("<span>"+p_name+"</span>");
 	   }
 
+
    });
-   
-   
-   
+});
+
    /**
 	 *  eylee
 	 *  mildmeeklee
 	 *  2015.06.11
 	 *  add ajax /get method
-	 */ 
+	  
   $('#pselect').on('change', function (e) {
 	  $("#program_feedback").html('');
 	   var selectedProgram = this.selectedOptions[0].value;
@@ -84,7 +84,6 @@ $(function(){
 		});
 		
 	});
-
-   
-   
+  
 });
+  */	

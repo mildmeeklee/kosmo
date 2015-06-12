@@ -21,4 +21,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select schedule_id from schedule where schedule_id=#{schedule_id}
 	</select>
 	
+	<!-- 지정한 아이디 값의 레코드를 뽑아옴 -->
+	<select id="select" parameterType="String" resultType="mybatis.ScheduleInfo">
+		select * from schedule where schedule_id=#{schedule_id}
+	</select>
+	
 </mapper>

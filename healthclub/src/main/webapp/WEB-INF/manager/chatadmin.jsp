@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/chat.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://localhost:9995/socket.io/socket.io.js"></script>
+<script src="http://192.168.0.47:9995/socket.io/socket.io.js"></script>
 <script src="js/chatAdmin.js"></script>
 
 </head>

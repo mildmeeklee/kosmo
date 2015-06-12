@@ -7,7 +7,7 @@
 
 <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://localhost:9995/socket.io/socket.io.js"></script>
+<script src="http://192.168.0.47:9995/socket.io/socket.io.js"></script>
 <script src="js/chatClient.js"></script>
 <script type="text/javascript">
 	$(function() {

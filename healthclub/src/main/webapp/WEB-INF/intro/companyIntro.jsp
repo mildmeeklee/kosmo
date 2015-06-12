@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,15 +30,15 @@ $(function(){
 </script>
 </head>
 <body>
-	<font size=9><b>¹æ¹æ Çï½ºÀå</b></font>
+	<font size=9><b>ë°©ë°© í—¬ìŠ¤ìž¥</b></font>
 	<br>
 	<br>
 
-	<font color="red">WORLD ¹æ¹æ INTERNATIONAL (SINCE 1976) </font>
-	<p>¾à 40³â ¿ª»ç¿Í ¼ö¸¹Àº ÈÖÆ®´Ï½º »ç¾÷ ¼º°ø»ç·Ê¸¦ ÀÚ¶ûÇÏ´Â ¹æ¹æÀº ÇöÀç Àü¼¼°è ¹é¸¸¸íÀÌ ³Ñ´Â È¸¿øÀ» º¸À¯ÇÏ°í ÀÖ´Â
-		¼¼°èÀûÀÎ ÈÖÆ®´Ï½º ÇÁ·£Â÷ÀÌÁîÀÔ´Ï´Ù. Bodybuilding°èÀÇ Àü¼³ÀÌÀÚ ¿µÈ­ ¡®Å¸ÀÜ¡¯ÀÇ ÁÖÀÎ°ø Joe Gold°¡ 1976³â
-		World Gym ¿ÀÇÂ ÀÌ·¡ Arnold Schwarzenegger, Rou Ferrigno Dave Draper µî ¼ö¸¹Àº
-		ÇÒ¸®¿ìµå ½ºÅ¸¸¦ ¹èÃâÇÏ¿´½À´Ï´Ù.
+	<font color="red">WORLD ë°©ë°© INTERNATIONAL (SINCE 1976) </font>
+	<p>ì•½ 40ë…„ ì—­ì‚¬ì™€ ìˆ˜ë§Žì€ íœ˜íŠ¸ë‹ˆìŠ¤ ì‚¬ì—… ì„±ê³µì‚¬ë¡€ë¥¼ ìžëž‘í•˜ëŠ” ë°©ë°©ì€ í˜„ìž¬ ì „ì„¸ê³„ ë°±ë§Œëª…ì´ ë„˜ëŠ” íšŒì›ì„ ë³´ìœ í•˜ê³  ìžˆëŠ”
+		ì„¸ê³„ì ì¸ íœ˜íŠ¸ë‹ˆìŠ¤ í”„ëžœì°¨ì´ì¦ˆìž…ë‹ˆë‹¤. Bodybuildingê³„ì˜ ì „ì„¤ì´ìž ì˜í™” â€˜íƒ€ìž”â€™ì˜ ì£¼ì¸ê³µ Joe Goldê°€ 1976ë…„
+		World Gym ì˜¤í”ˆ ì´ëž˜ Arnold Schwarzenegger, Rou Ferrigno Dave Draper ë“± ìˆ˜ë§Žì€
+		í• ë¦¬ìš°ë“œ ìŠ¤íƒ€ë¥¼ ë°°ì¶œí•˜ì˜€ìŠµë‹ˆë‹¤.
 	<P>
 		<embed
 			src=http://www.youtube.com/embed/LEPWY5InD6k?&amp;hl=ko_KR&autoplay=1
@@ -48,7 +48,7 @@ $(function(){
 	<div class="c">
       <h1>Enjoy the video</h1>
       <input id="in" type="text"/>
-      <input id="ch" type="button" value="µ¿¿µ»ó º¯°æ"/>
+      <input id="ch" type="button" value="ë™ì˜ìƒ ë³€ê²½"/>
       <div class="youtubeWrap">
         <iframe id="if" src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
       </div>

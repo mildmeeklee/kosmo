@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
@@ -7,7 +7,56 @@
 <head>
 <title>Insert title here</title>
 </head>
-<style>
+<style>   
+
+.button {
+   border: 1px solid #050505;
+   background: #8e9091;
+   background: -webkit-gradient(linear, left top, left bottom, from(#242324), to(#8e9091));
+   background: -webkit-linear-gradient(top, #242324, #8e9091);
+   background: -moz-linear-gradient(top, #242324, #8e9091);
+   background: -ms-linear-gradient(top, #242324, #8e9091);
+   background: -o-linear-gradient(top, #242324, #8e9091);
+   background-image: -ms-linear-gradient(top, #242324 0%, #8e9091 100%);
+   padding: 2px 4px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   color: #f5f8fa;
+   font-size: 21px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+ .button:hover {
+   border: 1px solid #0a3c59;
+   text-shadow: #1e4158 0 1px 0;
+   background: #838485;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d9dde0), to(#838485));
+   background: -webkit-linear-gradient(top, #d9dde0, #838485);
+   background: -moz-linear-gradient(top, #d9dde0, #838485);
+   background: -ms-linear-gradient(top, #d9dde0, #838485);
+   background: -o-linear-gradient(top, #d9dde0, #838485);
+   background-image: -ms-linear-gradient(top, #d9dde0 0%, #838485 100%);
+   color: #0a0a0a;
+   }
+ .button:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 1px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#838485));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   } 
+
 #layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;
 
 }
@@ -33,43 +82,43 @@ width:79% min-height:400px;
 		</center>
 		<c:if test="${id !=null }">
 				<p align="right">
-				${id }´Ô |<a href="logout.do">logout</a> | <a href="mypage.do?id=${id}">my page</a> | <a>cart</a>
+				${id }ë‹˜ |<a href="logout.do">logout</a> | <a href="mypage.do?id=${id}">my page</a> | <a>cart</a>
 				</p>
 		</c:if>
 		
 		
 		<c:if test="${id ==null }">
 			<p align="right">
-				·Î±×ÀÎ ÇØÁÖ¼¼¿ä : <a href="loginForm.do">login</a>
+				ë¡œê·¸ì¸ í•´ì£¼ì„¸ìš” : <a href="loginForm.do">login</a>
 		</c:if>
 		
 		<hr color="red" size="2" width=100%>
 		<center>
 			<font size="5">
-			<b>&diams;¼Ò°³ | 
-			<a href="notice.do">&diams;°øÁö»çÇ×</a>| 
-			<a href="boardlist.do">&diams;°Ô½ÃÆÇ</a> | 
+			<b>&diams;ì†Œê°œ | 
+			<a href="notice.do">&diams;ê³µì§€ì‚¬í•­</a>| 
+			<a href="boardlist.do">&diams;ê²Œì‹œíŒ</a> | 
 			 &diams;aa |
-			 <a href="itemlist.do">&diams;Çï½ºÁ¦Ç°</b></a>
+			 <a href="itemlist.do">&diams;í—¬ìŠ¤ì œí’ˆ</b></a>
 			</b></font>
 			<hr color="red" size="2" width=100%>
 		</center>
 </div>
 
-	<a href="itemsubmit.do"> Á¦Ç° ¿Ã¸®±â upload</a></br>
-	<a href="noticelist_m.do"> °ü¸®ÀÚ È¨ÆäÀÌÁö °ü¸® upload</a>
+
 	
 	<div id="sidebar">
 	<p align="center">
-	<input type="button" value="È¸»ç¼Ò°³" onclick="javascript:window.location='introcompanyIntro.do'"><br>
 	
-	<input type="button" value="Çï½ºÇÁ·Î±×·¥" onclick="javascript:window.location='introhealthProgram.do'"><br>
+	<input type="button" value="íšŒì‚¬ì†Œê°œ" class="button" onclick="javascript:window.location='introcompanyIntro.do'"><br>
 	
-	<input type="button" value="ÇÁ·Î±×·¥ °­»ç" onclick="javascript:window.location='introprogramTeacher.do'"><br>
+	<input type="button" value="í—¬ìŠ¤í”„ë¡œê·¸ë¨" class="button" onclick="javascript:window.location='introhealthProgram.do'">
 	
-	<input type="button" value="½Ã¼³" onclick="javascript:window.location='introfacility.do'"><br>
+	<input type="button" value="í”„ë¡œê·¸ë¨ ê°•ì‚¬" class="button" onclick="javascript:window.location='introprogramTeacher.do'"><br>
 	
-	<input type="button" value="Á¦ÈŞÈ¸»ç" onclick="javascript:window.location='introalianceBusiness.do'"><br>
+	<input type="button" value="ì‹œì„¤" class="button" onclick="javascript:window.location='introfacility.do'"><br>
+	
+	<input type="button" value="ì œíœ´íšŒì‚¬" class="button" onclick="javascript:window.location='introalianceBusiness.do'"><br>
 	</p>
 	</div>
 	<!-- --------------------------------------------- -->

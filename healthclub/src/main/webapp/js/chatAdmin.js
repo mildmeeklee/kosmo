@@ -6,11 +6,8 @@
  */
 
 var socket = io.connect('http://192.168.0.47:9995');
-
 $(document).ready(function() {
 
-	
-	
 	var $users = $('#users');
 	var $msg = $(".inputMessage");
 	var $chat = $("#addchat");
@@ -27,8 +24,6 @@ $(document).ready(function() {
 		} ); 		
 		$msg.val('');
 	});
-	
-	
 	 socket.on('admin', function(data){
 		var html = '<div class="userinfo">';
 		html += data + '님이 입장하셨습니다. <br/>';
@@ -41,15 +36,11 @@ $(document).ready(function() {
 	 socket.on('admin receive msg', function(data){
 		$chat.append('<div class="chatmsg"><b>' + data.nick + ': </b>' + data.msg + "<br/></div>");
 	}); 
-	 
-	
 	socket.on('new message', function(data){
 		if(data.admin==true){
 			$chat.append('<div class="chatmsg"><b>' +  '관리자 : </b>' + data.msg + "<br/></div>");
 		}
 	}); 
-		
-	
 	socket.on('disconnect user', function(data){
 		  
 		var $myoption = $("#select_user option[value='"+data+"']");
@@ -59,8 +50,4 @@ $(document).ready(function() {
 		html += '</div>';
 		$users.append(html);			
 	}); 
-	
-	
-	
-	
 });

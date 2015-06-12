@@ -45,7 +45,7 @@ $(function(){
 	  $("#program_feedback").html('');
 	   var selectedProgram = this.selectedOptions[0].value;
 	   
-		var jsonData = {"program" : selectedProgram};
+		var jsonData = {program : selectedProgram};
 		
 		$.ajax({
 			

@@ -1,9 +1,7 @@
 package controller;
 
-import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import mybatis.ProgramDAO;
@@ -16,10 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
 public class ScheduleController {
@@ -100,8 +94,6 @@ public class ScheduleController {
 			System.out.println(a.toString());
 
 		}
-		ObjectMapper mapper = new ObjectMapper();
-		response.setContentType("text/xml; charset= utf-8");
 		try {
 			response.getWriter().print(mapper.writeValueAsString(list));
 		} catch (JsonProcessingException e) {

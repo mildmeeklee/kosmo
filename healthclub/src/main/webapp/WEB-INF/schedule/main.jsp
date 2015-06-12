@@ -23,7 +23,7 @@
 	 
 	<tr >
 		<td>1400-1500</td>
-		<td name="MON_1400_1500">
+		<td name="MON_1400_1500" id="MON_1400_1500">
 		<input type="hidden" class="col" name ="MON_1400_1500" value=""></td>
 		<td name="TUE_1400_1500" >
 		<input type="hidden" class="col" name ="TUE_1400_1500" value=""></td>
@@ -137,20 +137,19 @@
 </form>
 <select id ="pselect">
 	<option value="-----" selected>프로그램선택</option>
-	<option value="-----">헬스</option>
-	<option value="-----">요가</option>
-	<option value="-----">PT</option>
+	<option value="p">헬스</option>
+	<option value="y">요가</option>
+	<option value="p">PT</option>
 </select>
-<table>
-	
-	<c:forEach var="programInfo" items="${programInfo}">
+<table id="program_feedback">
+	<%-- <c:forEach var="programInfo" items="${programInfo}">
 	<tr>
-		<td><input type="button" class="programselect" value="${programInfo.p_name}">${programInfo.p_position}</td>
+		<td><input type="button" class="programselect" value="${programInfo.p_name}">${programInfo.p_position} | ${programInfo.p_teacher} | ${programInfo.p_day} | ${programInfo.p_time}</td>
 		<td><input type="hidden"  class ="programselect1" 
 				value="${programInfo.p_position}" title="${programInfo.p_group}" 
 				name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
 	</tr>
-	</c:forEach>
+	</c:forEach> --%>
 </table>
 
 </body>

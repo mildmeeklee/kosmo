@@ -23,7 +23,7 @@ public class ProgramController {
 	}
 
 	/**
-	 * °ü¸®ÀÚ page -> ÇÁ·Î±×·¥ °ü¸® page ÀÌµ¿
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ page -> ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½ page ï¿½Ìµï¿½
 	 */
 	@RequestMapping(value = "programlist_m.do", method = RequestMethod.GET)
 	public String schedulelist_m(Model m) {
@@ -33,7 +33,7 @@ public class ProgramController {
 	}
 
 	/**
-	 * ÇÁ·Î±×·¥ °ü¸® page -> ÇÁ·Î±×·¥ µî·Ï page
+	 * ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½ page -> ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ page
 	 */
 	@RequestMapping(value = "programwriteM.do", method = RequestMethod.GET)
 	public String schedulewriteM() {
@@ -41,7 +41,7 @@ public class ProgramController {
 	}
 
 	/**
-	 * ÇÁ·Î±×·¥ µî·Ï page -> ÇÁ·Î±×·¥µî·Ï
+	 * ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ page -> ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ï¿½
 	 */
 	@RequestMapping(value = "programwrite.do", method = RequestMethod.POST)
 	public String schedulewrite(ProgramInfo si) {

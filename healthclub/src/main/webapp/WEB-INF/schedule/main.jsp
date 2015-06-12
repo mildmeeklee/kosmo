@@ -137,7 +137,7 @@
 </form>
 <select id ="pselect">
 	<option value="-----" selected>프로그램선택</option>
-	<option value="p">헬스</option>
+	<option value="h">헬스</option>
 	<option value="y">요가</option>
 	<option value="p">PT</option>
 </select>

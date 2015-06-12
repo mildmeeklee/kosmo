@@ -2,121 +2,13 @@
 	pageEncoding="UTF-8"%>
 <html>
 <head>
-<style>
+<link rel="stylesheet" type="text/css" href="css/chat.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
-.button {
-   border: 2px solid #0a3c59;
-   background: #a4a5a6;
-   background: -webkit-gradient(linear, left top, left bottom, from(#000508), to(#a4a5a6));
-   background: -webkit-linear-gradient(top, #000508, #a4a5a6);
-   background: -moz-linear-gradient(top, #000508, #a4a5a6);
-   background: -ms-linear-gradient(top, #000508, #a4a5a6);
-   background: -o-linear-gradient(top, #000508, #a4a5a6);
-   background-image: -ms-linear-gradient(top, #000508 0%, #a4a5a6 100%);
-   padding: 5px 10px;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   text-shadow: #000000 0 1px 0;
-   color: #ffffff;
-   font-size: 21px;
-   font-family: helvetica, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
- .button:hover {
-   border: 2px solid #0a3c59;
-   text-shadow: #1e4158 0 1px 0;
-   background: #f4f9fc;
-   background: -webkit-gradient(linear, left top, left bottom, from(#bdbdbd), to(#f4f9fc));
-   background: -webkit-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -moz-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -ms-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -o-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background-image: -ms-linear-gradient(top, #bdbdbd 0%, #f4f9fc 100%);
-   color: #000000;
-   }
- .button:active {
-   text-shadow: #1e4158 0 1px 0;
-   border: 2px solid #0a3c59;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f4f9fc));
-   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
-   color: #fff;
-   } 
-
-.container {
-	width: 90%;
-	margin: auto;
-}
-
-.youtubeWrap {
-	position: relative;
-	width: 100%;
-	padding-bottom: 56.25%;
-}
-
-.youtubeWrap iframe {
-	position: absolute;
-	width: 1000px;
-	height: 500px;
-}
-
-#container {
-	width: 80%;
-	margin: 20px auto;
-}
-/* 이미지*/
-#navi {
-	width: 200px;
-	float: left;
-}
-
-#navi ul {
-	height: 460px;
-}
-
-#navi li {
-	list-style-type: none;
-	float: left;
-}
-
-#navi li img {
-	border: 3px solid black;
-}
-
-#navi {
-	overflow: hidden;
-}
-
-#navi .pageWrap {
-	width: 900px;
-}
-
-#navi .pageWrap .page {
-	width: 300px;
-	float: left;
-}
-
-#navi p {
-	clear: both;
-	width: 300px;
-	padding: 10px 0;
-	text-align: center;
-}
-
-#navi p img {
-	cursor: pointer;
-}
-</style>
-<script src="http://code.jquery.com/jquery.js"></script>
+<!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://localhost:9995/socket.io/socket.io.js"></script>
+<script src="js/chatClient.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$("#navi a").click(
@@ -152,6 +44,7 @@
 </script>
 </head>
 <body>
+
 	<header>
 		<center>
 			<a href="http://localhost:8080/healthclub/index.jsp"><h2>bangbang</h2></a>
@@ -226,7 +119,7 @@
 			</div>
 			<br>
 			<br>
-		<div id="footer" style="height:140px; margin-top:10px; background:black;">
+		 <div id="footer" style="height:140px; margin-top:10px; background:black;">
 		<font color = "white">
 		프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 | 이용약관 | 개인정보취급방침 | 사이트 맵 <br/>
 		<br>
@@ -235,9 +128,37 @@
 		<br/><br/>
 		
 		COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS RESERVED
-		</div>
 		</font>
+		</div> 
 
+		
+
+	<div class="send_msg" id="leave_msg">leave us a message</div>
+	<div class="join_chat">
+		<div class="join_header">이름을 입력하세요.</div>
+		<div class="join_body">
+			<p id="nickError"></p>
+			이름 : <input type="text" class="join_name" id="join_name">
+		</div>
+		<div class="join_footer">
+			<div class="join_btn">send</div>
+		</div>
+	</div>
+
+	<div id="chat_contentWrap">
+		<div class="join_header">
+			live chat<input type="button" value="종료" id="exit_chat"
+				class="chat_exitBtn">
+		</div>
+		<div id="chatWrap">
+			<div id="chat"></div>
+			<form id="send-message">
+				<input size="35" id="message"> <input type="submit"
+					value="전송">
+			</form>
+		</div>
+		<div id="users"></div>
+	</div>
 </body>
 </html>
 

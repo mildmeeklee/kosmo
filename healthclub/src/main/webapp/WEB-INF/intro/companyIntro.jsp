@@ -9,7 +9,7 @@
         margin: auto;
       }
       .youtubeWrap {
-        position: relative;
+        position: relative;z
         width: 100%;
         padding-bottom: 56.25%;
       }

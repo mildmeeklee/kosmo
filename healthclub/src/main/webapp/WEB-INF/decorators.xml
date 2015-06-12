@@ -9,24 +9,24 @@
 	</decorator>
 	<!-- /WEB-INF/login/main.jsp -->
 
-	<decorator name="board" page="/WEB-INF/item/main.jsp">
+	<decorator name="item" page="/WEB-INF/item/main.jsp">
 		<pattern>*item*</pattern>
 	</decorator>
 	
-	<decorator name="item" page="/WEB-INF/board/main.jsp">
+	<decorator name="board" page="/WEB-INF/board/main.jsp">
 		<pattern>*board*</pattern>
 	</decorator>
 	
-	<decorator name="item" page="/WEB-INF/mypage/main.jsp">
+	<decorator name="mypage" page="/WEB-INF/mypage/main.jsp">
 		<pattern>*mypage*</pattern>
 	</decorator>
 	
 	
-	<decorator name="news" page="/WEB-INF/notice/main.jsp">
+	<decorator name="notice" page="/WEB-INF/notice/main.jsp">
 		<pattern>*notice*</pattern>
 	</decorator>
 	
-	<decorator name="news" page="/WEB-INF/intro/main.jsp">
+	<decorator name="intro" page="/WEB-INF/intro/main.jsp">
 		<pattern>*intro*</pattern>
 	</decorator>
 	<excludes>

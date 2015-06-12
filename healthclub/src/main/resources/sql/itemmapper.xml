@@ -7,50 +7,72 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="item">
 	<!-- 헬스제품 리스트를 전부 가져옴 -->
 	<select id="selectAll" resultType="mybatis.ItemInfo">
-		select * from item ORDER BY i_time desc
+		select * from item ORDER BY
+		i_time desc
 	</select>
-	
+
 	<select id="selectAlllist" resultType="mybatis.ItemInfo">
-		SELECT * FROM item WHERE i_time >= SYSDATE-7
+		SELECT * FROM item WHERE
+		i_time >= SYSDATE-7
 	</select>
-	
+
 	<!-- 4개의 글 가져오기 -->
 	<select id="select3" resultType="mybatis.ItemInfo">
-		select * from item where ROWNUM &lt; 3 ORDER BY i_date desc 
+		select * from item where ROWNUM
+		&lt; 3 ORDER BY i_date desc
 	</select>
-	
-	
+
+
 	<select id="selectcount" resultType="mybatis.ItemInfo">
-		SELECT * FROM item where i_count >= 25
+		SELECT * FROM item where
+		i_count >= 25
 	</select>
-	
+
 	<select id="itemweight" resultType="mybatis.ItemInfo">
-		SELECT * FROM item WHERE i_distinction like '보충제'
+		SELECT * FROM item WHERE
+		i_distinction like '보충제'
 	</select>
-	
+
 	<select id="itemhealthArticle" resultType="mybatis.ItemInfo">
-		SELECT * FROM item WHERE i_distinction like '헬스용품'
+		SELECT * FROM item
+		WHERE i_distinction like '헬스용품'
 	</select>
-	
+
 	<select id="itemhealthWear" resultType="mybatis.ItemInfo">
-		SELECT * FROM item WHERE i_distinction like '헬스의류'
+		SELECT * FROM item WHERE
+		i_distinction like '헬스의류'
 	</select>
-	
+
 	<!-- 제품번호와 같은 내용 가져옴 -->
 	<select id="selectOneitem" resultType="mybatis.ItemInfo">
-		select * from item where i_num =#{i_num}
+		select * from item where
+		i_num =#{i_num}
 	</select>
 
 	<!-- 추가한 헬스제품 정보를 저정 -->
 	<insert id="insert" parameterType="mybatis.ItemInfo">
 		insert into item
-		values(#{i_name},seq_item_i_num.nextval,#{i_price},#{i_content},sysdate, 0,#{i_imagePath},#{i_imageOrgname},#{i_distinction} )
+		values(#{i_name},seq_item_i_num.nextval,#{i_price},#{i_content},sysdate,
+		0,#{i_imagePath},#{i_imageOrgname},#{i_distinction} )
 	</insert>
-	
-	
+
+
 	<update id="i_countUp" parameterType="mybatis.ItemInfo">
-		update item set i_count=i_count+1
+		update item set
+		i_count=i_count+1
 		where i_num= #{i_num}
 	</update>
-	
+
+	<delete id="del" parameterType="int">
+		delete from item where i_num
+		=
+		#{i_num}
+	</delete>
+
+	<update id="update" parameterType="mybatis.ItemInfo">
+		update item set i_name=#{i_name}, i_content=#{i_content}, i_imageOrgname =#{i_imageOrgname} , i_imagePath =#{i_imagePath}
+		where
+		i_num = #{i_num}
+	</update>
+
 </mapper>

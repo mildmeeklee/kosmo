@@ -112,20 +112,19 @@ public class ItemDAO extends SqlSessionDaoSupport {
 
 	}
 
-	/*
-	 * public void delet(int num){ getSqlSession().delete("Member.del",num); }
-	 * 
-	 * 
-	 * 
-	 * public User selOne(int num){
-	 * 
-	 * User s = getSqlSession().selectOne("Member.selOne",num); return s; }
-	 * 
-	 * 
-	 * public void up(int num, String subject,String content,String
-	 * file_orgname, String file_path){ User u2 = new
-	 * User(num,subject,content,file_orgname,file_path);
-	 * getSqlSession().update("Member.up",u2); }
-	 */
+	
+	public void delete(int i_num){ getSqlSession().delete("item.del",i_num); }
+	 
+
+	 public void update(int i_num, String i_name,int i_price,String i_content,
+			 String i_imageOrgname, String i_imagePath, String i_distinction){ 
+		 ItemInfo u2 = new ItemInfo(i_num, i_price, i_name, i_content,  i_imagePath,i_imageOrgname, i_distinction);
+		 System.out.println(i_price);
+
+		 System.out.println(i_imagePath);
+		 System.out.println(i_imageOrgname);
+		 getSqlSession().update("item.update",u2); 
+	 }
+
 
 }

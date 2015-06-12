@@ -6,6 +6,7 @@
 </head>
 <body>
 <a href="itemsubmit.do"> 제품 올리기 </a></br>
+<a href="itemControll.do"> 제품 수정하기 </a></br>
 <a href="noticelist_m.do"> 공지사항 관리 </a></br>
 <a href="boardManager.do"> 게시판 관리 </a></br>
 <a href="programlist_m.do"> 프로그램 관리 </a><br/>

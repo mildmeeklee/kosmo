@@ -6,7 +6,7 @@ import java.util.List;
 
 import mybatis.ItemDAO;
 import mybatis.ItemInfo;
-import mybatis.LogUserInfo;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -222,29 +222,35 @@ public class ItemController {
       return "item/success";
    }
 
-   /*   
-   @RequestMapping(value = "selone.do", method = RequestMethod.POST)
-   public String selOne(@RequestParam("num") int num, Model m) {
+  
+   @RequestMapping(value = "seloneitem.do", method = RequestMethod.POST)
+   public String selOne(@RequestParam("i_num") int i_num, Model m) {
 
-      User a = dao.selOne(num);
-      m.addAttribute("file", a);
-      return "file/alter";
+      ItemInfo a = dao.selOne(i_num);
+      m.addAttribute("item", a);
+      return "manager/alter";
    }
 
    
-   @RequestMapping(value = "up.do", method = RequestMethod.POST)
-   public String up(@RequestParam("num") int num,
-         @RequestParam("subject") String subject,
+   /*@RequestMapping(value ="upItem.do", method = RequestMethod.POST)
+   public String up(@RequestParam("i_num") int i_num,
+         @RequestParam("i_name") String i_name,
          @RequestParam("file") MultipartFile file,
-         @RequestParam("content") String content, Model m) {
-
-      User a = dao.selOne(num);
-      File f2 = new File(a.getFile_path());
+         @RequestParam("i_content") String i_content , 
+         @RequestParam("i_price") int i_price ,
+         @RequestParam("i_distinction") String i_distinction ,Model m) {
+	   
+	  
+      ItemInfo a = dao.selOne(i_num);
+      System.out.println(a.getI_imageOrgname());
+      System.out.println(a.getI_imagePath());
+      File f = new File(a.getI_imageOrgname());
+      f.delete();
+      File f2 = new File(a.getI_imagePath());
       f2.delete();
-
-      File f = new File("C:/Users/kosmo002/workspace/aaaaaaaaaa/src/main/webapp/image1", file.getOriginalFilename());
+      f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", file.getOriginalFilename());
       if (f.exists()) {
-         f = new File("C:/Users/kosmo002/workspace/aaaaaaaaaa/src/main/webapp/image1", inTime
+         f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", inTime
                + file.getOriginalFilename());
       }
 
@@ -257,19 +263,22 @@ public class ItemController {
          // TODO Auto-generated catch block
          e.printStackTrace();
       }
-      dao.up(num , subject , content , file.getOriginalFilename() , f.getPath());
-      return "file/success";
-
-   }
+ 
+      dao.update(i_num ,i_name, i_price , i_content , f.getPath() ,file.getOriginalFilename() , i_distinction);
+      
+  
+      return "redirect:itemControll.do";
+      
+   }*/
    @RequestMapping(value = "del.do", method = RequestMethod.POST)
-   public String del(@RequestParam("num") int num) {
-      User a = dao.selOne(num);
-      File f = new File(a.getFile_path());
+   public String del(@RequestParam("i_num") int i_num) {
+      ItemInfo a = dao.selOne(i_num);
+      File f = new File(a.getI_imageOrgname());
+
       f.delete();
-      dao.delet(num);
-      return "file/success";
+      dao.delete(i_num);
+      return "redirect:itemControll.do";
    }
-*/
 }
 		
 

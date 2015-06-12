@@ -11,12 +11,11 @@
 #layout {
 	margin: auto;
 	width: 90%;
-	border: solid 1px gray;
 	padding: 5px;
 }
 
 #top {
-	height: 100px;
+	height: 150px;
 	background-color: #000000;
 	color: #ffffff;
 	margin-bottom: 5px;
@@ -32,7 +31,8 @@
 
 #section {
 	width: 87%;
-	min-height: 400px;
+	height: 1800;
+
 	background-color: #f0f0f0;
 	margin-left: auto;
 }
@@ -68,9 +68,6 @@
 				<hr color="red" size="2" width=100%>
 			</center>
 		</div>
-
-		<a href="itemsubmit.do"> 力前 棵府扁 upload</a></br> <a href="noticelist_m.do">
-			包府磊 权其捞瘤 包府 upload</a>
 
 		<div id="sidebar">
 			<p align="center">

@@ -13,14 +13,14 @@
 </head>
 <body>
 	<form action="upItem.do" method="post" enctype="multipart/form-data">
-	 <input type="hidden" name="i_num" value="${item.getI_num() }" /><br />
-		i_name : <input type="text" name="i_name" /> <br />
-		i_price : <input type="text" name="i_price"/> <br/>
-		 i_content : <input type="text" name="i_content " /> <br /> 
-		 이미지 파일 : <input type="file" name="file " /> <br /> 
-		<input type="radio" name="i_distinction" value="보충제" checked="checked"> 보충제<br/>
-		<input type="radio" name="i_distinction" value="헬스용품"> 헬스용품<br/>
-		<input type="radio" name="i_distinction" value="헬스의류"> 헬스의류<br/>
+		<input type="hidden" name="i_num" value="${item.getI_num() }" /><br />
+		i_name : <input type="text" name="i_name" /> <br /> 이미지 파일 : <input
+			type="file" name="file " /> <br /> i_content : <input type="text"
+			name="i_content " /> <br /> i_price : <input type="text"
+			name="i_price" /> <br /> <input type="radio" name="i_distinction"
+			value="보충제" checked="checked"> 보충제<br /> <input type="radio"
+			name="i_distinction" value="헬스용품"> 헬스용품<br /> <input
+			type="radio" name="i_distinction" value="헬스의류"> 헬스의류<br />
 		<button type="submit">수정하기</button>
 	</form>
 </body>

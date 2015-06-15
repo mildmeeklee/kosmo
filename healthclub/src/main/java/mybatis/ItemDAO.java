@@ -117,12 +117,9 @@ public class ItemDAO extends SqlSessionDaoSupport {
 	 
 
 	 public void update(int i_num, String i_name,int i_price,String i_content,
-			 String i_imageOrgname, String i_imagePath, String i_distinction){ 
-		 ItemInfo u2 = new ItemInfo(i_num, i_price, i_name, i_content,  i_imagePath,i_imageOrgname, i_distinction);
-		 System.out.println(i_price);
-
-		 System.out.println(i_imagePath);
-		 System.out.println(i_imageOrgname);
+			 String i_imagePath, String i_imageOrgname, String i_distinction){ 
+		 ItemInfo u2 = new ItemInfo(i_num,i_name, i_price,  i_content,  i_imagePath,i_imageOrgname, i_distinction);
+	
 		 getSqlSession().update("item.update",u2); 
 	 }
 

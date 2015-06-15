@@ -93,7 +93,8 @@ public class ItemInfo {
 		this.i_num=i_num;
 	}
 	
-	ItemInfo(int i_num,int i_price ,String i_name, String i_content, String i_imageOrgname, String i_imagePath, String i_distinction){
+	ItemInfo(int i_num,String i_name,int i_price , String i_content, String i_imagePath,String i_imageOrgname,  String i_distinction){
+		this.i_num= i_num;
 		this.i_name= i_name;
 		this.i_price = i_price;
 		this.i_content = i_content;

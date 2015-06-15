@@ -8,6 +8,8 @@ import mybatis.ItemDAO;
 import mybatis.ItemInfo;
 
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -232,7 +234,7 @@ public class ItemController {
    }
 
    
-   /*@RequestMapping(value ="upItem.do", method = RequestMethod.POST)
+   @RequestMapping(value ="upItem.do", method = RequestMethod.POST)
    public String up(@RequestParam("i_num") int i_num,
          @RequestParam("i_name") String i_name,
          @RequestParam("file") MultipartFile file,
@@ -242,12 +244,10 @@ public class ItemController {
 	   
 	  
       ItemInfo a = dao.selOne(i_num);
-      System.out.println(a.getI_imageOrgname());
-      System.out.println(a.getI_imagePath());
       File f = new File(a.getI_imageOrgname());
-      f.delete();
-      File f2 = new File(a.getI_imagePath());
-      f2.delete();
+   		f = new File(a.getI_imagePath());
+      	f.delete();
+      	
       f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", file.getOriginalFilename());
       if (f.exists()) {
          f = new File("C:/Users/kosmo002/git/kosmo/healthclub/src/main/webapp/image", inTime
@@ -266,15 +266,14 @@ public class ItemController {
  
       dao.update(i_num ,i_name, i_price , i_content , f.getPath() ,file.getOriginalFilename() , i_distinction);
       
-  
       return "redirect:itemControll.do";
       
-   }*/
+   }
    @RequestMapping(value = "del.do", method = RequestMethod.POST)
    public String del(@RequestParam("i_num") int i_num) {
       ItemInfo a = dao.selOne(i_num);
       File f = new File(a.getI_imageOrgname());
-
+      
       f.delete();
       dao.delete(i_num);
       return "redirect:itemControll.do";

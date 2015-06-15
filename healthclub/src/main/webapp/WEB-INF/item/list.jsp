@@ -42,7 +42,7 @@ $(function(){
 					<td align="center">${item.i_content}</td>
 					<td align="center"><fmt:formatDate type="date" value="${item.i_time}" var="date"/>${date }</td>
 					<td align="center">${item.i_count}</td>
-					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imagePath }" width="100" height="100">				
+					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imageOrgname }" width="100" height="100">				
 					</a></td>
 				</tr>
 			</c:forEach>

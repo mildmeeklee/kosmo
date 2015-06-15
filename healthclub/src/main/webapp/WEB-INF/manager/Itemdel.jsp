@@ -25,8 +25,8 @@
 					<td align="center">${item.i_name}</td>
 					<td align="center">${item.i_price}</td>
 					<td align="center">${item.i_content}</td>
-					<td align="center">${item.i_count}</td>
-					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imagePath }" width="100" height="100">				
+					<td align="center">${item.i_count}</td>																								
+					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imageOrgname }" width="100" height="100">				
 					</a></td>
 					<td>
 						<form action="seloneitem.do" method="post">

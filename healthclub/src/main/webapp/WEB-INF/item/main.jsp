@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/button.css">
 </head>
 <style>
+
 #layout {
 	margin: auto;
 	width: 90%;
@@ -74,15 +75,24 @@
 
 		<div id="sidebar">
 			<p align="center">
-
+				<img alt="" src="/healthclub/img/item1.jpg" width="100" height="80"><br>
 				<input type="button" value="보충제이미지"
 					onclick="javascript:window.location='itemweight.do'"><br>
-				<br> <input type="button" value="헬스용품"
+				<hr size="1" color="red">
+			</p>
+			<p align="center">
+				<img alt="" src="/healthclub/img/item2.jpg" width="100" height="80"><br>
+				 <input type="button" value="헬스용품"
 					onclick="javascript:window.location='itemhealthArticle.do'"><br>
-				<br> <input type="button" value="헬스의류"
+				<hr size="1" color="red">
+			</p>
+			<p align="center">
+				<img alt="" src="/healthclub/img/item3.gif" width="100" height="80" ><br>
+				
+				
+					 <input type="button" value="헬스의류"
 					onclick="javascript:window.location='itemhealthWear.do'"><br>
 				<br> <br>
-
 			</p>
 		</div>
 		<!-- --------------------------------------------- -->

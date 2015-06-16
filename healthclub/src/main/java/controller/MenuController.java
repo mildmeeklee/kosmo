@@ -187,12 +187,12 @@ public class MenuController {
 	 */
 	@RequestMapping(value="logout.do" , method=RequestMethod.GET)
 	public String logout(HttpSession s , Model m){
-		List<BoardInfo> boardlist = dao3.selectAll();
-		m.addAttribute("boardlist", boardlist);
-		List<ItemInfo> itemtable = dao4.selectAll();
+		List<ItemInfo> itemtable = dao4.selectThree();
 		m.addAttribute("itemtable", itemtable);
-		List<NoticeInfo> noticelist = dao5.selectAll(); 
+		List<NoticeInfo> noticelist = dao5.selectThree(); 
 		m.addAttribute("noticelist", noticelist );
+		List<BoardInfo> boardlist = dao3.selectThree();
+		m.addAttribute("boardlist", boardlist);
 		
 		s.invalidate();
 		return "login/main";

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="decorator"
@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/button.css"> 
+
 <script src="http://code.jquery.com/jquery.js"></script>
 <title>Insert title here</title>
 <style>
@@ -87,6 +89,55 @@
 #bottom4 {
 	
 }
+
+.button {
+   border: 2px solid #0a3c59;
+   background: #a4a5a6;
+   background: -webkit-gradient(linear, left top, left bottom, from(#000508), to(#a4a5a6));
+   background: -webkit-linear-gradient(top, #000508, #a4a5a6);
+   background: -moz-linear-gradient(top, #000508, #a4a5a6);
+   background: -ms-linear-gradient(top, #000508, #a4a5a6);
+   background: -o-linear-gradient(top, #000508, #a4a5a6);
+   background-image: -ms-linear-gradient(top, #000508 0%, #a4a5a6 100%);
+   padding: 5px 10px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #000000 0 1px 0;
+   color: #ffffff;
+   font-size: 21px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+ .button:hover {
+   border: 2px solid #0a3c59;
+   text-shadow: #1e4158 0 1px 0;
+   background: #f4f9fc;
+   background: -webkit-gradient(linear, left top, left bottom, from(#bdbdbd), to(#f4f9fc));
+   background: -webkit-linear-gradient(top, #bdbdbd, #f4f9fc);
+   background: -moz-linear-gradient(top, #bdbdbd, #f4f9fc);
+   background: -ms-linear-gradient(top, #bdbdbd, #f4f9fc);
+   background: -o-linear-gradient(top, #bdbdbd, #f4f9fc);
+   background-image: -ms-linear-gradient(top, #bdbdbd 0%, #f4f9fc 100%);
+   color: #000000;
+   }
+ .button:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 2px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f4f9fc));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   } 
+
 </style>
 <script type="text/javascript">
 	$(function() {
@@ -122,40 +173,7 @@
 
 
 </head>
-<style>
-#layout {
-	margin: auto;
-	width: 90%;
-	border: solid 1px gray;
-	padding: 5px;
-}
 
-#top {
-	height: 100px;
-	background-color: #000000;
-	color: #ffffff;
-	margin-bottom: 5px;
-}
-
-#sidebar {
-	position: absolute;
-	float: left;
-	width: 10%;
-	height: 97%;
-	background-color: orange;
-}
-
-#section {
-	width: 87%;
-	min-height: 400px;
-	background-color: #f0f0f0;
-	margin-left: auto;
-}
-
-#footer {
-	width: 79% min-height:400px;
-}
-</style>
 <body>
 
 	<center>
@@ -163,7 +181,7 @@
 	</center>
 	<c:if test="${id !=null }">
 		<p align="right">
-			${id }´Ô |<a href="logout.do">logout</a> | <a
+			${id }ë‹˜ |<a href="logout.do">logout</a> | <a
 				href="mypage.do?id=${id}">my page</a> | <a href="cartlist.do?s_id=${id}">cart</a>
 		</p>
 	</c:if>
@@ -171,25 +189,18 @@
 
 	<c:if test="${id ==null }">
 		<p align="right">
-			·Î±×ÀÎ ÇØÁÖ¼¼¿ä : <a href="loginForm.do">login</a>
+			ë¡œê·¸ì¸ í•´ì£¼ì„¸ìš” : <a href="loginForm.do">login</a>
 	</c:if>
 
 	<hr color="red" size="2" width=100%>
 	<center>
-		<font size="5">
-	<a href="introcompanyIntro.do">&diams;¼Ò°³ </a>|
- 	<a href="notice.do">&diams;°øÁö»çÇ×</a>|
-	<a href="boardlist.do">&diams;°Ô½ÃÆÇ</a> | 
-  	<a href="schedule.do">&diams;½ºÄÉÁÙ·¯</a> |  
-    <a href="itemlist.do">&diams;Çï½ºÁ¦Ç°</a>
-  </font>
+		<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
+			| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
+			href="boardlist.do">BOARD</a> | <a class="button" href="schedule.do">SCHEDULER</a>
+			| <a class="button" href="itemlist.do">HEALTH PRODUCT</a>
+		</font>
 		<hr color="red" size="2" width=100%>
 	</center>
-
-
-	<!-- 	<a href="itemsubmit.do"> Á¦Ç° ¿Ã¸®±â upload</a></br>
-	<a href="noticelist_m.do"> °ü¸®ÀÚ È¨ÆäÀÌÁö °ü¸® upload</a> -->
-
 	<div id="container">
 		<div id="navi">
 			<div class="pageWrap">
@@ -197,49 +208,49 @@
 					<ul>
 
 						<li><a href="images/photo1.jpg"><img
-								src="images/photo1_thum.jpg" alt="¼§Á¦¸®¾Æ" /></a></li>
+								src="images/photo1_thum.jpg" alt="ìƒ¹ì œë¦¬ì•„" /></a></li>
 						<li><a href="images/photo2.jpg"><img
-								src="images/photo2_thum.jpg" alt="Àå¹Ì" /></a></li>
+								src="images/photo2_thum.jpg" alt="ì¥ë¯¸" /></a></li>
 						<li><a href="images/photo3.jpg"><img
-								src="images/photo3_thum.jpg" alt="¹Ù´Ù" /></a></li>
+								src="images/photo3_thum.jpg" alt="ë°”ë‹¤" /></a></li>
 						<li><a href="images/photo4.jpg"><img
-								src="images/photo4_thum.jpg" alt="¹®" /></a></li>
+								src="images/photo4_thum.jpg" alt="ë¬¸" /></a></li>
 
 					</ul>
 					<p>
-						<img src="images/btn_next.jpg" alt="ó­ªØ" class="next" />
+						<img src="images/btn_next.jpg" alt="æ¬¡ã¸" class="next" />
 					</p>
 				</div>
 				<div class="page">
 					<ul>
 						<li><a href="images/photo9.jpg"><img
-								src="images/photo9_thum.jpg" alt="¼Õ" /></a></li>
+								src="images/photo9_thum.jpg" alt="ì†" /></a></li>
 						<li><a href="images/photo10.jpg"><img
-								src="images/photo10_thum.jpg" alt="¸¶·ç" /></a></li>
+								src="images/photo10_thum.jpg" alt="ë§ˆë£¨" /></a></li>
 						<li><a href="images/photo11.jpg"><img
-								src="images/photo11_thum.jpg" alt="³ª¹«" /></a></li>
+								src="images/photo11_thum.jpg" alt="ë‚˜ë¬´" /></a></li>
 						<li><a href="images/photo12.jpg"><img
-								src="images/photo12_thum.jpg" alt="ÀÙ" /></a></li>
+								src="images/photo12_thum.jpg" alt="ì" /></a></li>
 
 					</ul>
 					<p>
-						<img src="images/btn_prev.jpg" alt="îñªØ" class="prev" /> <img
-							src="images/btn_next.jpg" alt="ó­ªØ" class="next" />
+						<img src="images/btn_prev.jpg" alt="å‰ã¸" class="prev" /> <img
+							src="images/btn_next.jpg" alt="æ¬¡ã¸" class="next" />
 					</p>
 				</div>
 				<div class="page">
 					<ul>
 						<li><a href="images/photo17.jpg"><img
-								src="images/photo17_thum.jpg" alt="²É" /></a></li>
+								src="images/photo17_thum.jpg" alt="ê½ƒ" /></a></li>
 						<li><a href="images/photo18.jpg"><img
-								src="images/photo18_thum.jpg" alt="²É" /></a></li>
+								src="images/photo18_thum.jpg" alt="ê½ƒ" /></a></li>
 						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" alt="²É" /></a></li>
+								src="images/photo19_thum.jpg" alt="ê½ƒ" /></a></li>
 						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" alt="²É" /></a></li>
+								src="images/photo19_thum.jpg" alt="ê½ƒ" /></a></li>
 					</ul>
 					<p>
-						<img src="images/btn_prev.jpg" alt="¾ÕÀ¸·Î" class="prev" />
+						<img src="images/btn_prev.jpg" alt="ì•ìœ¼ë¡œ" class="prev" />
 					</p>
 				</div>
 			</div>
@@ -247,18 +258,15 @@
 		<div id="main">
 			<img src="images/photo1.jpg" alt="" />
 		</div>
-		<div id="talk">
-			<p align="right">¿©±â¿¡ 1:1 ´ëÈ­½Ã½ºÅÛÀ» ³Ö°Ú´Ù.
-		</div>
 	</div>
 
 
 	<div id="bottom">
 		<div id="bottom2" >
 			<font size="5">		
-			<table>
+			<table border="1">
 				<tr>
-					<th>°Ô½ÃÆÇ</th>
+					<th>ê²Œì‹œíŒ</th>
 				</tr>
 				<c:forEach var="boardlist" items="${boardlist}">
 					<tr>
@@ -269,9 +277,9 @@
 		</div>
 		
 		<div id="bottom3">
-			<table>
+			<table border="1">
 				<tr>
-					<th>ÃÖ½Å ¾ÆÀÌÅÛ</th>
+					<th>ìµœì‹  ì•„ì´í…œ</th>
 				</tr>
 				<c:forEach var="itemtable" items="${itemtable}">
 					<tr>
@@ -282,9 +290,9 @@
 		</div>
 
 		<div id="bottom4">
-			<table>
+			<table border="1">
 				<tr>
-					<th>°øÁö»çÇ×</th>
+					<th>ê³µì§€ì‚¬í•­</th>
 				</tr>
 		
 				<c:forEach var="noticelist" items="${noticelist}">
@@ -296,6 +304,16 @@
 	
 		</div>
 	</div>
+	<div id="footer"
+			style="height: 140px; margin-top: 10px; background: black;">
+			<font color="white"> í”„ë Œì°¨ì´ì¦ˆ ì•ˆë‚´ | íœ˜íŠ¸ë‹ˆìŠ¤í´ëŸ½ ì»¨ì„¤íŒ… | ì±„ìš©ì•ˆë‚´ | ì œíœ´ë¬¸ì˜ |
+				ì´ìš©ì•½ê´€ | ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ | ì‚¬ì´íŠ¸ ë§µ <br /> <br> (ì£¼)ì•„ì‹œì•„ì›”ë“œë°©ë°© ì„œìš¸ì‹œ êµ¬ë¡œêµ¬ ê°€ì‚°ë™
+				123ë²ˆì§€ xxê±´ë¬¼ ëŒ€í‘œ: ì€ì˜ëˆ„ë‚˜ ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸ : 123-12-12345 í†µì‹ íŒë§¤ì—…ì‹ ê³ ë²ˆí˜¸ :
+				1234-ê°€ì‚°ë™-1234í˜¸<br> ê°€ì‚°ë³¸ì  123.123.1234 | ê°•ë‚¨ì  12.123.1234 | ë¶€ì‚°ì 
+				123.123.1234 <br /> <br /> COPYRIGHTS 2015 WORLD ë°©ë°© ALL RIGHTS
+				RESERVED
+			</font>
+		</div>
 
 
 </body>

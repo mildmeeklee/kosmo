@@ -68,7 +68,7 @@
 	width: 80%;
 	margin: 20px auto;
 }
-/* 이미지*/
+
 #navi {
 	width: 200px;
 	float: left;
@@ -109,4 +109,19 @@
 
 #navi p img {
 	cursor: pointer;
+}
+
+#main {
+	width: 500px;
+	float: left;
+}
+
+#main img {
+	position: absolute;
+	border: 3px solid white;
+}
+#footer{
+	float: left;
+	bottom:	0px;
+	
 }

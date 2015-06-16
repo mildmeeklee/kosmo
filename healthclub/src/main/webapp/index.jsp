@@ -6,7 +6,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/chat.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-
+<style type="text/css">
+#con  { background-color:#F0F0F0; width:1200px; margin:0 auto; padding:10px; }
+</style>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://192.168.0.47:9995/socket.io/socket.io.js"></script>
 <script src="js/chatClient.js"></script>
@@ -46,11 +48,12 @@
 
 </head>
 <body>
+	<div id=con>
 	<center>
-		<a href="http://localhost:8080/healthclub/index.jsp"><h2>bangbang</h2></a>
+		<a href="http://localhost:8080/healthclub/index.jsp" ><img alt="" src="/healthclub/img/name.PNG"></a>
 	</center>
 	<p align="right">
-		<a href="loginForm.do">login</a> |
+		<a href="loginForm.do"><font size="6" ><b>login</b></font></a>
 	<hr color="red" size="2" width=100%>
 	<center>
 		<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
@@ -148,21 +151,19 @@
 				</form>
 			</div>
 			<div id="users"></div>
-		
-			 <div id="footer" 
-			style="height: 140px; margin-top: 10px; background: black;">
-			<font color="white"> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
-				이용약관 | 개인정보취급방침 | 사이트 맵 <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
+	</div>
+</div>
+				 <div id="footer" 
+			style="height: 130px; margin-top: 10px; background: black;">
+			<font size ="3"color="white"><b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
 				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
 				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
-				123.123.1234 <br /> <br /> COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
+				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
 				RESERVED
 			</font>
 		</div>
-	</div>
 </div>
-
-	
 </body>
 </html>
 

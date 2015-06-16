@@ -17,7 +17,7 @@
 		$("#navi a").click(
 				function() {
 					$("#main img").before(
-							"<img src='" + $(this).attr("href") + "' alt=''>");
+							"<img src='" + $(this).attr("href") + "' alt='' width='700' height='500'>");
 					$("#main img:last").fadeOut("fast", function() {
 						$(this).remove();
 					});
@@ -70,14 +70,14 @@
 				<div class="page">
 					<ul>
 
-						<li><a href="images/photo1.jpg"><img
-								src="images/photo1_thum.jpg" alt="샹제리아" /></a></li>
-						<li><a href="images/photo2.jpg"><img
-								src="images/photo2_thum.jpg" alt="장미" /></a></li>
-						<li><a href="images/photo3.jpg"><img
-								src="images/photo3_thum.jpg" alt="바다" /></a></li>
-						<li><a href="images/photo4.jpg"><img
-								src="images/photo4_thum.jpg" alt="문" /></a></li>
+						<li><a href="images/photo1.jpg"><img width="130" height="100"
+								src="images/photo1_thum.jpg"  /></a></li>
+						<li><a href="images/photo2.jpg"><img width="130" height="100"
+								src="images/photo2_thum.jpg" /></a></li>
+						<li><a href="images/photo3.jpg"><img width="130" height="100"
+								src="images/photo3_thum.jpg" /></a></li>
+						<li><a href="images/photo4.jpg"><img width="130" height="100"
+								src="images/photo4_thum.jpg" /></a></li>
 
 					</ul>
 					<p>
@@ -87,14 +87,14 @@
 				
 				<div class="page">
 					<ul>
-						<li><a href="images/photo9.jpg"><img
-								src="images/photo9_thum.jpg" alt="손" /></a></li>
+						<li><a href="images/photo9.jpg" ><img
+								src="images/photo9_thum.jpg"  width="130" height="100"/></a></li>
 						<li><a href="images/photo10.jpg"><img
-								src="images/photo10_thum.jpg" alt="마루" /></a></li>
+								src="images/photo10_thum.jpg"  width="130" height="100"/></a></li>
 						<li><a href="images/photo11.jpg"><img
-								src="images/photo11_thum.jpg" alt="나무" /></a></li>
+								src="images/photo11_thum.jpg"   width="130" height="100"/></a></li>
 						<li><a href="images/photo12.jpg"><img
-								src="images/photo12_thum.jpg" alt="잎" /></a></li>
+								src="images/photo12_thum.jpg" width="130" height="100" /></a></li>
 
 					</ul>
 					<p>
@@ -106,13 +106,13 @@
 				<div class="page">
 					<ul>
 						<li><a href="images/photo17.jpg"><img
-								src="images/photo17_thum.jpg" alt="꽃" /></a></li>
+								src="images/photo17_thum.jpg" width="130" height="100"/></a></li>
 						<li><a href="images/photo18.jpg"><img
-								src="images/photo18_thum.jpg" alt="꽃" /></a></li>
+								src="images/photo18_thum.jpg" width="130" height="100"/></a></li>
 						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" alt="꽃" /></a></li>
-						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" alt="꽃" /></a></li>
+								src="images/photo19_thum.jpg" width="130" height="100"/></a></li>
+						<li><a href="images/photo20.jpg"><img
+								src="images/photo20_thum.jpg"  width="130" height="100"/></a></li>
 					</ul>
 					<p>
 						<img src="images/btn_prev.jpg" alt="앞으로" class="prev" />
@@ -122,7 +122,7 @@
 			</div>
 		</div>
 		<div id="main">
-			<img src="images/photo1.jpg" alt="" />
+			<img src="images/photo1.jpg" alt="" width="700" height="500"/>
 		</div>
 	
 		<br> <br>

@@ -16,19 +16,20 @@ $(function(){
 	   
 	  
 	   $("input[name='"+p_position+"']").attr("value", p_num );
-	 
+	   $("span."+p_position).remove();
+	   
 	   if(p_group == "헬스"){
 		  
 		   $("td[name='"+p_position+"']").css("background-color", "red")
-		   .append("<span>"+p_name+"</span>");
+		   .append("<span class='"+p_position+"'>"+p_name+"</span>");
 	   }else if(p_group == "요가"){
 		  
 		   $("td[name='"+p_position+"']").css("background-color", "yellow")
-		   .append("<span>"+p_name+"</span>");
+		   .append("<span class='"+p_position+"'>"+p_name+"</span>");
 	   }else{
 		
 		   $("td[name='"+p_position+"']").css("background-color", "green")
-		   .append("<span>"+p_name+"</span>");
+		   .append("<span class='"+p_position+"'>"+p_name+"</span>");
 	   }
 
 

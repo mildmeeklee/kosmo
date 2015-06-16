@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1">
+	<table>
 		<tr>
 			<th>글번호</th>
 			<th>제목</th>
@@ -17,9 +17,9 @@
 		</tr>
 		
 		<c:forEach var = "noticelist" items="${noticelist }">
-			<tr>
+			<tr align="center">
 				<td> ${noticelist.n_num }</td>
-				<td> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
+				<td width="70%"> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
 				<td><fmt:formatDate value="${noticelist.n_date}" type="date" var="date"/>${date}</td>
 			</tr>
 		</c:forEach>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +10,15 @@
 <body>
 	<table border="1">
 		<tr>
-			<td>${noticecontent.n_num}</td>
-			<td>${noticecontent.n_name}</td>
+			<td colspan="2">${noticecontent.n_name}</td>
 		</tr>
 		<tr>
-			<td colspan="2"><textarea rows="40" cols="20">${noticecontent.n_content}</textarea> </td>
+			<td>${noticecontent.n_num}</td>
+			<td><fmt:formatDate value="${noticecontent.n_date}" type="date" var="date"/>${date}</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" width="300" height="500">${noticecontent.n_content}</td>
 		</tr>
 	</table>
 	

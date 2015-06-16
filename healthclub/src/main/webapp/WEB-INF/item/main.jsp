@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/button.css">
 </head>
 <style>
 #layout {
@@ -32,7 +33,6 @@
 #section {
 	width: 87%;
 	height: 1800;
-
 	background-color: #f0f0f0;
 	margin-left: auto;
 }
@@ -62,9 +62,12 @@
 
 			<hr color="red" size="2" width=100%>
 			<center>
-				<font size="5"> <b>&diams;소개 | <a href="notice.do">&diams;공지사항</a>|
-						<a href="boardlist.do">&diams;게시판</a> | &diams;aa | <a
-						href="itemlist.do">&diams;헬스제품</b></a> </b></font>
+				<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
+					| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
+					href="boardlist.do">BOARD</a> | <a class="button"
+					href="schedule.do">SCHEDULER</a> | <a class="button"
+					href="itemlist.do">HEALTH PRODUCT</a>
+				</font>
 				<hr color="red" size="2" width=100%>
 			</center>
 		</div>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+%@ page contentType="text/html; charset=EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +6,7 @@
 </head>
 <body>
       <input id="in" type="text"/>
-      <input id="ch" type="button" value="µ¿¿µ»ó º¯°æ"/>
+      <input id="ch" type="button" value="ë™ì˜ìƒ ë³€ê²½"/>
       <div class="youtubeWrap">
         <iframe id="if" src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
       </div>

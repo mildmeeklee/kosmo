@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 4개의 글 가져오기 -->
 	<select id="select3" resultType="mybatis.ItemInfo">
 		select * from item where ROWNUM
-		&lt; 3 ORDER BY i_date desc
+		&lt; 3 ORDER BY i_time desc
 	</select>
 
 

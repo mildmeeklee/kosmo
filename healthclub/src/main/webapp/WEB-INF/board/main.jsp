@@ -5,7 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../../css/main.css"> 
 <title>Insert title here</title>
+
 </head>
 <style>
 #layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;

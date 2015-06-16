@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/schedule.js"></script>
+
 </head>
 <body>
 <form action="schedulesave.do" method="POST">

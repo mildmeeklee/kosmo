@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../css/button.css">
+<link rel="stylesheet" type="text/css" href="/healthclub/css/button.css">
 </head>
 <style>
 #layout {
@@ -27,13 +27,13 @@
 	float: left;
 	width: 10%;
 	height: 97%;
-	background-color: orange;
+	background-color: #ffffff;
 }
 
 #section {
 	width: 87%;
 	height: 1800;
-	background-color: #f0f0f0;
+	background-color: #ffffff;
 	margin-left: auto;
 }
 

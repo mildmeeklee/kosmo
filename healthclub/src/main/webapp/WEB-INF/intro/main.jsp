@@ -11,6 +11,57 @@
 </head>
 <style>
 .button {
+
+   border: 1px solid #050505;
+   background: #8e9091;
+   background: -webkit-gradient(linear, left top, left bottom, from(#242324), to(#8e9091));
+   background: -webkit-linear-gradient(top, #242324, #8e9091);
+   background: -moz-linear-gradient(top, #242324, #8e9091);
+   background: -ms-linear-gradient(top, #242324, #8e9091);
+   background: -o-linear-gradient(top, #242324, #8e9091);
+   background-image: -ms-linear-gradient(top, #242324 0%, #8e9091 100%);
+   padding: 2px 4px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   color: #f5f8fa;
+   font-size: 20px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+ .button:hover {
+   border: 1px solid #0a3c59;
+   text-shadow: #1e4158 0 1px 0;
+   background: #838485;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d9dde0), to(#838485));
+   background: -webkit-linear-gradient(top, #d9dde0, #838485);
+   background: -moz-linear-gradient(top, #d9dde0, #838485);
+   background: -ms-linear-gradient(top, #d9dde0, #838485);
+   background: -o-linear-gradient(top, #d9dde0, #838485);
+   background-image: -ms-linear-gradient(top, #d9dde0 0%, #838485 100%);
+   color: #0a0a0a;
+   }
+ .button:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 1px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#838485));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   } 
+
+#layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;
+
+
 	border: 1px solid #050505;
 	background: #8e9091;
 	background: -webkit-gradient(linear, left top, left bottom, from(#242324),
@@ -36,6 +87,7 @@
 	font-family: helvetica, serif;
 	text-decoration: none;
 	vertical-align: middle;
+
 }
 
 .button:hover {
@@ -130,6 +182,27 @@
 			</center>
 		</div>
 
+
+
+	
+	<div id="sidebar">
+	<p align="center">
+	
+	<input type="button" value="&nbsp&nbsp&nbsp&nbsp회사소개&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introcompanyIntro.do'"><br>
+	
+	<input type="button" value="헬스프로그램&nbsp" class="button" onclick="javascript:window.location='introhealthProgram.do'">
+	
+	<input type="button" value="프로그램 강사" class="button" onclick="javascript:window.location='introprogramTeacher.do'"><br>
+	
+	<input type="button" value="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp시 설&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introfacility.do'"><br>
+	
+	<!-- <input type="button" value="&nbsp&nbsp&nbsp&nbsp제휴회사&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introalianceBusiness.do'"><br> -->
+	</p>
+	</div>
+	<!-- --------------------------------------------- -->
+	<div id="section"> <decorator:body /> </div>
+	
+<div id="footer">
 
 
 		<div id="sidebar">

@@ -1,55 +1,67 @@
 <%@ page contentType="text/html; charset=EUC-KR"%>
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Insert title here</title>
 </head>
 <body>
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(function(){
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+		$(function() {
 
-	
-	$("select").change(function(){
-		url = $(this).val();
-	    open(url , "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
-	});
-});
-</script>
-<select>
-	<option value="itemlist.do" selected>제품 목록</option>
-	<option value="itemtoplist.do">최신상품</option>
-	<option value="itemcount.do">인기상품</option>
-</select>
-	<table border="1" cellpadding="15px">
-		<tr align="center">
-			<th>제품명</th>
-			<th>제품번호</th>
-			<th>제품가격</th>
-			<th>제품내용</th>
-			<th>등록시간</th>
-			<th>조회수</th>
-			<th>제품이미지</th>
-	
+			$("select")
+					.change(
+							function() {
+								url = $(this).val();
+								open(
+										url,
+										"toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+							});
+		});
+	</script>
+<p align="center">
+	<select >
+		<option value="itemlist.do" selected>제품 목록</option>
+		<option value="itemtoplist.do">최신상품</option>
+		<option value="itemcount.do">인기상품</option>
+	</select>
+</p>
+	<c:set var="i" value="0"/>
+
+	<table Align="Center" border="0"  >
+		
+		<tr >
+			
 			<c:forEach var="item" items="${itemtable}">
-				<tr>
-					<td align="center">${item.i_name}</td>
-					<td align="center">${item.i_num}</td>
-					<td align="center">${item.i_price}</td>
-					<td align="center">${item.i_content}</td>
-					<td align="center"><fmt:formatDate type="date" value="${item.i_time}" var="date"/>${date }</td>
-					<td align="center">${item.i_count}</td>
-					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imageOrgname }" width="100" height="100">				
-					</a></td>
+				
+				<c:if test="${i%2==0}">
 				</tr>
-			</c:forEach>
-	
-	</table>
+				</c:if>
+				<c:if test="${i%2==0}">
+				<tr>
+				</c:if>
+				<td align="center" width="200" height="150"><a
+					href="itemcontent.do?i_num=${item.i_num}"><img
+						src="/healthclub/image/${item.i_imagePath }" width="200"
+						height="150"></a>
+				<td align="center"> 제품 이름 : ${item.i_name} <br>
+						제품 번호: 	${item.i_num} <br>
+						가격 : <fmt:formatNumber value="${item.i_price}"
+						type="currency" currencySymbol="$" /> <br>
+						조회수 : ${item.i_count}
+				</td>
+				<c:set var="i" value="${i+1 }"/>
+				
+		</c:forEach>
+		</tr>
 
-		${page}
+	</table>
+	<p align="center">
+	${page}
+	</p>
 	<br>
 	<br>
 </body>

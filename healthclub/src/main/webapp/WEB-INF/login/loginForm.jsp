@@ -15,12 +15,26 @@ function openConfirmid(userinput) {
 
 }
 </script>
+<style type="text/css">
+#left{
+width:"50%"
+float:left
+}
+#right{
+width:"50%"
+float:left
+}
+</style>
 </head>
 
 <body>
 
 <center>
 <h1>안녕하세요. 방방헬스클럽에 오신 여러분을 환영합니다. <br> 로그인해주세요.</h1></center>
+
+<hr size="3" color="red">
+<br><br>
+<div id="left">
 <form name="myform" action="login.do" method="post">
 <TABLE cellSpacing=1 cellPadding=1 width="260" border=1 align="center" >
  
@@ -44,14 +58,9 @@ function openConfirmid(userinput) {
    </TR>
 </TABLE>
 </form>
-
-
-<br><br><br><br>
-<hr size=5 color="red">
-<br><br><br><br>
-
-
-<form name="myform2" action="Manager.do" method="post">
+</div>
+<div id="right">
+<form  name="myform2" action="Manager.do" method="post">
 <TABLE cellSpacing=1 cellPadding=1 width="260" border=1 align="center" >
  
   <TR height="30"> 
@@ -73,5 +82,6 @@ function openConfirmid(userinput) {
    </TR>
 </TABLE>
 </form>
+</div>
 </body>
 </html>

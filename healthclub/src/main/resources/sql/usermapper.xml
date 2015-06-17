@@ -34,4 +34,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectOneManager" parameterType="String" resultType="mybatis.LogUserInfo">
 		select * from users where id = 1
 	</select>
+	
+	<update id="update" parameterType="mybatis.LogUserInfo" >
+	    update users set
+		pw=#{pw}, name=#{name}, userzipcode=#{userzipcode},address=#{address},sex=#{sex},
+		ph=#{ph},birth=#{birth},email=#{email}
+		where id = #{id}
+	</update>
 </mapper>

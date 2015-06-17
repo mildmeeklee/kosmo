@@ -56,4 +56,9 @@ public class MyPageController {
 		return "redirect:schedule.do";
 		
 	}
+	@RequestMapping(value="mypagemylistUp2.do", method=RequestMethod.GET)
+	public String mypagepasswdcheck(){
+		return "mypage/passwdcheck";
+		
+	}
 }

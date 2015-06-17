@@ -32,8 +32,8 @@ public class ItemController {
    //올리는 이미지명이 같을때 저장되기위해 현재 시간을 추가해 저장하기위함
    String inTime = new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date());
    
-   int d = 5;   //itemlist.do -> PagingService(blockCount);
-   int e = 5;  //itemlist.do ->PagingService(blockPage);
+   int d = 6;   //itemlist.do -> PagingService(blockCount);
+   int e = 6;  //itemlist.do ->PagingService(blockPage);
    
    /**
     * main page에서 -> 헬스제품으로 이동
@@ -52,6 +52,8 @@ public class ItemController {
       // 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
       itemtable = itemtable.subList(paging.getStartCount(), b);
       m.addAttribute("page",page);
+      
+   
       m.addAttribute("itemtable", itemtable);
       
       return "item/list";
@@ -67,8 +69,8 @@ public class ItemController {
    /**
     * 최신상품
     */
-   int q = 5;   //itemlist.do -> PagingService(blockCount);
-   int w = 5;  //itemlist.do ->PagingService(blockPage);
+   int q = 6;   //itemlist.do -> PagingService(blockCount);
+   int w = 6;  //itemlist.do ->PagingService(blockPage);
    @RequestMapping(value = "itemtoplist.do", method = RequestMethod.GET)
    public String weight(@RequestParam(value="p", defaultValue="1") String p , Model m) {
 	      List<ItemInfo> itemtable = dao.selectAlllist();

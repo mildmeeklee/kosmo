@@ -73,9 +73,6 @@
 			</center>
 		</div>
 
-		<a href="itemsubmit.do"> 力前 棵府扁 upload</a></br> <a href="noticelist_m.do">
-			包府磊 权其捞瘤 包府 upload</a>
-
 		<div id="sidebar">
 			<p align="center">
 

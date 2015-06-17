@@ -35,7 +35,7 @@ public class ScheduleController {
 	/**
 	 * main page -> ������ page �̵�
 	 */
-	@RequestMapping(value = "schedule.do", method = RequestMethod.GET)
+	@RequestMapping(value = "mypageschedule.do", method = RequestMethod.GET)
 	public String schedule(ProgramInfo pi, Model m, HttpSession session) {
 
 		if (session.getAttribute("id") != null) {

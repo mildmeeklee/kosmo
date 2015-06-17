@@ -39,7 +39,7 @@
 				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
 				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
 				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
-				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="mypageschedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
 				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
 		</center>
 	</div>

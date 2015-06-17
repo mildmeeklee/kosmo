@@ -20,14 +20,6 @@
       }
     </style>
 <script src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript">
-$(function(){
-	$("#ch").click(function(){
-		$("#if").attr("src",$("#in").val());
-	});
-	  return false
-});
-</script>
 </head>
 <body>
 	<font size=9><b>방방 헬스장</b></font>
@@ -47,8 +39,6 @@ $(function(){
 			
 	<div class="c">
       <h1>Enjoy the video</h1>
-      <input id="in" type="text"/>
-      <input id="ch" type="button" value="동영상 변경"/>
       <div class="youtubeWrap">
         <iframe id="if" src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
       </div>

@@ -121,8 +121,8 @@ public class ManagerController {
 
 	}
 
-	int i = 10;
-	int u = 10;
+	int i = 8;
+	int u = 8;
 	@RequestMapping(value = "itemControll.do", method = RequestMethod.GET)
 	public String itemControlldmin(
 			@RequestParam(value = "p", defaultValue = "1") String p, Model m) {

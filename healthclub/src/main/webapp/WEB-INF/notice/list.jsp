@@ -9,12 +9,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p align="center">
-	<table  border="3"  frame="hsides" rules="rows" >
+	</br>
+	</br>
+	</br>
+	
+	<table  border="3"  frame="hsides" rules="rows" align="center" >
 		<tr>
-			<th>글번호</th>
-			<th>제목</th>
-			<th>날짜</th>
+			<th width="150">글번호</th>
+			<th width="600">제목</th>
+			<th width="300">날짜</th>
 		</tr>
 		
 		<c:forEach var = "noticelist" items="${noticelist }">
@@ -26,7 +29,8 @@
 		</c:forEach>
 
 	</table>
-	${page}
-</p>
+	
+	<p align="right">${page}</p>
+
 </body>
 </html>

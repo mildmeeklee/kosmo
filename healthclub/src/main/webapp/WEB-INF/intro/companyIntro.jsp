@@ -9,7 +9,7 @@
         margin: auto;
       }
       .youtubeWrap {
-        position: relative;z
+        position: relative;
         width: 100%;
         padding-bottom: 56.25%;
       }
@@ -31,17 +31,7 @@
 		세계적인 휘트니스 프랜차이즈입니다. Bodybuilding계의 전설이자 영화 ‘타잔’의 주인공 Joe Gold가 1976년
 		World Gym 오픈 이래 Arnold Schwarzenegger, Rou Ferrigno Dave Draper 등 수많은
 		할리우드 스타를 배출하였습니다.
-	<P>
-		<embed
-			src=http://www.youtube.com/embed/LEPWY5InD6k?&amp;hl=ko_KR&autoplay=1
-			type="application/x-shockwave-flash" width="560" height="315"
-			allowscriptaccess="always" allowfullscreen="true"></embed>
-			
-	<div class="c">
-      <h1>Enjoy the video</h1>
-      <div class="youtubeWrap">
-        <iframe id="if" src="https://www.youtube.com/embed/NgaseuL6C1c" frameborder="0" allowfullscreen></iframe>
-      </div>
+	
 
 
 </div>

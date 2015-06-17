@@ -7,230 +7,82 @@
 <html>
 <head>
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../../css/button.css">
+
 </head>
-<style>
-.button {
-
-   border: 1px solid #050505;
-   background: #8e9091;
-   background: -webkit-gradient(linear, left top, left bottom, from(#242324), to(#8e9091));
-   background: -webkit-linear-gradient(top, #242324, #8e9091);
-   background: -moz-linear-gradient(top, #242324, #8e9091);
-   background: -ms-linear-gradient(top, #242324, #8e9091);
-   background: -o-linear-gradient(top, #242324, #8e9091);
-   background-image: -ms-linear-gradient(top, #242324 0%, #8e9091 100%);
-   padding: 2px 4px;
-   -webkit-border-radius: 0px;
-   -moz-border-radius: 0px;
-   border-radius: 0px;
-   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   text-shadow: #7ea4bd 0 1px 0;
-   color: #f5f8fa;
-   font-size: 20px;
-   font-family: helvetica, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
- .button:hover {
-   border: 1px solid #0a3c59;
-   text-shadow: #1e4158 0 1px 0;
-   background: #838485;
-   background: -webkit-gradient(linear, left top, left bottom, from(#d9dde0), to(#838485));
-   background: -webkit-linear-gradient(top, #d9dde0, #838485);
-   background: -moz-linear-gradient(top, #d9dde0, #838485);
-   background: -ms-linear-gradient(top, #d9dde0, #838485);
-   background: -o-linear-gradient(top, #d9dde0, #838485);
-   background-image: -ms-linear-gradient(top, #d9dde0 0%, #838485 100%);
-   color: #0a0a0a;
-   }
- .button:active {
-   text-shadow: #1e4158 0 1px 0;
-   border: 1px solid #0a3c59;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#838485));
-   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
-   color: #fff;
-   } 
-
-#layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;
-
-
-	border: 1px solid #050505;
-	background: #8e9091;
-	background: -webkit-gradient(linear, left top, left bottom, from(#242324),
-		to(#8e9091));
-	background: -webkit-linear-gradient(top, #242324, #8e9091);
-	background: -moz-linear-gradient(top, #242324, #8e9091);
-	background: -ms-linear-gradient(top, #242324, #8e9091);
-	background: -o-linear-gradient(top, #242324, #8e9091);
-	background-image: -ms-linear-gradient(top, #242324 0%, #8e9091 100%);
-	padding: 2px 4px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-	-webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset
-		rgba(255, 255, 255, 0.4) 0 1px 0;
-	-moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset
-		rgba(255, 255, 255, 0.4) 0 1px 0;
-	box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset
-		rgba(255, 255, 255, 0.4) 0 1px 0;
-	text-shadow: #7ea4bd 0 1px 0;
-	color: #f5f8fa;
-	font-size: 21px;
-	font-family: helvetica, serif;
-	text-decoration: none;
-	vertical-align: middle;
-
-}
-
-.button:hover {
-	border: 1px solid #0a3c59;
-	text-shadow: #1e4158 0 1px 0;
-	background: #838485;
-	background: -webkit-gradient(linear, left top, left bottom, from(#d9dde0),
-		to(#838485));
-	background: -webkit-linear-gradient(top, #d9dde0, #838485);
-	background: -moz-linear-gradient(top, #d9dde0, #838485);
-	background: -ms-linear-gradient(top, #d9dde0, #838485);
-	background: -o-linear-gradient(top, #d9dde0, #838485);
-	background-image: -ms-linear-gradient(top, #d9dde0 0%, #838485 100%);
-	color: #0a0a0a;
-}
-
-.button:active {
-	text-shadow: #1e4158 0 1px 0;
-	border: 1px solid #0a3c59;
-	background: #65a9d7;
-	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d),
-		to(#838485));
-	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-	background: -o-linear-gradient(top, #3e779d, #65a9d7);
-	background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
-	color: #fff;
-}
-
-#layout {
-	margin: auto;
-	width: 90%;
-	border: solid 1px gray;
-	padding: 5px;
-}
-
-#top {
-	height: 100px;
-	background-color: #000000;
-	color: #ffffff;
-	margin-bottom: 5px;
-}
-
-#sidebar {
-	position: absolute;
-	float: left;
-	width: 10%;
-	height: 97%;
-	background-color: orange;
-}
-
-#section {
-	width: 87%;
-	min-height: 400px;
-	background-color: #f0f0f0;
-	margin-left: auto;
-}
-
-#footer {
-	width: 79% min-height:400px;
-}
-</style>
+<link href="css/notice.css" rel="stylesheet" type="text/css">
 <body>
-	<div id="layout">
-		<div id="top">
-			<center>
-				<h2>bangbang</h2>
-			</center>
-			<c:if test="${id !=null }">
-				<p align="right">
-					${id }님 |<a href="logout.do">logout</a> | <a
-						href="mypage.do?id=${id}">my page</a> | <a>cart</a>
-				</p>
-			</c:if>
+	<div id="top">
+		<h1 class="title" align="center">BB Club</h1>
+
+		<c:if test="${id !=null }">
+			<p align="right">
+				<strong>${id }</strong>님 &nbsp;&nbsp;&nbsp; <a href="logout.do"
+					class="myButton">logout</a> <b>|</b> <a href="mypage.do?id=${id}"
+					class="myButton">My page</a> <b>|</b> <a
+					href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+			</p>
+		</c:if>
 
 
-			<c:if test="${id ==null }">
-				<p align="right">
-					로그인 해주세요 : <a href="loginForm.do">login</a>
-			</c:if>
-
-			<hr color="red" size="2" width=100%>
-			<center>
-				<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
-					| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
-					class="button" href="boardlist.do">&diams;BOARD</a> | <a
-					class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
-					class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
-				</font>
-				<hr color="red" size="2" width=100%>
-			</center>
-		</div>
-
-
-
+		<c:if test="${id ==null }">
+			<p align="right">
+				<a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+				<a href="inputForm.do" class="myButton">Join</a>
+			</p>
+		</c:if>
+		
+		<hr color="gray" size="1" width="100%">
+		<hr color="black" size="3" width=100%>
+		
 	
+			<center>
+				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+			</center>
+	</div>
+
+
+
+
 	<div id="sidebar">
-	<p align="center">
-	
-	<input type="button" value="&nbsp&nbsp&nbsp&nbsp회사소개&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introcompanyIntro.do'"><br>
-	
-	<input type="button" value="헬스프로그램&nbsp" class="button" onclick="javascript:window.location='introhealthProgram.do'">
-	
-	<input type="button" value="프로그램 강사" class="button" onclick="javascript:window.location='introprogramTeacher.do'"><br>
-	
-	<input type="button" value="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp시 설&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introfacility.do'"><br>
-	
-	<!-- <input type="button" value="&nbsp&nbsp&nbsp&nbsp제휴회사&nbsp&nbsp&nbsp&nbsp" class="button" onclick="javascript:window.location='introalianceBusiness.do'"><br> -->
-	</p>
+		<p align="center">
+
+			<input type="button"
+				class="MenuButtonF"
+				value="회사소개" 
+				onclick="javascript:window.location='introcompanyIntro.do'"><br>
+
+			<input type="button" value="헬스프로그램" class="MenuButtonF"
+				onclick="javascript:window.location='introhealthProgram.do'"><br>
+
+			<input type="button" value="프로그램 강사" class="MenuButtonF"
+				onclick="javascript:window.location='introprogramTeacher.do'"><br>
+
+			<input type="button"
+				value="시 설"
+				class="MenuButtonF"
+				onclick="javascript:window.location='introfacility.do'"><br>
+		</p>
 	</div>
 	<!-- --------------------------------------------- -->
-	<div id="section"> <decorator:body /> </div>
+	<div id="categorybar">
+	<h1 align="left">&nbsp;&nbsp;Intro</h1>
+	</div>
 	
-<div id="footer">
+	<div id="sectionBG">
+		<div id="section"> <decorator:body /></div>
+	</div>
 
-
-		<div id="sidebar">
-			<p align="center">
-
-				<input type="button" value="회사소개" class="button"
-					onclick="javascript:window.location='introcompanyIntro.do'"><br>
-
-				<input type="button" value="헬스프로그램" class="button"
-					onclick="javascript:window.location='introhealthProgram.do'">
-
-				<input type="button" value="프로그램 강사" class="button"
-					onclick="javascript:window.location='introprogramTeacher.do'"><br>
-
-				<input type="button" value="시설" class="button"
-					onclick="javascript:window.location='introfacility.do'"><br>
-
-				<input type="button" value="제휴회사" class="button"
-					onclick="javascript:window.location='introalianceBusiness.do'"><br>
-			</p>
-		</div>
-		<!-- --------------------------------------------- -->
-		<div id="section">
-			<decorator:body />
-		</div>
-
-		<div id="footer"></div>
-
+	<div id="footer">
+				<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
+				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
+				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
+				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
+				RESERVED
 	</div>
 </body>
 </html>

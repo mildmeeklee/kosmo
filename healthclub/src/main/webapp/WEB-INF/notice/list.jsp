@@ -9,7 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table>
+<p align="center">
+	<table  border="3"  frame="hsides" rules="rows" >
 		<tr>
 			<th>글번호</th>
 			<th>제목</th>
@@ -26,5 +27,6 @@
 
 	</table>
 	${page}
+</p>
 </body>
 </html>

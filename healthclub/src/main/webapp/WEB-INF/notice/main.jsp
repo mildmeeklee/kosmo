@@ -20,7 +20,7 @@
 	position : absolute; float : left; width : 10%; height : 97%; background-color : orange;
 }
 #section{
-	width :87%; min-height : 400px;  background-color : #f0f0f0; margin-left : auto;
+	width :87%; min-height : 400px;  background-color : #f0f0f0; margin: auto;
 }
 #footer{
 width:79% min-height:400px; 

@@ -46,7 +46,8 @@
 
 	<div id="sidebar">
 		<p align="center">
-		<a href="notice.do" class="MenuButtonF">공지시항</a>
+		<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+		<a href="notice.do" class="SideButton">공 &nbsp;지 &nbsp;사 &nbsp;항</a>
 		</p>
 	</div>
 	<!-- --------------------------------------------- -->

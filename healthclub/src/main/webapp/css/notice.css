@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 #top{
 	margin-left: 10%;
@@ -21,7 +22,7 @@
 	height: 600px;
 	background: #333333;
 	border: medium groove gray;
-	border-radius:50px 0px 50px 0px;
+	border-radius:0px 0px 50px 0px;
 	
 }
 #categorybar{
@@ -192,4 +193,41 @@
 	top:1px;
 }
 
+/*  사이드 버튼 */
+.SideButton {
+   font-family: 'Hanna', sans-serif;
+   border: 1px solid #333333;
+   background: #333333;
+   background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#333333));
+   background: -webkit-linear-gradient(top, #333333, #333333);
+   background: -moz-linear-gradient(top, #333333, #333333);
+   background: -ms-linear-gradient(top, #333333, #333333);
+   background: -o-linear-gradient(top, #333333, #333333);
+   background-image: -ms-linear-gradient(top, #333333 0%, #333333 100%);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   color: #ffffff;
+   font-size: 17px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.SideButton:hover {
+   font-family: 'Hanna', sans-serif;
+   border: 1px solid #333333;
+   text-shadow: #1e4158 0 1px 0;
+   background: #333333;
+   background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#333333));
+   background: -webkit-linear-gradient(top, #333333, #333333);
+   background: -moz-linear-gradient(top, #333333, #333333);
+   background: -ms-linear-gradient(top, #333333, #333333);
+   background: -o-linear-gradient(top, #333333, #333333);
+   background-image: -ms-linear-gradient(top, #333333 0%, #333333 100%);
+   color: #f50000;
+   }
 

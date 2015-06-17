@@ -29,6 +29,20 @@ public class LogUserDAO extends SqlSessionDaoSupport {
 	}
 	
 	/**
+	 * update
+	 */
+	public void update(String id, String pw, String name, String userzipcode,
+			String address, String sex, String ph, String birth, String email) {
+
+		LogUserInfo x = new LogUserInfo(id, pw, name, userzipcode, address,
+				sex, ph, birth, email);
+
+		getSqlSession().update("users.update", x);
+
+	}
+	
+	
+	/**
 	 * DB의 id값 비교
 	 */
 	public LogUserInfo selOne(String id) {

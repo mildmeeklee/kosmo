@@ -138,6 +138,24 @@ public class MenuController {
 				u.getEmail());
 		return "login/loginForm";
 	}
+	
+	/**
+	 * mypage에서 수정완료 버튼을 누르면 수정쿼리 실행
+	 */
+	@RequestMapping(value = "UpUp.do", method = RequestMethod.POST)
+	public String UpUp(@ModelAttribute("logUserInfo") LogUserInfo u, 
+			 Model m) {
+		if (u.getPw().equals(u.getPw2())) {
+			dao.update(u.getId(), u.getPw(), u.getName(), u.getUserzipcode(),
+					u.getAddress(), u.getSex(), u.getPh(), u.getBirth(),
+					u.getEmail());
+			LogUserInfo l = dao.selOne(u.getId());
+			m.addAttribute("userlist",l);
+			return "mypage/mylist";
+			}
+	
+		return "login/logerror";
+	}
 
 	/**
 	 * 로그인 창에서 -> 로그인 버튼 누를시 확인/에러 페이지
@@ -169,7 +187,29 @@ public class MenuController {
 			return "login/logerror";
 		}
 	}
-	
+	/**
+	 * 수정 버튼을 누르면 아이디와 비밀번호 확인후 수정페이지로 이동
+	 */
+	@RequestMapping(value = "passwdcheck.do", method = RequestMethod.POST)
+	public String Idupdate(
+			@RequestParam("pw") String pw, HttpSession session, Model m) {
+
+		try {
+			String id = (String)session.getAttribute("id");
+			
+			LogUserInfo l = dao.selOne(id);
+			if (l.getId().equals(id)) {
+				if (l.getPw().equals(pw)) {
+					m.addAttribute("userlist",l);
+					return "mypage/mylistUpdate";
+				}
+				return "login/logerror";
+			}
+			return "login/logerror";
+		} catch (Exception e) {
+			return "login/logerror";
+		}
+	}
 	/**
 	 * 로그인 되어있는 main page에서  ->mypage로 넘어감
 	 */

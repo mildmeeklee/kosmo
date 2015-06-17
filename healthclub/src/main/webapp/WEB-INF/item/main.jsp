@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="../../css/button.css">
 </head>
 <style>
-
 #layout {
 	margin: auto;
 	width: 90%;
@@ -63,11 +62,11 @@
 
 			<hr color="red" size="2" width=100%>
 			<center>
-				<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
-					| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
-					href="boardlist.do">BOARD</a> | <a class="button"
-					href="schedule.do">SCHEDULER</a> | <a class="button"
-					href="itemlist.do">HEALTH PRODUCT</a>
+				<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
+					| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
+					class="button" href="boardlist.do">&diams;BOARD</a> | <a
+					class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
+					class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
 				</font>
 				<hr color="red" size="2" width=100%>
 			</center>
@@ -78,19 +77,19 @@
 				<img alt="" src="/healthclub/img/item1.jpg" width="100" height="80"><br>
 				<input type="button" value="보충제이미지"
 					onclick="javascript:window.location='itemweight.do'"><br>
-				<hr size="1" color="red">
+			<hr size="1" color="red">
 			</p>
 			<p align="center">
 				<img alt="" src="/healthclub/img/item2.jpg" width="100" height="80"><br>
-				 <input type="button" value="헬스용품"
+				<input type="button" value="헬스용품"
 					onclick="javascript:window.location='itemhealthArticle.do'"><br>
-				<hr size="1" color="red">
+			<hr size="1" color="red">
 			</p>
 			<p align="center">
-				<img alt="" src="/healthclub/img/item3.gif" width="100" height="80" ><br>
-				
-				
-					 <input type="button" value="헬스의류"
+				<img alt="" src="/healthclub/img/item3.gif" width="100" height="80"><br>
+
+
+				<input type="button" value="헬스의류"
 					onclick="javascript:window.location='itemhealthWear.do'"><br>
 				<br> <br>
 			</p>

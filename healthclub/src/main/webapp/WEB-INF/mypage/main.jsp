@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../css/button.css"> 
+<link rel="stylesheet" type="text/css" href="../../css/button.css">
 </head>
 <style>
 #layout {
@@ -63,9 +63,12 @@
 
 			<hr color="red" size="2" width=100%>
 			<center>
-				<font size="5"> <b>&diams;소개 | <a href="notice.do">&diams;공지사항</a>|
-						<a href="boardlist.do">&diams;게시판</a> | &diams;aa | <a
-						href="itemlist.do">&diams;헬스제품</b></a> </b></font>
+				<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
+					| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
+					class="button" href="boardlist.do">&diams;BOARD</a> | <a
+					class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
+					class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
+				</font>
 				<hr color="red" size="2" width=100%>
 			</center>
 		</div>
@@ -80,10 +83,7 @@
 					onclick="javascript:window.location='mypage.do?id=${id}'"><br>
 				<br> <input type="button" value="스케줄"
 					onclick="javascript:window.location='mypagescheduleViewM.do'"><br>
-				<br> <input type="button" value=".ㅇ른ㄹㄴㅇㄹ하고싶은거해"
-					onclick="javascript:window.location='itemhealthWear.do'"><br>
-				<br> <br>
-
+				<br>
 			</p>
 		</div>
 		<!-- --------------------------------------------- -->

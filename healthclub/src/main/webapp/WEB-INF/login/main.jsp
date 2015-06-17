@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../css/button.css"> 
+<link rel="stylesheet" type="text/css" href="../../css/button.css">
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <title>Insert title here</title>
@@ -91,60 +91,68 @@
 }
 
 .button {
-   border: 2px solid #0a3c59;
-   background: #a4a5a6;
-   background: -webkit-gradient(linear, left top, left bottom, from(#000508), to(#a4a5a6));
-   background: -webkit-linear-gradient(top, #000508, #a4a5a6);
-   background: -moz-linear-gradient(top, #000508, #a4a5a6);
-   background: -ms-linear-gradient(top, #000508, #a4a5a6);
-   background: -o-linear-gradient(top, #000508, #a4a5a6);
-   background-image: -ms-linear-gradient(top, #000508 0%, #a4a5a6 100%);
-   padding: 5px 10px;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   text-shadow: #000000 0 1px 0;
-   color: #ffffff;
-   font-size: 21px;
-   font-family: helvetica, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
- .button:hover {
-   border: 2px solid #0a3c59;
-   text-shadow: #1e4158 0 1px 0;
-   background: #f4f9fc;
-   background: -webkit-gradient(linear, left top, left bottom, from(#bdbdbd), to(#f4f9fc));
-   background: -webkit-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -moz-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -ms-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background: -o-linear-gradient(top, #bdbdbd, #f4f9fc);
-   background-image: -ms-linear-gradient(top, #bdbdbd 0%, #f4f9fc 100%);
-   color: #000000;
-   }
- .button:active {
-   text-shadow: #1e4158 0 1px 0;
-   border: 2px solid #0a3c59;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f4f9fc));
-   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
-   color: #fff;
-   } 
+	border: 2px solid #0a3c59;
+	background: #a4a5a6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#000508),
+		to(#a4a5a6));
+	background: -webkit-linear-gradient(top, #000508, #a4a5a6);
+	background: -moz-linear-gradient(top, #000508, #a4a5a6);
+	background: -ms-linear-gradient(top, #000508, #a4a5a6);
+	background: -o-linear-gradient(top, #000508, #a4a5a6);
+	background-image: -ms-linear-gradient(top, #000508 0%, #a4a5a6 100%);
+	padding: 5px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset
+		rgba(255, 255, 255, 0.4) 0 1px 0;
+	-moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset
+		rgba(255, 255, 255, 0.4) 0 1px 0;
+	box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset
+		rgba(255, 255, 255, 0.4) 0 1px 0;
+	text-shadow: #000000 0 1px 0;
+	color: #ffffff;
+	font-size: 21px;
+	font-family: helvetica, serif;
+	text-decoration: none;
+	vertical-align: middle;
+}
 
+.button:hover {
+	border: 2px solid #0a3c59;
+	text-shadow: #1e4158 0 1px 0;
+	background: #f4f9fc;
+	background: -webkit-gradient(linear, left top, left bottom, from(#bdbdbd),
+		to(#f4f9fc));
+	background: -webkit-linear-gradient(top, #bdbdbd, #f4f9fc);
+	background: -moz-linear-gradient(top, #bdbdbd, #f4f9fc);
+	background: -ms-linear-gradient(top, #bdbdbd, #f4f9fc);
+	background: -o-linear-gradient(top, #bdbdbd, #f4f9fc);
+	background-image: -ms-linear-gradient(top, #bdbdbd 0%, #f4f9fc 100%);
+	color: #000000;
+}
+
+.button:active {
+	text-shadow: #1e4158 0 1px 0;
+	border: 2px solid #0a3c59;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d),
+		to(#f4f9fc));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+	color: #fff;
+}
 </style>
 <script type="text/javascript">
 	$(function() {
 		$("#navi a").click(
 				function() {
 					$("#main img").before(
-							"<img src='" + $(this).attr("href") + "' alt='' width='700' height='500'>");
+							"<img src='" + $(this).attr("href")
+									+ "' alt='' width='700' height='500'>");
 					$("#main img:last").fadeOut("fast", function() {
 						$(this).remove();
 					});
@@ -182,7 +190,8 @@
 	<c:if test="${id !=null }">
 		<p align="right">
 			${id }님 |<a href="logout.do">logout</a> | <a
-				href="mypage.do?id=${id}">my page</a> | <a href="cartlist.do?s_id=${id}">cart</a>
+				href="mypage.do?id=${id}">my page</a> | <a
+				href="cartlist.do?s_id=${id}">cart</a>
 		</p>
 	</c:if>
 
@@ -194,10 +203,11 @@
 
 	<hr color="red" size="2" width=100%>
 	<center>
-		<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
-			| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
-			href="boardlist.do">BOARD</a> | <a class="button" href="schedule.do">SCHEDULER</a>
-			| <a class="button" href="itemlist.do">HEALTH PRODUCT</a>
+		<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
+			| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
+			class="button" href="boardlist.do">&diams;BOARD</a> | <a
+			class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
+			class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
 		</font>
 		<hr color="red" size="2" width=100%>
 	</center>
@@ -207,29 +217,29 @@
 				<div class="page">
 					<ul>
 
-						<li><a href="images/photo1.jpg"><img width="130" height="100"
-								src="images/photo1_thum.jpg"  /></a></li>
-						<li><a href="images/photo2.jpg"><img width="130" height="100"
-								src="images/photo2_thum.jpg" /></a></li>
-						<li><a href="images/photo3.jpg"><img width="130" height="100"
-								src="images/photo3_thum.jpg" /></a></li>
-						<li><a href="images/photo4.jpg"><img width="130" height="100"
-								src="images/photo4_thum.jpg" /></a></li>
+						<li><a href="images/photo1.jpg"><img width="130"
+								height="100" src="images/photo1_thum.jpg" /></a></li>
+						<li><a href="images/photo2.jpg"><img width="130"
+								height="100" src="images/photo2_thum.jpg" /></a></li>
+						<li><a href="images/photo3.jpg"><img width="130"
+								height="100" src="images/photo3_thum.jpg" /></a></li>
+						<li><a href="images/photo4.jpg"><img width="130"
+								height="100" src="images/photo4_thum.jpg" /></a></li>
 
 					</ul>
 					<p>
 						<img src="images/btn_next.jpg" alt="次へ" class="next" />
 					</p>
-					</div>
-				
+				</div>
+
 				<div class="page">
 					<ul>
-						<li><a href="images/photo9.jpg" ><img
-								src="images/photo9_thum.jpg"  width="130" height="100"/></a></li>
+						<li><a href="images/photo9.jpg"><img
+								src="images/photo9_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo10.jpg"><img
-								src="images/photo10_thum.jpg"  width="130" height="100"/></a></li>
+								src="images/photo10_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo11.jpg"><img
-								src="images/photo11_thum.jpg"   width="130" height="100"/></a></li>
+								src="images/photo11_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo12.jpg"><img
 								src="images/photo12_thum.jpg" width="130" height="100" /></a></li>
 
@@ -239,74 +249,74 @@
 							src="images/btn_next.jpg" alt="次へ" class="next" />
 					</p>
 				</div>
-				
+
 				<div class="page">
 					<ul>
 						<li><a href="images/photo17.jpg"><img
-								src="images/photo17_thum.jpg" width="130" height="100"/></a></li>
+								src="images/photo17_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo18.jpg"><img
-								src="images/photo18_thum.jpg" width="130" height="100"/></a></li>
+								src="images/photo18_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" width="130" height="100"/></a></li>
+								src="images/photo19_thum.jpg" width="130" height="100" /></a></li>
 						<li><a href="images/photo20.jpg"><img
-								src="images/photo20_thum.jpg"  width="130" height="100"/></a></li>
+								src="images/photo20_thum.jpg" width="130" height="100" /></a></li>
 					</ul>
 					<p>
 						<img src="images/btn_prev.jpg" alt="앞으로" class="prev" />
 					</p>
 				</div>
-			
+
 			</div>
 		</div>
 		<div id="main">
-			<img src="images/photo1.jpg" alt="" width="700" height="500"/>
+			<img src="images/photo1.jpg" alt="" width="700" height="500" />
 		</div>
 
 
-	<div id="bottom">
-		<div id="bottom2" >
-			<font size="5">		
-			<table border="1">
-				<tr>
-					<th>게시판</th>
-				</tr>
-				<c:forEach var="boardlist" items="${boardlist}">
-					<tr>
-						<td><a href="boardcontent.do?b_num=${boardlist.b_num}">${boardlist.b_name}</a></td>
-					</tr>
-				</c:forEach>
-			</table>
-		</div>
-		
-		<div id="bottom3">
-			<table border="1">
-				<tr>
-					<th>최신 아이템</th>
-				</tr>
-				<c:forEach var="itemtable" items="${itemtable}">
-					<tr>
-						<td><a href="itemcontent.do?i_num=${itemtable.i_num}">${itemtable.i_name}</a></td>
-					</tr>
-				</c:forEach>
-			</table>
-		</div>
+		<div id="bottom">
+			<div id="bottom2">
+				<font size="5">
+					<table border="1">
+						<tr>
+							<th>게시판</th>
+						</tr>
+						<c:forEach var="boardlist" items="${boardlist}">
+							<tr>
+								<td><a href="boardcontent.do?b_num=${boardlist.b_num}">${boardlist.b_name}</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+			</div>
 
-		<div id="bottom4">
-			<table border="1">
-				<tr>
-					<th>공지사항</th>
-				</tr>
-		
-				<c:forEach var="noticelist" items="${noticelist}">
+			<div id="bottom3">
+				<table border="1">
 					<tr>
-						<td><a href="noticecontent.do?n_num=${noticelist.n_num}">${noticelist.n_name}</a></td>
+						<th>최신 아이템</th>
 					</tr>
-				</c:forEach>
-			</table>
-	
+					<c:forEach var="itemtable" items="${itemtable}">
+						<tr>
+							<td><a href="itemcontent.do?i_num=${itemtable.i_num}">${itemtable.i_name}</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+
+			<div id="bottom4">
+				<table border="1">
+					<tr>
+						<th>공지사항</th>
+					</tr>
+
+					<c:forEach var="noticelist" items="${noticelist}">
+						<tr>
+							<td><a href="noticecontent.do?n_num=${noticelist.n_num}">${noticelist.n_name}</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+
+			</div>
 		</div>
-	</div>
-	<div id="footer"
+		<div id="footer"
 			style="height: 140px; margin-top: 10px; background: black;">
 			<font color="white"> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
 				이용약관 | 개인정보취급방침 | 사이트 맵 <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
@@ -316,7 +326,5 @@
 				RESERVED
 			</font>
 		</div>
-
-
 </body>
 </html>

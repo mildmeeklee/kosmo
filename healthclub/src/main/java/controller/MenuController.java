@@ -142,7 +142,7 @@ public class MenuController {
 	/**
 	 * mypage에서 수정완료 버튼을 누르면 수정쿼리 실행
 	 */
-	@RequestMapping(value = "UpUp.do", method = RequestMethod.POST)
+	@RequestMapping(value = "mypageUpUp.do", method = RequestMethod.POST)
 	public String UpUp(@ModelAttribute("logUserInfo") LogUserInfo u, 
 			 Model m) {
 		if (u.getPw().equals(u.getPw2())) {
@@ -190,7 +190,7 @@ public class MenuController {
 	/**
 	 * 수정 버튼을 누르면 아이디와 비밀번호 확인후 수정페이지로 이동
 	 */
-	@RequestMapping(value = "passwdcheck.do", method = RequestMethod.POST)
+	@RequestMapping(value = "mypagepasswdcheck.do", method = RequestMethod.POST)
 	public String Idupdate(
 			@RequestParam("pw") String pw, HttpSession session, Model m) {
 

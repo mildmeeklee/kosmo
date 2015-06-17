@@ -55,6 +55,6 @@
 		
 	</table>
 									
-	<input type="button" onclick="javascript:window.location='mylistUp2.do'" value="수정하기">
+	<input type="button" onclick="javascript:window.location='mypagemylistUp2.do'" value="수정하기">
 </body>
 </html>

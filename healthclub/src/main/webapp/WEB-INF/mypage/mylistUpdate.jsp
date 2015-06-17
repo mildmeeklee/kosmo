@@ -5,8 +5,16 @@
 <head>
 <title>Insert title here</title>
 </head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+function zipCheck() {
+	url = "zip.do";
+	window.open(url,"post",
+					"toolbar=no ,width=500 ,height=300,directories=no,status=yes,scrollbars=yes,menubar=no");
+}
+</script>
 <body>
-<form action="UpUp.do" method="POST">
+<form action="mypageUpUp.do" method="POST">
 	<table border="1" cellpadding="15px">
 		<tr align="center">
 
@@ -28,8 +36,10 @@
 			<td align="center"><input name = "name" type="text" value="${userlist.getName() }"></td>  
 		</tr>
 		<tr>
-			<td>우편번호</td>
- 		<td align="center"><input name = "userzipcode" type="text" value="${userlist.getUserzipcode() }"></td> 
+			<td width="300">우편번호</td>
+				<td><input name="userzipcode" type="text" size="7" /> 
+					<input type="button" value="우편번호찾기" onClick="zipCheck()"> 우편번호를 검색
+					하세요.</td> 
 		</tr>
 
 		<tr>
@@ -38,8 +48,11 @@
 		</tr>
 
 		<tr>
-			<td>성별</td>
-		 <td align="center"><input name = "sex" type="text" value="${userlist.getSex() }"></td>
+			<td width="300">성별</td>
+				<td width="400">
+				<input type="radio" name="sex" value="남자" checked />남자
+				<input type="radio" name="sex" value="여자" />여자
+				
 		</tr>
 
 		<tr>

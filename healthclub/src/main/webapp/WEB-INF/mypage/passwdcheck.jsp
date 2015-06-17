@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <form action="passwdcheck.do" method="POST">
+ <form action="mypagepasswdcheck.do" method="POST">
  현제 비밀번호 입력을 해주세요.<br>
  <input name="pw" type="text" >
  <input type="submit"> 

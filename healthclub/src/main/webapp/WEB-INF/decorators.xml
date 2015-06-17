@@ -30,7 +30,7 @@
 		<pattern>*intro*</pattern>
 	</decorator>
 	
-	<decorator name="intro" page="/WEB-INF/login/main2.jsp">
+	<decorator name="login" page="/WEB-INF/login/main2.jsp">
 		<pattern>*loginForm.do</pattern>
 	</decorator>
 	<excludes>

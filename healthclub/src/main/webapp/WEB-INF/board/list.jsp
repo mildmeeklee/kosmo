@@ -20,7 +20,7 @@
 <br>
 <div  class="noticetable">
 
-	<table align="center" frame="hsides" rules="rows" align="center">
+	<table align="center" frame="hsides" rules="rows">
 		<tr bordercolor="red">
 			<th>글번호</th>
 			<th>제목</th>

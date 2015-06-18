@@ -33,7 +33,7 @@ public class CartController {
 		this.dao2 = dao2;
 	}
 
-	@RequestMapping(value = "Cart.do", method = RequestMethod.POST)
+	@RequestMapping(value = "mypageCart.do", method = RequestMethod.POST)
 	public String Cart(@RequestParam("s_id") String s_id,
 			@RequestParam("i_item") int i_item,
 			@RequestParam("s_num") int s_num, Model m) {
@@ -52,7 +52,7 @@ public class CartController {
 		return "cart/cartlist";
 	}
 
-	@RequestMapping(value = "cartlist.do", method = RequestMethod.GET)
+	@RequestMapping(value = "mypagecartlist.do", method = RequestMethod.GET)
 	public String Cartlist(HttpSession session, Model m) {
 		String s_id = (String) session.getAttribute("id");
 		List<CartInfo> cartlist = dao.selectAll(s_id);
@@ -68,7 +68,7 @@ public class CartController {
 	@RequestMapping(value = "delcart.do", method = RequestMethod.POST)
 	public String cartdelete(@RequestParam("cart_num") int cart_num) {
 		dao.delete(cart_num);
-		return "redirect:cartlist.do";
+		return "redirect:mypagecartlist.do";
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class CartController {
 	/**
 	 * upcart -> ¼öÁ¤
 	 */
-	@RequestMapping(value = "upcart.do", method = RequestMethod.POST)
+	@RequestMapping(value = "mypageupcart.do", method = RequestMethod.POST)
 	public String boardup(@RequestParam("cart_num") int cart_num, Model m) {
 
 		CartInfo cart = dao.select1(cart_num);
@@ -102,7 +102,7 @@ public class CartController {
 		int itemPay = dao2.selOne(i_item).getI_price();
 		int s_sum = s_num * itemPay;
 		dao.up(cart_num, s_num, s_sum);
-		return "redirect:cartlist.do";
+		return "redirect:mypagecartlist.do";
 	}
 
 }

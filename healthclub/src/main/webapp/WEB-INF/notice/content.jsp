@@ -8,20 +8,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<td colspan="2">${noticecontent.n_name}</td>
+	<P align="right">	
+	<input type="button" value="목록" onclick="javascript:window.location='notice.do'">&nbsp;&nbsp;&nbsp;&nbsp; 	
+	</P>
+	<table frame="hsides" rules="rows" align="center" >
+		<tr >
+			<td width="600" colspan="2">제목  : ${noticecontent.n_name}</td>
 		</tr>
 		<tr>
-			<td>${noticecontent.n_num}</td>
-			<td><fmt:formatDate value="${noticecontent.n_date}" type="date" var="date"/>${date}</td>
+			<td width="600">글번호 : ${noticecontent.n_num}</td>
+			<td width="600"><fmt:formatDate value="${noticecontent.n_date}" type="date" var="date"/>작성일 : ${date}</td>
 		</tr>
 		
 		<tr>
-			<td colspan="2" width="300" height="500">${noticecontent.n_content}</td>
+			<td width="600" colspan="2" width="300" height="500" >${noticecontent.n_content}</td>
 		</tr>
 	</table>
 	
-	<input type="button" value="목록" onclick="javascript:window.location='notice.do'"> 
+	
 </body>
 </html>

@@ -34,22 +34,38 @@ margin-bottom: 100px;
 </style>
 </style>
 <body>
-<div id="layout">
-	<div id="top">
-		<center>
-			<h2>bangbang</h2>
-		</center>
-		
-		<hr color="red" size="2" width=100%>
-		<center>
-			<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
-				| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
-				href="boardlist.do">BOARD</a> | <a class="button" href="schedule.do">SCHEDULER</a>
-				| <a class="button" href="itemlist.do">HEALTH PRODUCT</a>
-			</font>
-			<hr color="red" size="2" width=100%>
-		</center>
-</div>
+<div id="top">
+   
+      <h1 class="title" align="center">Nice Body Club</h1>
+      
+   
+      <c:if test="${id !=null }">
+         <p align="right">
+            <strong>${id }</strong>ดิ &nbsp;&nbsp;&nbsp;
+            <a href="logout.do" class="myButton">logout</a> <b>|</b> 
+            <a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
+            <a href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+         </p>
+      </c:if>
+      
+      <c:if test="${id ==null }">
+         <p align="right">
+            <a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+            <a href="inputForm.do" class="myButton">Join</a> 
+         </p>
+      </c:if>
+      
+      <hr color="gray" size="1" width="100%">
+      <hr color="black" size="3" width=100%>
+      
+      <center>
+            <a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+            <a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+            <a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+            <a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+            <a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+      </center>
+   </div>
 
 	<div id="sectionBG">
 	<br>

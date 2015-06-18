@@ -23,7 +23,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 4개의 글 가져오기 -->
 	<select id="select3" resultType="mybatis.BoardInfo">
-		select * from board where ROWNUM &lt; 3 ORDER BY b_date desc 
+		select * from board where ROWNUM &lt; 5 ORDER BY b_date desc 
 	</select>
 	
 	<!-- 작성되어 있는 게시판글을 Update -->

@@ -6,10 +6,22 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style type="text/css">
+.noticetable{
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+</style>
 </head>
 <body>
-	<table align="center" >
-		<tr>
+<br>
+<br>
+<br>
+<div  class="noticetable">
+
+	<table align="center" frame="hsides" rules="rows" align="center">
+		<tr bordercolor="red">
 			<th>글번호</th>
 			<th>제목</th>
 			<th>작성자Id</th>
@@ -18,11 +30,11 @@
 
 		<c:forEach var="boardlist" items="${boardlist }">
 			<tr>
-				<td>${boardlist.b_num }</td>
-				<td><a href="boardcontent.do?b_num=${boardlist.b_num}">
+				<td width="50" align="center">${boardlist.b_num }</td>
+				<td width="500" align="center"><a href="boardcontent.do?b_num=${boardlist.b_num}">
 						${boardlist.b_name}</a></td>
-				<td>${boardlist.b_id}</td>
-				<td>${boardlist.b_count}</td>
+				<td width="100" align="center">${boardlist.b_id}</td>
+				<td width="50" align="center">${boardlist.b_count}</td>
 			</tr>
 		</c:forEach>
 	</table>

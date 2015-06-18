@@ -9,12 +9,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<p align="right">
+	<input type="button" value="목록" onclick="javascript:window.location='boardlist.do'"> 
+	<input type="button" value="수정" onclick="javascript:window.location='boardupdateM.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'" />
+	<input type="button" value="삭제" onclick="javascript:window.location='boarddelete.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'">
+	</p>
+	<br>
 	<!--  선택 Board Content  -->
-	<table border="1">
+	<table frame="hsides" rules="rows" align="center" >
 		<tr>
-			<td>글번호 :: ${boardcontent.b_num}</td>
-			<td colspan="2">제목 :: ${boardcontent.b_name}</td>
+			<td width="100">글번호 :: ${boardcontent.b_num}</td>
+			<td width="700" colspan="2">제목 :: ${boardcontent.b_name}</td>
 		</tr>
 		<tr>
 			<td>작성자 :: ${boardcontent.b_id}</td>
@@ -22,42 +27,35 @@
 			<td>조회수 :: ${boardcontent.b_count}</td>
 		</tr>
 		<tr>
-			<td colspan="3"><textarea cols="50" rows="10">${boardcontent.b_content}</textarea> </td>
+			<td width="800" colspan="3" width="300" height="250" >${boardcontent.b_content}</td>
 		</tr>
 	</table>
-	
-	<input type="button" value="목록" onclick="javascript:window.location='boardlist.do'"> 
-	<input type="button" value="수정" onclick="javascript:window.location='boardupdateM.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'" />
-	<input type="button" value="삭제" onclick="javascript:window.location='boarddelete.do?b_id=${boardcontent.b_id}&b_num=${boardcontent.b_num}'">
+
 	<p>
 	
 	<!--  코멘트 작성란  -->
 	<form action="commentwrite.do?c_bnum=${boardcontent.b_num}" method="POST">
-	<table border="1">
+	<table align="center">
 		<tr>
-			<td><input type="text" name="c_content" value="코맨트를 입력해 주세요" >
+			<td width="800"><input type="text" name="c_content" value="코맨트를 입력해 주세요" >
 				<input type="submit" value="작성"> </td>
 		</tr>
 	</table>
 	</form>
-	
+	<br>
 	<!--  코멘트 list  -->
-	<table border="1">
-	<!-- <tr>
-		<td>sds</td>
-		<td>sd</td>
-	</tr> -->
+	<table frame="hsides" rules="rows" align="center" >
 		<c:forEach var="commentInfo" items="${commentInfo }">
 			<tr>
-				<td>${commentInfo.c_num }</td>
-				<td>${commentInfo.c_content}"></td>
-				<td>${commentInfo.c_id}</td>
-				<td>${commentInfo.c_date}</td>
+				<td width="80">no: ${commentInfo.c_num }</td>
+				<td width="400">내용: ${commentInfo.c_content}"></td>
+				<td width="100">작성자: ${commentInfo.c_id}</td>			
+				<td width="150"><fmt:formatDate value="${commentInfo.c_date}" type="date" var="date"/>작성일 : ${date}</td>
 				<td><input type="button" value="삭제" 
 				onclick="javascript:window.location='commentdelete.do?c_id=${commentInfo.c_id}&c_num=${commentInfo.c_num }&c_bnum=${commentInfo.c_bnum }'"></td>
 			</tr>
 		</c:forEach>
 	</table>
-	${page}	
+	<p align="center">${page}</p>	
 </body>
 </html>

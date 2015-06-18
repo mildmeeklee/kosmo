@@ -39,7 +39,8 @@
 <body>
 	<div id="top">
 	
-		<h1 class="title" align="center">BB Club</h1>
+		<h1 class="title" align="center">
+		<span onclick="javascript:window.location='login.do'"> Nice Body Club</span></h1>
 		
 	
 		<c:if test="${id !=null }">

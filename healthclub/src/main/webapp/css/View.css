@@ -72,7 +72,8 @@
 .title{
    font-family: 'Pacifico', cursive;
    font-size: 50px;
-   color: black;   
+   color: black; 
+   cursor: pointer;  
 }
  
 
@@ -200,6 +201,11 @@
 .page p img{
    width: 40px;
    height: 30px;
+   cursor: pointer;
+}
+
+a{
+	text-decoration: none;
 }
 
 /* main page(2) */

@@ -74,7 +74,7 @@ public class CartController {
 	/**
 	 * buy -> ±¸¸Å
 	 */
-	@RequestMapping(value = "buycart.do", method = RequestMethod.POST)
+	@RequestMapping(value = "mypagebuycart.do", method = RequestMethod.POST)
 	public String cartbuy(@RequestParam("cart_num") int cart_num) {
 		dao.delete(cart_num);
 		return "cart/buy";

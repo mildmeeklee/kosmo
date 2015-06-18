@@ -36,7 +36,8 @@ margin-bottom: 100px;
 <body>
 <div id="top">
    
-      <h1 class="title" align="center">Nice Body Club</h1>
+    <h1 class="title" align="center">
+		<span onclick="javascript:window.location='login.do'"> Nice Body Club</span></h1>
       
    
       <c:if test="${id !=null }">
@@ -44,7 +45,7 @@ margin-bottom: 100px;
             <strong>${id }</strong>ดิ &nbsp;&nbsp;&nbsp;
             <a href="logout.do" class="myButton">logout</a> <b>|</b> 
             <a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
-            <a href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+            <a href="mypagecartlist.do?s_id=${id}" class="myButton">Cart</a>
          </p>
       </c:if>
       

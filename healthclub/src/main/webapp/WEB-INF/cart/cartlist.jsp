@@ -33,7 +33,7 @@
 					</form>
 				</td>
 				<td>
-					<form action="buycart.do" method="POST">
+					<form action="mypagebuycart.do" method="POST">
 						<input name="cart_num" type="hidden" value="${cartlist.cart_num}">
 						<button>±¸¸Å</button>
 					</form>

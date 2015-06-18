@@ -192,7 +192,15 @@ public class MenuController {
 	 * 로그인 메인페이지 이동
 	 */
 	@RequestMapping(value = "login.do", method = RequestMethod.GET)
-	public String homep(){
+	public String homep(Model m){
+		
+		List<ItemInfo> itemtable = dao4.selectThree();
+		m.addAttribute("itemtable", itemtable);
+		List<NoticeInfo> noticelist = dao5.selectThree(); 
+		m.addAttribute("noticelist", noticelist );
+		List<BoardInfo> boardlist = dao3.selectThree();
+		m.addAttribute("boardlist", boardlist);
+		
 		return "login/main";
 	}
 	

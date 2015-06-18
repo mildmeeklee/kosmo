@@ -6,98 +6,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/healthclub/css/button.css">
+<link rel="stylesheet" type="text/css" href="css/View.css">
 </head>
-<style>
-#layout {
-	margin: auto;
-	width: 90%;
-	padding: 5px;
-}
 
-#top {
-	height: 150px;
-	background-color: #000000;
-	color: #ffffff;
-	margin-bottom: 5px;
-}
-
-#sidebar {
-	position: absolute;
-	float: left;
-	width: 10%;
-	height: 97%;
-	background-color: #ffffff;
-}
-
-#section {
-	width: 87%;
-	height: 1800;
-	background-color: #ffffff;
-	margin-left: auto;
-}
-
-#footer {
-	width: 79% min-height:400px;
-}
-</style>
 <body>
-	<div id="layout">
-		<div id="top">
-			<center>
-				<h2>bangbang</h2>
-			</center>
-			<c:if test="${id !=null }">
-				<p align="right">
-					${id }님 |<a href="logout.do">logout</a> | <a
-						href="mypage.do?id=${id}">my page</a> | <a>cart</a>
-				</p>
-			</c:if>
-
-
-			<c:if test="${id ==null }">
-				<p align="right">
-					로그인 해주세요 : <a href="loginForm.do">login</a>
-			</c:if>
-
-			<hr color="red" size="2" width=100%>
-			<center>
-				<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
-					| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
-					class="button" href="boardlist.do">&diams;BOARD</a> | <a
-					class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
-					class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
-				</font>
-				<hr color="red" size="2" width=100%>
-			</center>
+	<div id="top">
+	
+		<h1 class="title" align="center">BB Club</h1>
+		
+	
+		<c:if test="${id !=null }">
+			<p align="right">
+				<strong>${id }</strong>님 &nbsp;&nbsp;&nbsp;
+				<a href="logout.do" class="myButton">logout</a> <b>|</b> 
+				<a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
+				<a href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+			</p>
+		</c:if>
+		
+		<c:if test="${id ==null }">
+			<p align="right">
+				<a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+				<a href="inputForm.do" class="myButton">Join</a> 
+			</p>
+		</c:if>
+		
+		<hr color="gray" size="1" width="100%">
+		<hr color="black" size="3" width=100%>
+		
+		<center>
+				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+		</center>
 		</div>
-
+		
 		<div id="sidebar">
 			<p align="center">
-				<img alt="" src="/healthclub/img/item1.jpg" width="100" height="80"><br>
-				<input type="button" value="보충제이미지"
-					onclick="javascript:window.location='itemweight.do'"><br>
-			<hr size="1" color="red">
-			</p>
-			<p align="center">
-				<img alt="" src="/healthclub/img/item2.jpg" width="100" height="80"><br>
-				<input type="button" value="헬스용품"
-					onclick="javascript:window.location='itemhealthArticle.do'"><br>
-			<hr size="1" color="red">
-			</p>
-			<p align="center">
-				<img alt="" src="/healthclub/img/item3.gif" width="100" height="80"><br>
-
-
-				<input type="button" value="헬스의류"
-					onclick="javascript:window.location='itemhealthWear.do'"><br>
-				<br> <br>
-			</p>
+			<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+			<a href="itemweight.do" class="SideButton">보 &nbsp; &nbsp;충 &nbsp; &nbsp;제</a><br><br>
+			<a href="itemhealthArticle.do" class="SideButton">헬 &nbsp;스 &nbsp;용 &nbsp;품</a><br><br>
+			<a href="itemhealthWear.do" class="SideButton">헬 &nbsp;스 &nbsp;의 &nbsp;류</a>
+		</p>
 		</div>
+		
 		<!-- --------------------------------------------- -->
-		<div id="section">
-			<decorator:body />
+		
+		<div id="categorybar">
+		<font size="7">&nbsp;&nbsp;Health Product</font> 
+		<div id="categorybar_1" align="right">
+			<a href="login.do">홈</a> > <a href="itemweight.do">헬스제품</a></div>
+		
+	</div>
+		
+		<div id="sectionBG">
+			<div id="section"> <decorator:body /></div>
 		</div>
+
 
 
 

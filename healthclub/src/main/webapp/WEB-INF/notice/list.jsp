@@ -7,18 +7,26 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style type="text/css">
+.noticetable{
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+</style>
 </head>
 <body>
-	</br>
-	</br>
-	</br>
-	
-	<table  border="3"  frame="hsides" rules="rows" align="center" >
-		<tr>
+<br>
+<br>
+<br>
+<div  class="noticetable">
+	<table frame="hsides" rules="rows" align="center" >
+		<tr bordercolor="red">
 			<th width="150">글번호</th>
 			<th width="600">제목</th>
 			<th width="300">날짜</th>
 		</tr>
+		
 		
 		<c:forEach var = "noticelist" items="${noticelist }">
 			<tr align="center">
@@ -29,7 +37,7 @@
 		</c:forEach>
 
 	</table>
-	
+	</div>
 	<p align="right">${page}</p>
 
 </body>

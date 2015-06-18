@@ -58,7 +58,7 @@
 	<center>
 		<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
 			| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
-			href="boardlist.do">BOARD</a> | <a class="button" href="mypageschedule.do">SCHEDULER</a>
+			href="boardlist.do">BOARD</a> | <a class="button" href="schedule.do">SCHEDULER</a>
 			| <a class="button" href="itemlist.do">HEALTH PRODUCT</a>
 		</font>
 		<hr color="red" size="2" width=100%>

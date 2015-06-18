@@ -187,6 +187,16 @@ public class MenuController {
 			return "login/logerror";
 		}
 	}
+	
+	/**
+	 * 로그인 메인페이지 이동
+	 */
+	@RequestMapping(value = "login.do", method = RequestMethod.GET)
+	public String homep(){
+		return "login/main";
+	}
+	
+	
 	/**
 	 * 수정 버튼을 누르면 아이디와 비밀번호 확인후 수정페이지로 이동
 	 */

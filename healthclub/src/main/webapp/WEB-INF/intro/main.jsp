@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 
 </head>
-<link href="css/notice.css" rel="stylesheet" type="text/css">
+<link href="css/View.css" rel="stylesheet" type="text/css">
 <body>
 	<div id="top">
 		<h1 class="title" align="center">BB Club</h1>
@@ -39,7 +39,7 @@
 				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
 				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
 				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
-				<a href="mypageschedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
 				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
 			</center>
 	</div>
@@ -49,27 +49,21 @@
 
 	<div id="sidebar">
 		<p align="center">
-
-			<input type="button"
-				class="MenuButtonF"
-				value="회사소개" 
-				onclick="javascript:window.location='introcompanyIntro.do'"><br>
-
-			<input type="button" value="헬스프로그램" class="MenuButtonF"
-				onclick="javascript:window.location='introhealthProgram.do'"><br>
-
-			<input type="button" value="프로그램 강사" class="MenuButtonF"
-				onclick="javascript:window.location='introprogramTeacher.do'"><br>
-
-			<input type="button"
-				value="시 설"
-				class="MenuButtonF"
-				onclick="javascript:window.location='introfacility.do'"><br>
+			
+			<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+			<a href="introcompanyIntro.do" class="SideButton">회 &nbsp;사 &nbsp;소 &nbsp;개</a><br><br>
+			<a href="introhealthProgram.do" class="SideButton">헬 스 프 로 그 램</a><br><br>
+			<a href="introprogramTeacher.do" class="SideButton">프 로 그 램 강 사</a><br><br>
+			<a href="introfacility.do" class="SideButton">시 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;설</a>
 		</p>
 	</div>
 	<!-- --------------------------------------------- -->
+	
 	<div id="categorybar">
-	<h1 align="left">&nbsp;&nbsp;Intro</h1>
+		<font size="7">&nbsp;&nbsp;Intro</font> 
+		<div id="categorybar_1" align="right">
+			<a href="login.do">홈</a> > <a href="introcompanyIntro.do">소개페이지</a></div>
+		
 	</div>
 	
 	<div id="sectionBG">

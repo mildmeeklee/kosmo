@@ -8,88 +8,76 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../../css/button.css">
 </head>
-<style>
-#layout {
-	margin: auto;
-	width: 90%;
-	border: solid 1px gray;
-	padding: 5px;
-}
 
-#top {
-	height: 100px;
-	background-color: #000000;
-	color: #ffffff;
-	margin-bottom: 5px;
-}
-
-#sidebar {
-	position: absolute;
-	float: left;
-	width: 10%;
-	height: 97%;
-	background-color: orange;
-}
-
-#section {
-	width: 87%;
-	min-height: 400px;
-	background-color: #f0f0f0;
-	margin-left: auto;
-}
-
-#footer {
-	width: 79% min-height:400px;
-}
-</style>
 <body>
-	<div id="layout">
-		<div id="top">
-			<center>
-				<h2>bangbang</h2>
-			</center>
-			<c:if test="${id !=null }">
-				<p align="right">
-					${id }님 |<a href="logout.do">logout</a> | <a
-						href="mypage.do?id=${id}">my page</a> | <a>cart</a>
-				</p>
-			</c:if>
+	</head>
+<link href="css/View.css" rel="stylesheet" type="text/css">
+<body>
+	<div id="top">
+		<h1 class="title" align="center">BB Club</h1>
 
-
-			<c:if test="${id ==null }">
-				<p align="right">
-					로그인 해주세요 : <a href="loginForm.do">login</a>
-			</c:if>
-
-			<hr color="red" size="2" width=100%>
-			<center>
-				<font size="5"> <a class="button" href="introcompanyIntro.do">&diams;INDRODUCTION</a>
-					| <a class="button" href="notice.do">&diams;NOTICE</a>| <a
-					class="button" href="boardlist.do">&diams;BOARD</a> | <a
-					class="button" href="mypageschedule.do">&diams;SCHEDULER</a> | <a
-					class="button" href="itemlist.do">&diams;HEALTH PRODUCT</a>
-				</font>
-				<hr color="red" size="2" width=100%>
-			</center>
-		</div>
-
-		<div id="sidebar">
-			<p align="center">
-
-				<input type="button" value="내 정보"
-					onclick="javascript:window.location='mypage.do?id=${id}'"><br>
-				<br> <input type="button" value="스케줄"
-					onclick="javascript:window.location='mypagescheduleViewM.do'"><br>
-				<br>
+		<c:if test="${id !=null }">
+			<p align="right">
+				<strong>${id }</strong>님 &nbsp;&nbsp;&nbsp; <a href="logout.do"
+					class="myButton">logout</a> <b>|</b> <a href="mypage.do?id=${id}"
+					class="myButton">My page</a> <b>|</b> <a
+					href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
 			</p>
-		</div>
-		<!-- --------------------------------------------- -->
-		<div id="section">
-			<decorator:body />
-		</div>
+		</c:if>
+
+
+		<c:if test="${id ==null }">
+			<p align="right">
+				<a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+				<a href="inputForm.do" class="myButton">Join</a>
+			</p>
+		</c:if>
+		
+		<hr color="gray" size="1" width="100%">
+		<hr color="black" size="3" width=100%>
+		
+	
+			<center>
+				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+			</center>
+	</div>
 
 
 
+
+	<div id="sidebar">
+		<p align="center">
+			
+			<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+			<a href="mypage.do?id=${id}" class="SideButton">내 &nbsp;정 &nbsp;보 &nbsp;수 &nbsp;정</a><br><br>
+			<a href="mypagescheduleViewM.do" class="SideButton">스 &nbsp;케 &nbsp;줄 &nbsp;확 &nbsp;인</a><br><br>
+		
+		</p>
+	</div>
+	<!-- --------------------------------------------- -->
+	
+	<div id="categorybar">
+		<font size="7">&nbsp;&nbsp;My page</font> 
+		<div id="categorybar_1" align="right">
+			<a href="login.do">홈</a> > <a href="mypage.do?id=${id}">My페이지</a></div>
+		
+	</div>
+	
+	<div id="sectionBG">
+		<div id="section"> <decorator:body /></div>
+	</div>
+
+	<div id="footer">
+				<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
+				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
+				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
+				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
+				RESERVED
 	</div>
 </body>
 </html>

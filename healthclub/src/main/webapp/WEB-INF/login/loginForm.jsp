@@ -17,12 +17,12 @@ function openConfirmid(userinput) {
 </script>
 <style type="text/css">
 #left{
-width:"50%"
-float:left
+width:"50%";
+float:left;
 }
 #right{
-width:"50%"
-float:left
+width:"50%";
+float:left;
 }
 </style>
 </head>

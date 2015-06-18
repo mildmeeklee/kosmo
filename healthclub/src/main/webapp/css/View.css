@@ -28,9 +28,16 @@
 #categorybar{
 	font-family: 'Indie Flower', cursive;
 	float:left;
-	height: 80px;
+	height: 90px;
 	width: 950px;
 	border-bottom: medium groove gray; 
+	background-color: #dddddd;
+}
+
+#categorybar_1{
+	font-family: 'Hanna', sans-serif;
+	height: 20px;
+	width: 950px;
 	background-color: #dddddd;
 }
 
@@ -67,7 +74,22 @@
 	color: black;	
 }
  
- 
+
+#schedulet{
+	margin-top: 10px;
+	float:left;
+	width: 430px;
+	height: 450px;
+	border: medium groove;
+}
+
+#programlist{
+	margin-top: 10px;
+	float:right;
+	width: 410px;
+	height: 450px;
+	border: medium double;
+}
 /* 내정보 창 버튼  */
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;

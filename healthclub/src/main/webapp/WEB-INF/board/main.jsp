@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/notice.css" rel="stylesheet" type="text/css">
+<link href="css/View.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -36,19 +36,23 @@
 			<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
 			<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp; <a
 				href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp; <a
-				href="mypageschedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp; <a
+				href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp; <a
 				href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
 		</center>
 	</div>
 
 	<div id="sidebar">
 		<p align="center">
-			<a href="notice.do" class="MenuButtonF">공지시항</a>
+		<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+		<a href="boardlist.do" class="SideButton">자 &nbsp;유 &nbsp;게 &nbsp;시 &nbsp;판</a>
 		</p>
 	</div>
 	<!-- --------------------------------------------- -->
 	<div id="categorybar">
-		<h1 align="left">&nbsp;&nbsp;board</h1>
+		<font size="7">&nbsp;&nbsp;Board</font> 
+		<div id="categorybar_1" align="right">
+			<a href="login.do">홈</a> > <a href="boardlist.do">자유게시판</a></div>
+		
 	</div>
 
 	<div id="sectionBG">

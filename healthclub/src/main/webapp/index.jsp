@@ -12,30 +12,32 @@
 <script src="js/chatClient.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$("#navi a").click(
+		$("#pageWrap a").click(
 				function() {
 					$("#main img").before(
-							"<img src='" + $(this).attr("href") + "' alt='' width='700' height='500'>");
+							"<img src='" + $(this).attr("href") + "' alt='' width='800' height='400'>");
 					$("#main img:last").fadeOut("fast", function() {
 						$(this).remove();
 					});
 					return false;
 				})
-		$("img.next").click(
+				
+		$(".next").click(
 				function() {
-					$("#navi .pageWrap").animate(
+					$(".page").animate(
 							{
-								marginLeft : parseInt($("#navi .pageWrap").css(
+								marginLeft : parseInt($(".page").css(
 										"margin-left"))
 										- 300 + "px"
 							}, "fast");
 
 				});
-		$("img.prev").click(
+		
+		$(".prev").click(
 				function() {
-					$("#navi .pageWrap").animate(
+					$(".page").animate(
 							{
-								marginLeft : parseInt($("#navi .pageWrap").css(
+								marginLeft : parseInt($(".page").css(
 										"margin-left"))
 										+ 300 + "px"
 							}, "fast");
@@ -84,7 +86,6 @@
 		<div id="main">
 			<img src="images/photo3.jpg"/>
 		</div>
-		<div id="navi">
 			<div id="pageWrap">
 				<div class="page">
 					<ul>
@@ -124,7 +125,6 @@
 					</p>
 				</div>
 			
-			</div>
 		</div>
 		
 		<br> <br>

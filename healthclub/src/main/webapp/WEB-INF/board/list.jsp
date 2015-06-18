@@ -31,7 +31,7 @@
 		<c:forEach var="boardlist" items="${boardlist }">
 			<tr>
 				<td width="50" align="center">${boardlist.b_num }</td>
-				<td width="500" align="center"><a href="boardcontent.do?b_num=${boardlist.b_num}">
+				<td width="500" align="center"><a href="boardcontent.do?b_num=${boardlist.b_num}" style="text-decoration:none">
 						${boardlist.b_name}</a></td>
 				<td width="100" align="center">${boardlist.b_id}</td>
 				<td width="50" align="center">${boardlist.b_count}</td>

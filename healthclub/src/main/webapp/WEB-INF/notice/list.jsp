@@ -31,7 +31,7 @@
 		<c:forEach var = "noticelist" items="${noticelist }">
 			<tr align="center">
 				<td> ${noticelist.n_num }</td>
-				<td width="70%"> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
+				<td width="70%"> <a href="noticecontent.do?n_num=${noticelist.n_num}" style="text-decoration:none"> ${noticelist.n_name}</a></td>
 				<td><fmt:formatDate value="${noticelist.n_date}" type="date" var="date"/>${date}</td>
 			</tr>
 		</c:forEach>

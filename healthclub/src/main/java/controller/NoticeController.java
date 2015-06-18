@@ -66,8 +66,8 @@ public class NoticeController {
 	
 	/**
 	 * 관리자 -> 관리자 공지사항 페이지이동
-	 */
-	@RequestMapping(value="noticelist_m.do",  method = RequestMethod.GET)
+	 */					   
+	@RequestMapping(value="managerslist_m.do",  method = RequestMethod.GET)
 	public String noticelist_m( @RequestParam(value="p", defaultValue="1") String p , Model m){
 		
 		List<NoticeInfo> noticelist = dao.selectAll(); 
@@ -93,7 +93,7 @@ public class NoticeController {
 	/**
 	 * 관리자 -> 공지사항 작성 페이지이동
 	 */
-	@RequestMapping(value="noticewriteM.do",  method = RequestMethod.GET)
+	@RequestMapping(value="managerswriteM.do",  method = RequestMethod.GET)
 	public String noticewriteM(){
 		return "notice/write";
 	}
@@ -101,7 +101,7 @@ public class NoticeController {
 	/**
 	 * 작성한 공지사항을 DB에 저장
 	 */
-	@RequestMapping(value="noticewrite.do", method = RequestMethod.POST)
+	@RequestMapping(value="managerswrite.do", method = RequestMethod.POST)
 	public String noticewrite(
 			@RequestParam("n_name") String n_name,
 			@RequestParam("n_content") String n_content,
@@ -110,24 +110,24 @@ public class NoticeController {
 		String n_ct = n_content.toString(); 
 		dao.insert(n_name, n_ct);
 		
-		return "redirect:noticelist_m.do";
+		return "redirect:managerslist_m.do";
 	}
 	
 	/**
 	 * 홈페이지 관리 페이지 -> 삭제실행
 	 */
-	@RequestMapping(value="noticedelete.do",  method = RequestMethod.GET)
+	@RequestMapping(value="managersdelete.do",  method = RequestMethod.GET)
 	public String noticewriteM(@RequestParam("n_num") int n_num){
 		int n = (Integer)n_num;
 		
 		dao.delete(n);
-		return "redirect:noticelist_m.do";
+		return "redirect:managerslist_m.do";
 	}
 	
 	/**
 	 * 홈페이지 관리 페이지 -> 수정페이지 이동
 	 */
-	@RequestMapping(value="noticeupdateM.do",  method = RequestMethod.GET)
+	@RequestMapping(value="managersupdateM.do",  method = RequestMethod.GET)
 	public String noticeupdateM(@RequestParam("n_num") int n_num, Model m){
 		
 		NoticeInfo ni = dao.selectOne(n_num);
@@ -139,7 +139,7 @@ public class NoticeController {
 	/**
 	 * 홈페이지 관리 수정페이지 -> 수정
 	 */
-	@RequestMapping(value="noticeupdate.do",  method = RequestMethod.POST)
+	@RequestMapping(value="managerssupdate.do",  method = RequestMethod.POST)
 	public String noticeupdate(@RequestParam("n_num") int n_num, 
 			@RequestParam("n_name") String n_name,
 			@RequestParam("n_content") String n_content){
@@ -148,7 +148,7 @@ public class NoticeController {
 		ni.setN_num(n_num);
 		dao.update(ni);
 		
-		return "redirect:noticelist_m.do";
+		return "redirect:managerslist_m.do";
 	}
 	
 	

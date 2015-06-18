@@ -18,7 +18,7 @@
 								url = $(this).val();
 								open(
 										url,
-										"toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+										" toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 							});
 		});
 	</script>

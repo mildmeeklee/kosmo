@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="noticewrite.do" method="POST">
+	<form action="managerswrite.do" method="POST">
 		제목 :: <input type="text" name ="n_name"></br>
 		내용 :: <br/>
 		<textarea cols="40" rows="20" name="n_content"></textarea><br/>

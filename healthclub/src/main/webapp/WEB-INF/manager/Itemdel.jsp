@@ -26,16 +26,16 @@
 					<td align="center">${item.i_price}</td>
 					<td align="center">${item.i_content}</td>
 					<td align="center">${item.i_count}</td>																								
-					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imageOrgname }" width="100" height="100">				
+					<td><a href="itemcontent.do?i_num=${item.i_num}"><img src="/healthclub/image/${item.i_imagePath }" width="100" height="100">				
 					</a></td>
 					<td>
-						<form action="seloneitem.do" method="post">
+						<form action="managersseloneitem.do" method="post">
 							<input type="hidden" name="i_num" value="${item.i_num }">
 							<button type="submit">수정하기</button>
 						</form>
 					</td>
 					<td>
-						<form action="del.do" method="post">
+						<form action="managersdel.do" method="post">
 							<input type="hidden" name="i_num" value="${item.i_num }">
 							<button>삭제 하기</button>
 						</form>

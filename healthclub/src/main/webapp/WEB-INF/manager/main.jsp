@@ -1,16 +1,67 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+<%@ taglib prefix="decorator"
+	uri="http://www.opensymphony.com/sitemesh/decorator"%>
 <!DOCTYPE html>
 <html>
 <head>
+<link href="css/View.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
 </head>
 <body>
-<a href="itemsubmit.do"> ì œí’ˆ ì˜¬ë¦¬ê¸° </a></br>
-<a href="itemControll.do"> ì œí’ˆ ìˆ˜ì •í•˜ê¸° </a></br>
-<a href="noticelist_m.do"> ê³µì§€ì‚¬í•­ ê´€ë¦¬ </a></br>
-<a href="boardManager.do"> ê²Œì‹œíŒ ê´€ë¦¬ </a></br>
-<a href="programlist_m.do"> í”„ë¡œê·¸ëž¨ ê´€ë¦¬ </a><br/>
-<a href="chatadmin.do">ê´€ë¦¬ìž ì±„íŒ…</a><br/>
-<a href="videoch.do">ë¹„ë””ì˜¤ ë³€ê²½</a>
+
+	<div id="top">
+
+		<h1 class="title" align="center">
+			<span onclick="javascript:window.location='login.do'"> Nice
+				Body Club</span>
+		</h1>
+
+
+		<c:if test="${id !=null }">
+			<p align="right">
+				<strong>${id }</strong>´Ô &nbsp;&nbsp;&nbsp; <a href="logout.do"
+					class="myButton">logout</a> <b>|</b> <a href="mypage.do?id=${id}"
+					class="myButton">My page</a> <b>|</b> <a
+					href="mypagecartlist.do?s_id=${id}" class="myButton">Cart</a>
+			</p>
+		</c:if>
+
+		<c:if test="${id ==null }">
+			<p align="right">
+				<a href="loginForm.do" class="myButton">login</a> <b>|</b> <a
+					href="inputForm.do" class="myButton">Join</a>
+			</p>
+		</c:if>
+
+		<hr color="gray" size="1" width="100%">
+		<hr color="black" size="3" width=100%>
+
+		<center>
+			<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+			<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp; <a
+				href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp; <a
+				href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp; <a
+				href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+		</center>
+	</div>
+
+	<div id="sidebar">
+		<img src="/healthclub/images/main.jpg" width="140" height="100"><br><br>
+		<a href="managerssubmit.do" class="SideButton"> Á¦Ç° ¿Ã¸®±â </a></br></br> 
+		<a href="managersControll.do" class="SideButton"> Á¦Ç°¼öÁ¤ÇÏ±â </a></br></br> 
+		<a href="managerslist_m.do" class="SideButton"> °øÁö»çÇ× °ü¸® </a></br></br> 
+		<a href="managersManager.do" class="SideButton"> °Ô½ÃÆÇ °ü¸® </a></br></br> 
+		<a href="managersprogramlist_m.do" class="SideButton"> ÇÁ·Î±×·¥ °ü¸® </a><br/></br>
+		 <a href="chatadmin.do" class="SideButton">°ü¸®ÀÚ Ã¤ÆÃ</a><br /> 
+			
+	</div>
+	<div id="sectionBG">
+		<br>
+		<div id="section">
+			<decorator:body />
+		</div>
+	</div>
 </body>
 </html>

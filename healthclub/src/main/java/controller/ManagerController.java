@@ -80,7 +80,7 @@ public class ManagerController {
 	int e = 5;
 	int d = 5;
 
-	@RequestMapping(value = "boardManager.do", method = RequestMethod.GET)
+	@RequestMapping(value = "managersManager.do", method = RequestMethod.GET)
 	public String board(
 			@RequestParam(value = "p", defaultValue = "1") String p, Model m) {
 		List<BoardInfo> boardlist = dao2.selectAll();
@@ -105,7 +105,7 @@ public class ManagerController {
 			dao3.deleteB(check[i]);
 		}
 
-		return "redirect:boardManager.do";
+		return "redirect:managersManager.do";
 
 	}
 
@@ -123,7 +123,7 @@ public class ManagerController {
 
 	int i = 8;
 	int u = 8;
-	@RequestMapping(value = "itemControll.do", method = RequestMethod.GET)
+	@RequestMapping(value = " managersControll.do", method = RequestMethod.GET)
 	public String itemControlldmin(
 			@RequestParam(value = "p", defaultValue = "1") String p, Model m) {
 		List<ItemInfo> itemtable = dao4.selectAll();

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="noticeupdate.do" method="POST">
+	<form action="managerssupdate.do" method="POST">
 		제목 :: <input type="text" name="n_name" value="${noticeupdate.n_name }"></br>
 		내용 :: <br />
 		<textarea cols="40" rows="20" name="n_content"

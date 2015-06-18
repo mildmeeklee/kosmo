@@ -7,9 +7,37 @@
 <html>
 <head>
 <title>Insert title here</title>
-
-</head>
 <link href="css/View.css" rel="stylesheet" type="text/css">
+<style>
+#sectionBG{
+	float: left;
+	width: 950px;
+	height: 100%;
+	background-color : #efefef;
+	border-radius:0px 0px 50px 50px;
+	margin: auto;
+	
+}
+
+#section{
+	margin-bottom : 30px;
+	width: 900px;
+	height: 90%;
+	background-color : white;
+}
+
+#footer{
+	font-family: 'Nanum Pen Script', cursive;
+	position : relative;
+	background: black;
+	width: 1110px;
+	height: 10%;
+	color: white;
+	margin-left: 10%;
+}
+</style>
+</head>
+
 <body>
 	<div id="top">
 		<h1 class="title" align="center">BB Club</h1>

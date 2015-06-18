@@ -86,6 +86,7 @@
 		<div id="main">
 			<img src="images/photo3.jpg"/>
 		</div>
+		<div id="navi">
 			<div id="pageWrap">
 				<div class="page">
 					<ul>
@@ -124,7 +125,7 @@
 						<img src="images/btn_prev.jpg" alt="앞으로" class="prev" />
 					</p>
 				</div>
-			
+			</div>
 		</div>
 		
 		<br> <br>

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1">
+	<table align="center" >
 		<tr>
 			<th>글번호</th>
 			<th>제목</th>
@@ -25,12 +25,8 @@
 				<td>${boardlist.b_count}</td>
 			</tr>
 		</c:forEach>
-		<tr>
-			<td><input type="button" value="글쓰기" onclick="javascript:window.location='boardwriteM.do'" /></td>
-		</tr>
-
-
 	</table>
-	${page}
+	
+	<p align="right"><a href="boardwriteM.do">글쓰기</a><br><br><br>${page}</p>
 </body>
 </html>

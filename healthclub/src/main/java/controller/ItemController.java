@@ -28,7 +28,7 @@ public class ItemController {
    public void setDao(ItemDAO dao) {
       this.dao = dao;
    }
-   
+  
    //올리는 이미지명이 같을때 저장되기위해 현재 시간을 추가해 저장하기위함
    String inTime = new java.text.SimpleDateFormat("HHmmss").format(new java.util.Date());
    
@@ -62,7 +62,7 @@ public class ItemController {
    /**
     * 관리자 -> 제품등록 페이지이동
     */
-   @RequestMapping(value = "itemsubmit.do", method = RequestMethod.GET)
+   @RequestMapping(value = "managerssubmit.do", method = RequestMethod.GET)
    public String form() {
       return "item/submissionForm";
    }
@@ -194,7 +194,7 @@ public class ItemController {
    /**
     * 제품등록시 -> DB로 저장
     */
-   @RequestMapping(value = "saveitem.do", method = RequestMethod.POST)
+   @RequestMapping(value = "saveitmanagers.do", method = RequestMethod.POST)
    public String submitReport1(
          @RequestParam("i_name") String i_name,
          @RequestParam("i_price") int i_price,
@@ -227,7 +227,7 @@ public class ItemController {
    }
 
   
-   @RequestMapping(value = "seloneitem.do", method = RequestMethod.POST)
+   @RequestMapping(value = "managersseloneitem.do", method = RequestMethod.POST)
    public String selOne(@RequestParam("i_num") int i_num, Model m) {
 
       ItemInfo a = dao.selOne(i_num);
@@ -235,7 +235,7 @@ public class ItemController {
       return "manager/alter";
    }
 
-   
+
    @RequestMapping(value ="upItem.do", method = RequestMethod.POST)
    public String up(@RequestParam("i_num") int i_num,
          @RequestParam("i_name") String i_name,
@@ -268,7 +268,7 @@ public class ItemController {
  
       dao.update(i_num ,i_name, i_price , i_content , f.getPath() ,file.getOriginalFilename() , i_distinction);
       
-      return "redirect:itemControll.do";
+      return "redirect: managersControll.do";
       
    }
    @RequestMapping(value = "del.do", method = RequestMethod.POST)
@@ -278,7 +278,7 @@ public class ItemController {
       
       f.delete();
       dao.delete(i_num);
-      return "redirect:itemControll.do";
+      return "redirect: managersControll.do";
    }
 }
 		

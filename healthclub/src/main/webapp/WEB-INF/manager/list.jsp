@@ -28,11 +28,12 @@
 				<td>${boardlist.b_count}</td>		
 			</tr>
 		</c:forEach>
-		<td><input type="submit" value="삭제"></td>
+		
 		
 
 
 	</table>
+	<input type="submit" value="삭제"></td>
 </form>
 	${page}
 </body>

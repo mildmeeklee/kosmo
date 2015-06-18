@@ -33,6 +33,10 @@
 	<decorator name="login" page="/WEB-INF/login/main2.jsp">
 		<pattern>*loginForm.do</pattern>
 	</decorator>
+	
+	<decorator name="manager" page="/WEB-INF/manager/main.jsp">
+		<pattern>*managers*</pattern>
+	</decorator>
 	<excludes>
 	</excludes>
 

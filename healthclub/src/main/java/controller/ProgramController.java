@@ -23,9 +23,9 @@ public class ProgramController {
 	}
 
 	/**
-	 * ������ page -> ���α׷� ���� page �̵�
+	 * 占쏙옙占쏙옙占쏙옙 page -> 占쏙옙占싸그뤄옙 占쏙옙占쏙옙 page 占싱듸옙
 	 */
-	@RequestMapping(value = "programlist_m.do", method = RequestMethod.GET)
+	@RequestMapping(value = "managersprogramlist_m.do", method = RequestMethod.GET)
 	public String schedulelist_m(Model m) {
 		List<ProgramInfo> si1 = dao.selectAll();
 		m.addAttribute("programlist", si1);
@@ -33,7 +33,7 @@ public class ProgramController {
 	}
 
 	/**
-	 * ���α׷� ���� page -> ���α׷� ��� page
+	 * 占쏙옙占싸그뤄옙 占쏙옙占쏙옙 page -> 占쏙옙占싸그뤄옙 占쏙옙占� page
 	 */
 	@RequestMapping(value = "programwriteM.do", method = RequestMethod.GET)
 	public String schedulewriteM() {
@@ -41,7 +41,7 @@ public class ProgramController {
 	}
 
 	/**
-	 * ���α׷� ��� page -> ���α׷����
+	 * 占쏙옙占싸그뤄옙 占쏙옙占� page -> 占쏙옙占싸그뤄옙占쏙옙占�
 	 */
 	@RequestMapping(value = "programwrite.do", method = RequestMethod.POST)
 	public String schedulewrite(ProgramInfo si) {

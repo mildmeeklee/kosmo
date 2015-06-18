@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h3>@RequestParam 사용</h3>
-	<form action="saveitem.do" method="post" enctype="multipart/form-data"><br/>
+	<form action="saveitmanagers.do" method="post" enctype="multipart/form-data"><br/>
 		제품명 : <input type="text" name="i_name" /> <br />
 		가격 : <input type="text" name="i_price" /><br/>
 		제품내용 : <input type="textArea" size="200" name="i_content" /> <br />

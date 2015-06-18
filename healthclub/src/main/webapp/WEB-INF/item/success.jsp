@@ -10,32 +10,8 @@
 
 </head>
 <body>
-	<b>로그인 성공!@</b>
-	<br>
-	<br>
+	<b>제품을 성공적으로 올렸습니다.</b>
 
-	<form action="list.do" method="GET">
-		<input type="submit" value="리스트보기">
-	</form>
-	<br>
-	<br>
 
-	<form action="passwd.do" method="POST">
-		<input type="hidden" name="id" value=${id }> <input
-			type="submit" value="비밀번호 변경">
-	</form>
-	<br>
-	<br>
-
-	<form action="logout.do" method="POST" >
-		 <input type="submit" value="로그아웃">
-	</form>
-	
-	<br>
-	<br>
-	<form action="deleteUser.do" method="POST">
-	<input type="hidden" name="id" value=${id }>
-		<input type="submit" value="회원 탈퇴">
-	</form>
 </body>
 </html>

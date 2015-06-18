@@ -14,12 +14,12 @@ function zipCheck() {
 }
 </script>
 <body>
-<form action="mypageUpUp.do" method="POST">
-	<table border="1" cellpadding="15px">
+<form  action="mypageUpUp.do" method="POST">
+	<table align="center" height="450"   border="1" cellspacing="1" cellpadding="3" bordercolor="#999999" rules="none">
 		<tr align="center">
 
-			<td>ID</td>
-			<td align="center"><input name="id" type="hidden" value="${userlist.getId() }">
+			<td width="100">ID</td>
+			<td width="500" align="center"><input name="id" type="hidden" value="${userlist.getId() }">
 				${userlist.getId() }</td>
 		</tr>
 		<tr>
@@ -71,7 +71,9 @@ function zipCheck() {
 		</tr>
 		
 	</table>
+	<p align="right">
 	<input type="submit" value="수정 완료">
+	</p>
 	</form>
 </body>
 </html>

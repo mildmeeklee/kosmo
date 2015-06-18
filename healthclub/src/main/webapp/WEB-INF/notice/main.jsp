@@ -48,7 +48,7 @@
 				<strong>${id }</strong>ดิ &nbsp;&nbsp;&nbsp;
 				<a href="logout.do" class="myButton">logout</a> <b>|</b> 
 				<a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
-				<a href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+				<a href="mypagecartlist.do?s_id=${id}" class="myButton">Cart</a>
 			</p>
 		</c:if>
 		

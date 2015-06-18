@@ -9,10 +9,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1" cellpadding="15px">
+<p align="left">
+<input type="button" onclick="javascript:window.location='mypagemylistUp2.do'" value="수정하기">
+
+</p>
+	<table height="450"   border="1" cellspacing="1" cellpadding="3" bordercolor="#999999" rules="none">
 		<tr align="center">
-			<td>ID</td>
-			<td align="center">${userlist.getId() }</td>
+			<td width="100">ID</td>
+			<td width="500" align="center">${userlist.getId() }</td>
 		</tr>
 		<tr>
 			<td>PASSWD</td>
@@ -55,6 +59,6 @@
 		
 	</table>
 									
-	<input type="button" onclick="javascript:window.location='mypagemylistUp2.do'" value="수정하기">
+	
 </body>
 </html>

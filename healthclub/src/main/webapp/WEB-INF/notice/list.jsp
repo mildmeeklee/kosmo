@@ -29,18 +29,10 @@
 		
 		
 		<c:forEach var = "noticelist" items="${noticelist }">
-<<<<<<< HEAD
 			<tr>
 				<td align="center"> ${noticelist.n_num }</td>
 				<td width="600"> <a href="noticecontent.do?n_num=${noticelist.n_num}"> ${noticelist.n_name}</a></td>
 				<td align="center"><fmt:formatDate value="${noticelist.n_date}" type="date" var="date"/>${date}</td>
-=======
-			<tr align="center">
-				<td> ${noticelist.n_num }</td>
-				<td width="70%"> <a href="noticecontent.do?n_num=${noticelist.n_num}" style="text-decoration:none"> ${noticelist.n_name}</a></td>
-				<td><fmt:formatDate value="${noticelist.n_date}" type="date" var="date"/>${date}</td>
->>>>>>> branch 'master' of https://github.com/mildmeeklee/kosmo.git
-			</tr>
 		</c:forEach>
 
 	</table>

@@ -59,7 +59,7 @@
 	<div id="categorybar">
 		<font size="7">&nbsp;&nbsp;Schedule</font> 
 		<div id="categorybar_1" align="right">
-			<a href="login.do">홈</a> > <a href="introcompanyIntro.do">소개페이지</a></div>
+			<a href="login.do">홈</a> > <a href="schedule.do">스케줄작성</a></div>
 		
 	</div>
 	

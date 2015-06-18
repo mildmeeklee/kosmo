@@ -5,10 +5,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/chat.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<style type="text/css">
-#con  { background-color:#F0F0F0; width:1200px; margin:0 auto; padding:10px; }
-</style>
+<!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+<link rel="stylesheet" type="text/css" href="css/View.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://192.168.0.47:9995/socket.io/socket.io.js"></script>
 <script src="js/chatClient.js"></script>
@@ -48,71 +46,78 @@
 
 </head>
 <body>
-	<div id=con>
-	<center>
-		<a href="http://localhost:8080/healthclub/index.jsp" ><img alt="" src="/healthclub/img/name.PNG"></a>
-	</center>
-	<p align="right">
-		<a href="loginForm.do"><font size="6" ><b>login</b></font></a>
-	<hr color="red" size="2" width=100%>
-	<center>
-		<font size="5"> <a class="button" href="introcompanyIntro.do">INDRODUCTION</a>
-			| <a class="button" href="notice.do">NOTICE</a>| <a class="button"
-			href="boardlist.do">BOARD</a> | <a class="button" href="schedule.do">SCHEDULER</a>
-			| <a class="button" href="itemlist.do">HEALTH PRODUCT</a>
-		</font>
-		<hr color="red" size="2" width=100%>
-	</center>
+	<div id="top">
+	
+		<h1 class="title" align="center">Nice Body Club</h1>
+		
+	
+		<c:if test="${id !=null }">
+			<p align="right">
+				<strong>${id }</strong>님 &nbsp;&nbsp;&nbsp;
+				<a href="logout.do" class="myButton">logout</a> <b>|</b> 
+				<a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
+				<a href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
+			</p>
+		</c:if>
+		
+		<c:if test="${id ==null }">
+			<p align="right">
+				<a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+				<a href="inputForm.do" class="myButton">Join</a> 
+			</p>
+		</c:if>
+		
+		<hr color="gray" size="1" width="100%">
+		<hr color="black" size="3" width=100%>
+		
+		<center>
+				<a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+				<a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+				<a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+				<a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+				<a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+		</center>
+	</div>
 
 	<div id="container">
+		
+		<div id="main">
+			<img src="images/photo3.jpg"/>
+		</div>
 		<div id="navi">
-			<div class="pageWrap">
+			<div id="pageWrap">
 				<div class="page">
 					<ul>
-
-						<li><a href="images/photo1.jpg"><img width="130" height="100"
-								src="images/photo1_thum.jpg"  /></a></li>
-						<li><a href="images/photo2.jpg"><img width="130" height="100"
-								src="images/photo2_thum.jpg" /></a></li>
-						<li><a href="images/photo3.jpg"><img width="130" height="100"
-								src="images/photo3_thum.jpg" /></a></li>
-						<li><a href="images/photo4.jpg"><img width="130" height="100"
-								src="images/photo4_thum.jpg" /></a></li>
-
+						<li><a href="images/photo1.jpg"><img src="images/photo1_thum.jpg"/></a></li>
+						<li><a href="images/photo2.jpg"><img src="images/photo2_thum.jpg" /></a></li>
+						<li><a href="images/photo3.jpg"><img src="images/photo3_thum.jpg" /></a></li>
+						<li><a href="images/photo4.jpg"><img src="images/photo4_thum.jpg" /></a></li>
 					</ul>
 					<p>
-						<img src="images/btn_next.jpg" alt="次へ" class="next" />
-					</p>
-					</div>
-				
-				<div class="page">
-					<ul>
-						<li><a href="images/photo9.jpg" ><img
-								src="images/photo9_thum.jpg"  width="130" height="100"/></a></li>
-						<li><a href="images/photo10.jpg"><img
-								src="images/photo10_thum.jpg"  width="130" height="100"/></a></li>
-						<li><a href="images/photo11.jpg"><img
-								src="images/photo11_thum.jpg"   width="130" height="100"/></a></li>
-						<li><a href="images/photo12.jpg"><img
-								src="images/photo12_thum.jpg" width="130" height="100" /></a></li>
-
-					</ul>
-					<p>
-						<img src="images/btn_prev.jpg" alt="前へ" class="prev" /> <img
-							src="images/btn_next.jpg" alt="次へ" class="next" />
+						<img src="images/btn_next.jpg" alt="뒤로" class="next" />
 					</p>
 				</div>
 				
 				<div class="page">
 					<ul>
-						<li><a href="images/photo17.jpg"><img
-								src="images/photo17_thum.jpg" width="130" height="100"/></a></li>
-						<li><a href="images/photo18.jpg"><img
-								src="images/photo18_thum.jpg" width="130" height="100"/></a></li>
-						<li><a href="images/photo19.jpg"><img
-								src="images/photo19_thum.jpg" width="130" height="100"/></a></li>
-						<li><a href="images/photo20.jpg"><img
-								src="images/photo20_thum.jpg"  width="130" height="100"/></a></li>
+						<li><a href="images/photo9.jpg" ><img src="images/photo9_thum.jpg"/></a></li>
+						<li><a href="images/photo10.jpg"><img src="images/photo10_thum.jpg"/></a></li>
+						<li><a href="images/photo11.jpg"><img src="images/photo11_thum.jpg"/></a></li>
+						<li><a href="images/photo12.jpg"><img src="images/photo12_thum.jpg"/></a></li>
+
+					</ul>
+					<p>
+						<img src="images/btn_prev.jpg" alt="앞으로" class="prev" /> 
+						<img src="images/btn_next.jpg" alt="뒤로" class="next" />
+					</p>
+				</div>
+				
+				<div class="page">
+					<ul>
+						<li><a href="images/photo17.jpg"><img src="images/photo17_thum.jpg"/></a></li>
+						<li><a href="images/photo18.jpg"><img src="images/photo18_thum.jpg"/></a></li>
+						<li><a href="images/photo19.jpg"><img src="images/photo19_thum.jpg"/></a></li>
+						<li><a href="images/photo20.jpg"><img src="images/photo20_thum.jpg"/></a></li>
 					</ul>
 					<p>
 						<img src="images/btn_prev.jpg" alt="앞으로" class="prev" />
@@ -121,10 +126,7 @@
 			
 			</div>
 		</div>
-		<div id="main">
-			<img src="images/photo1.jpg" alt="" width="700" height="500"/>
-		</div>
-	
+		
 		<br> <br>
 		<div class="send_msg" id="leave_msg">leave us a message</div>
 		<div class="join_chat">
@@ -153,15 +155,13 @@
 			<div id="users"></div>
 	</div>
 </div>
-				 <div id="footer" 
-			style="height: 130px; margin-top: 10px; background: black;">
-			<font size ="3"color="white"><b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+			<div id="footer">
+			<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
 				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
 				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
 				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
 				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
 				RESERVED
-			</font>
 		</div>
 </div>
 </body>

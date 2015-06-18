@@ -5,26 +5,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../css/button.css"> 
+<link href="css/View.css" rel="stylesheet"  type="text/css" >
+<link href="/healthclub/css/button.css" rel="stylesheet"  type="text/css" >
 <title>Insert title here</title>
 </head>
 <style>
-#layout{ margin :auto; width:90%; border : solid 1px gray; padding:5px;
+#sectionBG{
+position : relative;
+margin-left: 200px;
+margin-bottom: 100px;
+}
 
+#con {
+	width: 700px;
+	margin: 0 auto;
+	overflow: hidden;
 }
-#top{
-	height : 100px;  background-color : #000000;  color : #ffffff;  margin-bottom:5px; 
-	}
 
-#sidebar{
-	position : absolute; float : left; width : 10%; height : 97%; background-color : orange;
+#aside1 {
+	width: 350px;
+	float: left;
 }
-#section{
-	width :87%; min-height : 400px;  background-color : #f0f0f0; margin: auto;
+
+#aside2 {
+	width: 350px;
+	float: right;
 }
-#footer{
-width:79% min-height:400px; 
-}
+</style>
 </style>
 <body>
 <div id="layout">
@@ -44,7 +51,11 @@ width:79% min-height:400px;
 		</center>
 </div>
 
-	<div id="section"> <decorator:body /> </div>
+	<div id="sectionBG">
+	<br>
+		<div id="section"> <decorator:body /></div>
+	</div>
+	
 	
 		 <div id="footer">
 		 		<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |

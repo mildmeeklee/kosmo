@@ -13,7 +13,7 @@
 
 	<div id="top">
 	
-		<h1 class="title" align="center">BB Club</h1>
+		<h1 class="title" align="center">Nice Body Club</h1>
 		
 	
 		<c:if test="${id !=null }">

@@ -20,7 +20,7 @@
    margin-left: 10%;
    margin-bottom: 1%;
    min-width: 150px;
-   height: 670px;
+   height: 700px;
    background: #333333;
    border: medium groove gray;
    border-radius:0px 0px 50px 0px;
@@ -41,23 +41,24 @@
    width: 950px;
    background-color: #dddddd;
 }
+#section{
+   margin: auto;
+   width: 900px;
+   height: 570px;
+   background-color : white;
+}
 
 #sectionBG{
    float: left;
    width: 950px;
-   height: 580px;
+   height: 620px;
    background-color : #efefef;
    border-radius:0px 0px 50px 50px;
    margin: auto;
    
 }
 
-#section{
-   margin: auto;
-   width: 900px;
-   height: 520px;
-   background-color : white;
-}
+
 
 #footer{
    font-family: 'Nanum Pen Script', cursive;

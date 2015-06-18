@@ -41,7 +41,7 @@ public class BoardController {
 	/**
 	 * main page -> 게시판으로 이동
 	 */
-	int e = 5;
+	int e = 10;
 	int d = 5;
 
 	@RequestMapping(value = "boardlist.do", method = RequestMethod.GET)

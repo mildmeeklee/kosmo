@@ -70,14 +70,14 @@
 		<br>
 <div id="schedulet">		
 <form action="schedulesave.do" method="POST">	
-<table border="1"  width="200" align="center">
+<table border="1"  align="center">
 	<tr>
 		<td > </td>
-		<td>MON</td>
-		<td>TUE</td>
-		<td>WED</td>
-		<td>THU</td>
-		<td>FRI</td>
+		<td width="200">MON</td>
+		<td width="200">TUE</td>
+		<td width="200">WED</td>
+		<td width="200">THU</td>
+		<td width="200">FRI</td>
 	</tr>
 	 
 	<tr >
@@ -211,7 +211,7 @@
 	 	<c:forEach var="programInfo" items="${programInfo}">
 	 		<c:if test="${programInfo.p_group =='헬스'}">
 			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
 							시간 :: ${programInfo.p_position} |<br>강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
@@ -221,7 +221,7 @@
 			
 			<c:if test="${programInfo.p_group =='요가'}">
 			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
 							시간 :: ${programInfo.p_position} |<br> 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
@@ -231,7 +231,7 @@
 			
 			<c:if test="${programInfo.p_group =='PT'}">
 			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}">
+					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
 							시간 :: ${programInfo.p_position} |<br> 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 

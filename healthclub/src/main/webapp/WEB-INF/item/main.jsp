@@ -34,6 +34,7 @@
 	height: 10%;
 	color: white;
 	margin-left: 10%;
+	margin-top: 10px;
 }
 </style>
 <body>

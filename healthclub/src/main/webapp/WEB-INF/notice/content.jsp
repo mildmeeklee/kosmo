@@ -13,10 +13,11 @@
 	</P>
 	<table frame="hsides" rules="rows" align="center" >
 		<tr >
-			<td width="600" colspan="2">제목  : ${noticecontent.n_name}</td>
+			<td width="600" colspan="2">
+			<font size="5" color="black"><b> &nbsp;&nbsp;${noticecontent.n_name}</b></font></td>
 		</tr>
 		<tr>
-			<td width="600">글번호 : ${noticecontent.n_num}</td>
+			<td width="600"> &nbsp;&nbsp;&nbsp;글번호 : ${noticecontent.n_num}</td>
 			<td width="600"><fmt:formatDate value="${noticecontent.n_date}" type="date" var="date"/>작성일 : ${date}</td>
 		</tr>
 		

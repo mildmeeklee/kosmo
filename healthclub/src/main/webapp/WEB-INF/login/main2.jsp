@@ -46,15 +46,13 @@ width:79% min-height:400px;
 
 	<div id="section"> <decorator:body /> </div>
 	
-		 <div id="footer" 
-			style="height: 130px; margin-top: 10px; background: black;">
-			<font size ="3"color="white"><b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+		 <div id="footer">
+		 		<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
 				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
 				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
 				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
 				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
 				RESERVED
-			</font>
 		</div>
 	</div>
 </body>

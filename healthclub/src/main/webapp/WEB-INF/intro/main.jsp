@@ -67,6 +67,7 @@
 	</div>
 	
 	<div id="sectionBG">
+	<br>
 		<div id="section"> <decorator:body /></div>
 	</div>
 

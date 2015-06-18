@@ -59,15 +59,18 @@
 		<div id="categorybar_1" align="right">
 			<a href="login.do">홈</a> > <a href="itemweight.do">헬스제품</a></div>
 		
-	</div>
-		
+		</div>
 		<div id="sectionBG">
 			<div id="section"> <decorator:body /></div>
 		</div>
 
-
-
-
-	</div>
+		<div id="footer">
+				<b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+				이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
+				123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
+				1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
+				123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
+				RESERVED
+		</div>
 </body>
 </html>

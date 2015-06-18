@@ -57,14 +57,16 @@
 	<!-- --------------------------------------------- -->
 	
 	<div id="categorybar">
-		<font size="7">&nbsp;&nbsp;Intro</font> 
+		<font size="7">&nbsp;&nbsp;Schedule</font> 
 		<div id="categorybar_1" align="right">
 			<a href="login.do">홈</a> > <a href="introcompanyIntro.do">소개페이지</a></div>
 		
 	</div>
 	
 	<div id="sectionBG">
+	<br>
 		<div id="section">
+		<br>
 <div id="schedulet">		
 <form action="schedulesave.do" method="POST">	
 <table border="1"  width="200" align="center">

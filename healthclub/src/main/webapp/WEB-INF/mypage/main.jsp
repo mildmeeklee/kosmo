@@ -16,23 +16,23 @@
 	<div id="top">
 		<h1 class="title" align="center">
 		<span onclick="javascript:window.location='login.do'"> Nice Body Club</span></h1>
-
-		<c:if test="${id !=null }">
-			<p align="right">
-				<strong>${id }</strong>ดิ &nbsp;&nbsp;&nbsp; <a href="logout.do"
-					class="myButton">logout</a> <b>|</b> <a href="mypage.do?id=${id}"
-					class="myButton">My page</a> <b>|</b> <a
-					href="cartlist.do?s_id=${id}" class="myButton">Cart</a>
-			</p>
-		</c:if>
-
-
-		<c:if test="${id ==null }">
-			<p align="right">
-				<a href="loginForm.do" class="myButton">login</a> <b>|</b> 
-				<a href="inputForm.do" class="myButton">Join</a>
-			</p>
-		</c:if>
+      
+   
+      <c:if test="${id !=null }">
+         <p align="right">
+            <strong>${id }</strong>ดิ &nbsp;&nbsp;&nbsp;
+            <a href="logout.do" class="myButton">logout</a> <b>|</b> 
+            <a href="mypage.do?id=${id}" class="myButton">My page</a> <b>|</b> 
+            <a href="mypagecartlist.do?s_id=${id}" class="myButton">Cart</a>
+         </p>
+      </c:if>
+      
+      <c:if test="${id ==null }">
+         <p align="right">
+            <a href="loginForm.do" class="myButton">login</a> <b>|</b> 
+            <a href="inputForm.do" class="myButton">Join</a> 
+         </p>
+      </c:if>
 		
 		<hr color="gray" size="1" width="100%">
 		<hr color="black" size="3" width=100%>

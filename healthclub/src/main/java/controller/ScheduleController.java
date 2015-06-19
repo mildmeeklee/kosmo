@@ -4,10 +4,17 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import mybatis.BoardDAO;
+import mybatis.BoardInfo;
+import mybatis.ItemDAO;
+import mybatis.ItemInfo;
+import mybatis.NoticeDAO;
+import mybatis.NoticeInfo;
 import mybatis.ProgramDAO;
 import mybatis.ProgramInfo;
 import mybatis.ScheduleDAO;
 import mybatis.ScheduleInfo;
+import mybatis.ZipDAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,6 +39,34 @@ public class ScheduleController {
 		this.dao1 = dao1;
 	}
 
+	/**
+	 * SqlSessionDaoSupport ZipDAO
+	 */
+	@Autowired
+	ZipDAO dao2;
+	public void setDao(ZipDAO dao2) {
+		this.dao2 = dao2;
+	}
+	
+	@Autowired
+	BoardDAO dao3;
+
+	public void setDao(BoardDAO dao3) {
+		this.dao3 = dao3;
+	}
+	
+	@Autowired
+	ItemDAO dao4;
+	public void setDao(ItemDAO dao4) {
+		this.dao4 = dao4;
+	}
+	
+	@Autowired
+	NoticeDAO dao5;
+	public void setDao(NoticeDAO dao5) {
+		this.dao5 = dao5;
+	}
+	
 	/**
 	 * main page -> ������ page �̵�
 	 */
@@ -65,6 +100,13 @@ public class ScheduleController {
 			si.setSchedule_id(id);
 			dao1.insert(si);
 
+			List<ItemInfo> itemtable = dao4.selectThree();
+			m.addAttribute("itemtable", itemtable);
+			List<NoticeInfo> noticelist = dao5.selectThree(); 
+			m.addAttribute("noticelist", noticelist );
+			List<BoardInfo> boardlist = dao3.selectThree();
+			m.addAttribute("boardlist", boardlist);
+			
 			return "login/main";
 
 	}

@@ -32,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<select id="selectOneManager" parameterType="String" resultType="mybatis.LogUserInfo">
-		select * from users where id = 1
+		select * from users where id = '1'
 	</select>
 	
 	<update id="update" parameterType="mybatis.LogUserInfo" >

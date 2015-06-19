@@ -59,9 +59,11 @@ public class ManagerController {
 	@RequestMapping(value = "Manager.do", method = RequestMethod.POST)
 	public String Idform(@RequestParam("id") String id,
 			@RequestParam("pw") String pw, HttpSession session, Model m) {
-
+	
 		try {
 			LogUserInfo l = dao.selOneManager(id);
+		
+
 			if (l.getId().equals(id)) {
 				if (l.getPw().equals(pw)) {
 					session.setAttribute("id", id);
@@ -73,6 +75,7 @@ public class ManagerController {
 			}
 			return "login/logerror";
 		} catch (Exception e) {
+		
 			return "login/logerror";
 		}
 	}

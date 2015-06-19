@@ -22,13 +22,13 @@
 
 <body>
 
-	<center>
-		<h1>
-			안녕하세요. 방방헬스클럽에 오신 여러분을 환영합니다. <br> 로그인해주세요.
+		<h1 align="center">
+			Nice Body Club <br> - please Login -
 		</h1>
-	</center>
 
-	<hr size="3" color="red">
+
+	<hr size="3" color="black">
+	<hr size="1" color="gray">
 	<br>
 	<br>
 

@@ -73,11 +73,11 @@
 <table border="1"  align="center">
 	<tr>
 		<td > </td>
-		<td width="200">MON</td>
-		<td width="200">TUE</td>
-		<td width="200">WED</td>
-		<td width="200">THU</td>
-		<td width="200">FRI</td>
+		<td width="200"><b>MON</b></td>
+		<td width="200"><b>TUE</b></td>
+		<td width="200"><b>WED</b></td>
+		<td width="200"><b>THU</b></td>
+		<td width="200"><b>FRI</b></td>
 	</tr>
 	 
 	<tr >
@@ -216,6 +216,8 @@
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
 						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
+			</tr>
+			<tr>
 			</tr>
 			</c:if>
 			

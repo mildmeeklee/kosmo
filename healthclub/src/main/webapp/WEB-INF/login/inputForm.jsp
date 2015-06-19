@@ -52,8 +52,7 @@
       </center>
       <br><br>
 
-	<form:form commandName="logUserInfo" method="post" action="input.do"
-		name="userinput">
+	<form:form commandName="logUserInfo" method="post" action="input.do" name="userinput">
 		<form:errors />
 		<table height="1000" width="1500" border="1" cellspacing="0" cellpadding="3"
 			align="center">

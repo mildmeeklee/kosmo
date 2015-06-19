@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProgramController {
@@ -35,7 +36,7 @@ public class ProgramController {
 	/**
 	 * 占쏙옙占싸그뤄옙 占쏙옙占쏙옙 page -> 占쏙옙占싸그뤄옙 占쏙옙占� page
 	 */
-	@RequestMapping(value = "programwriteM.do", method = RequestMethod.GET)
+	@RequestMapping(value = "managersprogramwriteM.do", method = RequestMethod.GET)
 	public String schedulewriteM() {
 		return "program/write";
 	}
@@ -48,6 +49,15 @@ public class ProgramController {
 		String p_position = si.getP_day()+"_"+si.getP_time();
 		si.setP_position(p_position);
 		dao.insert(si);
-		return "redirect:programlist_m.do";
+		return "redirect:managersprogramlist_m.do";
+	}
+	
+	@RequestMapping(value="programdelete.do", method=RequestMethod.GET)
+	public String programdelete(
+			@RequestParam("p_num") int p_num){
+		
+		dao.delete(p_num);
+		
+		return "redirect:managersprogramlist_m.do";
 	}
 }

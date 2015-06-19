@@ -33,12 +33,12 @@
 				<td> ${programlist.p_position}</td>
 				
 				<td> <input type="button" value="삭제" 
-						onclick= "javascript:window.location='noticedelete.do?n_num=${noticelist.n_num}'"></td>
+						onclick= "javascript:window.location='programdelete.do?p_num=${programlist.p_num}'"></td>
 			</tr>
 		</c:forEach>
 		
 		<tr>
-			<td colspan="7"><input type="button" value="프로그램등록" onclick= "javascript:window.location='programwriteM.do'"></td>
+			<td colspan="9"><input type="button" value="프로그램등록" onclick= "javascript:window.location='managersprogramwriteM.do'"></td>
 		</tr>
 		
 		

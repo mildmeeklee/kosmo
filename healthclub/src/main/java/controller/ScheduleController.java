@@ -69,6 +69,14 @@ public class ScheduleController {
 
 	}
 
+	@RequestMapping(value ="mypagedeleteschudel.do", method=RequestMethod.GET)
+	public String deleteschudel(HttpSession session){
+		
+		String id = (String)session.getAttribute("id");
+		dao1.delete(id);
+		
+		return "mypage/schedulewrite";
+	}
 	/**
 	 * mildmeeklee 2015.06.11 add ajax controller
 	 * 

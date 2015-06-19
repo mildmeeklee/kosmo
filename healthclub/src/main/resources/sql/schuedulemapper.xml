@@ -26,4 +26,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from schedule where schedule_id=#{schedule_id}
 	</select>
 	
+	<delete id="delete" parameterType="mybatis.ScheduleInfo">
+		delete from schedule where schedule_id=#{schedule_id}
+	</delete>
+	
 </mapper>

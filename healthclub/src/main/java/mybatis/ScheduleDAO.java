@@ -24,4 +24,8 @@ public class ScheduleDAO extends SqlSessionDaoSupport{
 		ScheduleInfo si = getSqlSession().selectOne("schedule.select",id);
 		return si;
 	}
+	
+	public void delete(String id){
+		getSqlSession().delete("schedule.delete",id);
+	}
 }

@@ -409,6 +409,11 @@
 			</c:forEach>
 		</td>
 	</tr>
+	<tr>
+		<td colspan="6" align="right">
+			<input type="button" value="스케줄삭제" onclick="javascript:window.location='mypagedeleteschudel.do'">
+		</td>
+	</tr>
 </table>
 </body>
 </html>

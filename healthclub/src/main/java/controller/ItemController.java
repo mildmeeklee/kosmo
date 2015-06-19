@@ -271,7 +271,7 @@ public class ItemController {
       return "redirect: managersControll.do";
       
    }
-   @RequestMapping(value = "del.do", method = RequestMethod.POST)
+   @RequestMapping(value = "managersdel.do", method = RequestMethod.POST)
    public String del(@RequestParam("i_num") int i_num) {
       ItemInfo a = dao.selOne(i_num);
       File f = new File(a.getI_imageOrgname());

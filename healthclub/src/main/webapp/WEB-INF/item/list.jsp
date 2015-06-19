@@ -16,9 +16,7 @@
 					.change(
 							function() {
 								url = $(this).val();
-								open(
-										url,
-										" toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+								window.location = url;
 							});
 		});
 	</script>

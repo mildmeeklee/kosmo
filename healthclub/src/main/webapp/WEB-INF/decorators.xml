@@ -30,9 +30,14 @@
 		<pattern>*intro*</pattern>
 	</decorator>
 	
+	<!-- 天天天天天天天天天天天天天天天天天 -->
 	<decorator name="login" page="/WEB-INF/login/main2.jsp">
 		<pattern>*loginForm.do</pattern>
 	</decorator>
+	<decorator name="login2" page="/WEB-INF/login/main2.jsp">
+		<pattern>*logerror.do</pattern>
+	</decorator>
+	<!--天天天天天天天天天天天天天天天天天天天天 -->
 	
 	<decorator name="manager" page="/WEB-INF/manager/main.jsp">
 		<pattern>*managers*</pattern>

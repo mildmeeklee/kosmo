@@ -162,10 +162,12 @@ public class MenuController {
 	 */
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	public String Idform(@RequestParam("id") String id,
-			@RequestParam("pw") String pw, HttpSession session, Model m) {
-
+			@RequestParam("pw") String pw, 
+			HttpSession session, Model m) {
+		
 		try {
 			LogUserInfo l = dao.selOne(id);
+			System.out.println(l.getId().equals(id));
 			if (l.getId().equals(id)) {
 				if (l.getPw().equals(pw)) {
 					session.setAttribute("id", id);
@@ -177,21 +179,28 @@ public class MenuController {
 					m.addAttribute("noticelist", noticelist );
 					List<BoardInfo> boardlist = dao3.selectThree();
 					m.addAttribute("boardlist", boardlist);
-					
-					return "login/main";
+				
+					return "login/logerror";
 				}
+		
 				return "login/logerror";
 			}
+
 			return "login/logerror";
 		} catch (Exception e) {
-			return "login/logerror";
+			return "redirect:logerror.do";
 		}
+	}
+	@RequestMapping(value = "logerror.do", method = RequestMethod.GET)
+	public String logerror(){
+		
+		return "login/logerror";
 	}
 	
 	/**
 	 * 로그인 메인페이지 이동
 	 */
-	@RequestMapping(value = "login.do", method = RequestMethod.GET)
+	@RequestMapping(value = "login2.do", method = RequestMethod.GET)
 	public String homep(Model m){
 		
 		List<ItemInfo> itemtable = dao4.selectThree();

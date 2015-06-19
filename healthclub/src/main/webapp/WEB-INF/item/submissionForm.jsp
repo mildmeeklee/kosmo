@@ -13,7 +13,7 @@
 	<form action="saveitmanagers.do" method="post" enctype="multipart/form-data"><br/>
 		제품명 : <input type="text" name="i_name" /> <br />
 		가격 : <input type="text" name="i_price" /><br/>
-		제품내용 : <input type="textArea" size="200" name="i_content" /> <br />
+		제품내용 : <input type="textArea" size="110" name="i_content" /> <br />
 		리포트파일:<input type="file" name="file" /><br /> 
 		<input type="radio" name="i_distinction" value="보충제" checked="checked"> 보충제<br/>
 		<input type="radio" name="i_distinction" value="헬스용품"> 헬스용품<br/>

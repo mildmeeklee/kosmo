@@ -167,8 +167,10 @@ public class MenuController {
 		
 		try {
 			LogUserInfo l = dao.selOne(id);
+
 			if (l.getId().equals(id)) {
 				if (l.getPw().equals(pw)) {
+					
 					session.setAttribute("id", id);
 					session.setAttribute("pw", pw);
 					
@@ -178,15 +180,16 @@ public class MenuController {
 					m.addAttribute("noticelist", noticelist );
 					List<BoardInfo> boardlist = dao3.selectThree();
 					m.addAttribute("boardlist", boardlist);
+					return "login/main";
 				
-					return "login/logerror";
+					
 				}
-		
-				return "login/logerror";
+				
+				return "redirect:logerror.do";
 			}
-
-			return "login/logerror";
+			return "redirect:logerror.do";
 		} catch (Exception e) {
+
 			return "redirect:logerror.do";
 		}
 	}

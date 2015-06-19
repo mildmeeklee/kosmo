@@ -5,6 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+$(function(){
+	alert("dddd");
+	/* if(${check} == 1){
+	alert("해당 글에 대한 권한이 없습니다.");
+	} */
+})
+</script>
 <title>Insert title here</title>
 <style type="text/css">
 </style>

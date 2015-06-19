@@ -130,7 +130,7 @@ public class BoardController {
 			@RequestParam("b_num") int b_num, HttpSession session, Model m) {
 
 		String id = (String) session.getAttribute("id");
-		String check;
+		int check;
 		
 		if (id != null) {
 			if (id.equals(b_id)) {
@@ -138,9 +138,9 @@ public class BoardController {
 				m.addAttribute("boardcontent", boardcontent);
 				return "board/update";
 			} else {
-				check = "needId";
+				check = 1;
 				m.addAttribute("check", check);
-				return "login/loginForm";
+				return "redirect:boardlist.do";
 			}
 		}
 		return "login/loginForm";
@@ -168,7 +168,7 @@ public class BoardController {
 			@RequestParam("b_num") int b_num, HttpSession session, Model m) {
 
 		String id = (String) session.getAttribute("id");
-		String check;
+		int check;
 		
 		if (id != null) {
 			if (id.equals(b_id)) {
@@ -179,7 +179,7 @@ public class BoardController {
 				return "redirect:boardlist.do";
 			}
 		} else {
-			check = "needId";
+			check = 1;
 			m.addAttribute("check", check);
 			return "login/loginForm";
 		}

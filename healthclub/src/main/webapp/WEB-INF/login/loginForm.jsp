@@ -9,13 +9,7 @@
 <title>Insert title here</title>
 <link href="css/View.css" rel="stylesheet" type="text/css">
 <script>
-	$(function(){
-			if(${check} =='needId'){
-				alert("로그인 후에 사용하실 수 있습니다.");
-			}
-	})
-	
-	function openConfirmid() {
+	$(function openConfirmid() {
 		url = "inputForm.do";
 		
 		open(
@@ -23,7 +17,7 @@
 				"confirm",
 				"toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
 
-	}
+	})
 </script>
 </head>
 <body>

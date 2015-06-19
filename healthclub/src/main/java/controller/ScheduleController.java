@@ -60,7 +60,6 @@ public class ScheduleController {
 			
 			check = 1;
 			m.addAttribute("check", check);
-			System.out.println("�ش� ���̵�� ����� �������� �ֽ��ϴ�.");
 			return "schedule/main";
 		}
 			si.setSchedule_id(id);

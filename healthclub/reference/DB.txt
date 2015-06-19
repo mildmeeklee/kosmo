@@ -157,13 +157,3 @@ FRI_1900_2000 varchar2(100),
 FRI_2000_2100 varchar2(100),
 FRI_2100_2200 varchar2(100)
 )
-
-create sequence video_seq 
-increment by 1
-start with 1;
-
-create table video(
-video_Name varchar2(50),
-video_address varchar2(150),
-video_num number primary key
-);

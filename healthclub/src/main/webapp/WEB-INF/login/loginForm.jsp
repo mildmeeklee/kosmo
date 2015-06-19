@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
+<link href="css/View.css" rel="stylesheet" type="text/css">
 <script>
 	function openConfirmid() {
 		url = "inputForm.do";
@@ -20,7 +20,6 @@
 	}
 </script>
 </head>
-
 <body>
 
 		<h1 align="center">
@@ -37,7 +36,7 @@
 	<div id="con">
 		<div id="aside1">
 			<form name="myform" action="login.do" method="POST">
-				<TABLE class="tb" width="260" border=0
+				<TABLE class="tb" width="230" border=0
 					align="center">
 
 					<TR height="50">
@@ -50,7 +49,7 @@
 							size="15" maxlength="12"></TD>
 					</TR>
 					<TR height="50">
-						<TD width="110" align=center>비밀번호</TD>
+						<TD width="120" align=center>비밀번호</TD>
 						<TD width="150" align=center><INPUT type=password name="pw"
 							size="15" maxlength="12"></TD>
 					</TR>
@@ -67,9 +66,9 @@
 			</form>
 		</div>
 
-		<div id="aside2">
+		<div id="aside2" >
 			<form name="myform2" action="Manager.do" method="post">
-				<TABLE class="tb"  width="260" border=0
+				<TABLE class="tb"  width="230" border=0
 					align="center">
 					<TR height="50">
 						<TD colspan="2"><STRONG>관리자로그인</STRONG></TD>

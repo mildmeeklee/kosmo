@@ -93,6 +93,26 @@
    height: 450px;
    border: medium double;
 }
+
+#con{
+	width: 1000px;
+	height: 700px;
+	margin: auto;
+	margin-left: 5%;
+	margin-top: 5%
+}
+
+#aside1{
+	float: left;
+	width: 400px;
+	height: 300px;
+}
+
+#aside2{
+	float: left;
+	width: 400px;
+	height: 300px;
+}
 /* 내정보 창 버튼  */
 .myButton {
    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;

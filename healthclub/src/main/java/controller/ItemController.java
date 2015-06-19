@@ -4,8 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import mybatis.ItemDAO;
 import mybatis.ItemInfo;
+
 
 
 
@@ -181,10 +184,14 @@ public class ItemController {
     * 헬스용품 클릭시 내용
     */
    @RequestMapping(value = "itemcontent.do", method = RequestMethod.GET)
-   public String itemcontent (@RequestParam("i_num") int i_num,Model m) {
+   public String itemcontent (@RequestParam("i_num") int i_num,Model m ,  HttpSession session) {
+	
+	  
+		String id = (String) session.getAttribute("id");
+	   
 	   ItemInfo item = dao.selOne(i_num);
 	   dao.up(i_num);
-	
+	   	  m.addAttribute("id",id);
 	      m.addAttribute("item", item);
 	      
 	   

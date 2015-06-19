@@ -1,9 +1,11 @@
 <%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <%@ page isELIgnored="false"%>
 <html>
 <head>
 <title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 <table align="center" frame="hsides" rules="rows">
@@ -37,7 +39,7 @@
 		</tr>
 	</table>
 	<br>
-		
+	 <c:if test="${id !=null }">
 	<form align="center" action="mypageCart.do" method="POST">
 		<select name="s_num">
 			<option id="1" value="1"> 1개</option>
@@ -49,8 +51,13 @@
 
 		<input name="i_item" type="hidden" value="${item.getI_num() }"/>
 		<input name="s_id" type="hidden" value="${id }"/>
-		<input type="submit" value="확인">
+		
+
+            <input type="submit" value="확인">
+    
+		
 	</form>
+	  </c:if>
 	<br/>
 	<p align="center">
 	<img src="/healthclub/image/${item.i_imagePath }" width="700"

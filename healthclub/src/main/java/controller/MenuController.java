@@ -130,13 +130,16 @@ public class MenuController {
 			BindingResult result, Model m) {
 		
 		new MemberInfoValidator().validate(u, result);
+		
 		if (result.hasErrors()) {
+		
 			return "login/inputForm";
 		}
 		dao.insert(u.getId(), u.getPw(), u.getName(), u.getUserzipcode(),
 				u.getAddress(), u.getSex(), u.getPh(), u.getBirth(),
 				u.getEmail());
-		return "login/loginForm";
+		
+		return "redirect:loginForm.do";
 	}
 	
 	/**

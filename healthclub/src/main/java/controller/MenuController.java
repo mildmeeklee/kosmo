@@ -200,7 +200,7 @@ public class MenuController {
 	/**
 	 * 로그인 메인페이지 이동
 	 */
-	@RequestMapping(value = "login2.do", method = RequestMethod.GET)
+	@RequestMapping(value = "login.do", method = RequestMethod.GET)
 	public String homep(Model m){
 		
 		List<ItemInfo> itemtable = dao4.selectThree();

@@ -7,12 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<p align="center">
 아이디와 비밀번호가 정확하지 않습니다.
-<form action="loginForm.do"  method="get">
-<input type="submit" value="로그인"> 
+<form align="center" action="loginForm.do"  method="get">
+<input type="submit" value="로그인다시하기"> 
 </form>
-<form action="inputForm.do" method="get">
+<form align="center" action="inputForm.do" method="get">
 <input type="submit" value="회원가입"> 
 </form>
+</p>
 </body>
 </html>

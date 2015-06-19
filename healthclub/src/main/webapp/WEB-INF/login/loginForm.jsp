@@ -9,8 +9,9 @@
 <title>Insert title here</title>
 
 <script>
-	function openConfirmid(userinput) {
+	function openConfirmid() {
 		url = "inputForm.do";
+		
 		open(
 				url,
 				"confirm",
@@ -35,7 +36,7 @@
 
 	<div id="con">
 		<div id="aside1">
-			<form name="myform" action="login.do" method="post">
+			<form name="myform" action="login.do" method="POST">
 				<TABLE class="tb" width="260" border=0
 					align="center">
 
@@ -57,8 +58,10 @@
 		
 						<TD colspan="2">
 						
-						<INPUT type=submit value="로그인" class="button"> <input class="button" type="button" 
-							value="회원가입" OnClick="openConfirmid(this.form)"> </TD>
+						<INPUT type="submit" value="로그인">
+						
+						 <input type="button" value="회원가입" OnClick="javascript:window.location='inputForm.do'">
+						 </TD>
 					</TR>
 				</TABLE>
 			</form>

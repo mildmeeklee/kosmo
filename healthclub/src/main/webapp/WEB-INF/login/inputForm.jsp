@@ -2,13 +2,13 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
-
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/View.css" rel="stylesheet" type="text/css">
 <script>	
 	/*
 	*	id관련 새창 띄우는 메서드
@@ -38,20 +38,34 @@
 	}
 </script>
 <body>
+	 <div id="top">
+   
+      <h1 class="title" align="center">
+		<span onclick="javascript:window.location='login.do'"> Nice Body Club</span></h1>
+		</div>
+		     <center>
+            <a href="introcompanyIntro.do" class="MenuButtonF"> INDRODUCTION</a>&nbsp;&nbsp;
+            <a href="notice.do" class="MenuButton">NOTICE</a>&nbsp;&nbsp;
+            <a href="boardlist.do" class="MenuButton">BOARD</a> &nbsp;&nbsp;
+            <a href="schedule.do" class="MenuButton">SCHEDULER</a>&nbsp;&nbsp;
+            <a href="itemlist.do" class="MenuButton">HEALTH PRODUCT</a>
+      </center>
+      <br><br>
 
 	<form:form commandName="logUserInfo" method="post" action="input.do"
 		name="userinput">
 		<form:errors />
-		<table width="600" border="1" cellspacing="0" cellpadding="3"
+		<table height="1000" width="1500" border="1" cellspacing="0" cellpadding="3"
 			align="center">
 			<tr>
 				<td colspan="2" height="39" align="center"><font size="+1"><b>회원가입</b></font>
 				</td>
 			</tr>
 			<tr>
-				<td width="300">사용자 ID</td>
-				<td width="400">
-				<form:input path="id" size="10" maxlength="12" /><form:errors path="id" /> 
+				<td width="400">사용자 ID</td>
+				<td width="1100">
+				<form:input path="id" size="10" maxlength="12" />
+				<form:errors path="id" /> 
 				<input type="button" name="confirm_id"
 					value="ID중복확인" OnClick="openConfirmid(this.form)"></td>
  
@@ -136,5 +150,16 @@
 			</tr>
 		</table> 
 	</form:form>
+	<br>
+		<div id="footer">
+		<p align="center">
+         <b> 프렌차이즈 안내 | 휘트니스클럽 컨설팅 | 채용안내 | 제휴문의 |
+            이용약관 | 개인정보취급방침 | 사이트 맵</b> <br /> <br> (주)아시아월드방방 서울시 구로구 가산동
+            123번지 xx건물 대표: 은영누나 사업자등록번호 : 123-12-12345 통신판매업신고번호 :
+            1234-가산동-1234호<br> 가산본점 123.123.1234 | 강남점 12.123.1234 | 부산점
+            123.123.1234 <br />COPYRIGHTS 2015 WORLD 방방 ALL RIGHTS
+            RESERVED
+		</p>
+			</div>
 </body>
 </html>

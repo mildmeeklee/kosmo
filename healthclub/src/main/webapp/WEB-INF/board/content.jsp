@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page session="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -52,11 +53,18 @@
 				<td width="400">내용: ${commentInfo.c_content}</td>
 				<td width="100">작성자: ${commentInfo.c_id}</td>			
 				<td width="150"><fmt:formatDate value="${commentInfo.c_date}" type="date" var="date"/>작성일 : ${date}</td>
+      		
+      		<c:if test= "${id == commentInfo.c_id}">
+      	
 				<td><input type="button" value="삭제" 
 				onclick="javascript:window.location='commentdelete.do?c_id=${commentInfo.c_id}&c_num=${commentInfo.c_num }&c_bnum=${commentInfo.c_bnum }'"></td>
+		
+			</c:if> 
 			</tr>
 		</c:forEach>
 	</table>
+
+			
 	<p align="center">${page}</p>	
 </body>
 </html>

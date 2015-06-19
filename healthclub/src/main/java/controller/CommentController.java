@@ -26,7 +26,7 @@ public class CommentController {
 
 	/**
 	 * 코맨트 작성
-	 */
+	 */						
 	@RequestMapping(value = "commentwrite.do", method = RequestMethod.POST)
 	public String commentwrite(@RequestParam("c_bnum") int c_bnum,
 			@RequestParam("c_content") String c_content, HttpSession session) {
@@ -36,8 +36,8 @@ public class CommentController {
 		if (id != null) {
 			CommentInfo ci = new CommentInfo(id, c_content, c_bnum);
 			dao.insert(ci);
-
-			return "redirect:boardlist.do";
+		
+			return "redirect:boardcontent.do?b_num="+c_bnum;
 		} else {
 			return "login/loginForm";
 		}

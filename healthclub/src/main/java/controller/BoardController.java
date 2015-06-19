@@ -97,8 +97,11 @@ public class BoardController {
 	@RequestMapping(value = "boardcontent.do", method = RequestMethod.GET)
 	public String boardcontent(
 			@RequestParam(value = "p", defaultValue = "1") String p,
-			@RequestParam("b_num") int b_num, Model m) {
+			@RequestParam("b_num") int b_num, Model m,
+			HttpSession session) {
 
+		String id = (String)session.getAttribute("id");
+		m.addAttribute("id",id);
 		BoardInfo boardcontent = dao.selectOne(b_num);
 		m.addAttribute("boardcontent", boardcontent);
 		dao.up(b_num);
@@ -114,7 +117,7 @@ public class BoardController {
 		// 전체 리스트에서 현재 페이지만큼의 리스트만 가져온다.
 		commentInfo = commentInfo.subList(paging.getStartCount(), b);
 		m.addAttribute("page", page);
-
+		
 		m.addAttribute("commentInfo", commentInfo);
 		return "board/content";
 	}

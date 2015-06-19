@@ -167,7 +167,6 @@ public class MenuController {
 		
 		try {
 			LogUserInfo l = dao.selOne(id);
-			System.out.println(l.getId().equals(id));
 			if (l.getId().equals(id)) {
 				if (l.getPw().equals(pw)) {
 					session.setAttribute("id", id);

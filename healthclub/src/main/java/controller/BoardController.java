@@ -130,14 +130,16 @@ public class BoardController {
 			@RequestParam("b_num") int b_num, HttpSession session, Model m) {
 
 		String id = (String) session.getAttribute("id");
-
+		String check;
+		
 		if (id != null) {
 			if (id.equals(b_id)) {
 				BoardInfo boardcontent = dao.selectOne(b_num);
 				m.addAttribute("boardcontent", boardcontent);
 				return "board/update";
 			} else {
-				System.out.println("::아이디가 다릅니다::");
+				check = "needId";
+				m.addAttribute("check", check);
 				return "login/loginForm";
 			}
 		}
@@ -163,10 +165,11 @@ public class BoardController {
 	 */
 	@RequestMapping(value = "boarddelete.do", method = RequestMethod.GET)
 	public String boarddelete(@RequestParam("b_id") String b_id,
-			@RequestParam("b_num") int b_num, HttpSession session) {
+			@RequestParam("b_num") int b_num, HttpSession session, Model m) {
 
 		String id = (String) session.getAttribute("id");
-
+		String check;
+		
 		if (id != null) {
 			if (id.equals(b_id)) {
 				dao.delete(b_num);
@@ -176,6 +179,8 @@ public class BoardController {
 				return "redirect:boardlist.do";
 			}
 		} else {
+			check = "needId";
+			m.addAttribute("check", check);
 			return "login/loginForm";
 		}
 

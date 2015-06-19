@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 <link href="css/View.css" rel="stylesheet" type="text/css">
 <script>
+	$(function(){
+			if(${check} =='needId'){
+				alert("로그인 후에 사용하실 수 있습니다.");
+			}
+	})
+	
 	function openConfirmid() {
 		url = "inputForm.do";
 		

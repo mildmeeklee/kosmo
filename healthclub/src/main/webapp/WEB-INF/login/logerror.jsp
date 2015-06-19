@@ -5,16 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="css/View.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#vv {
+		margin-top: 50px;
+	}
+</style>
 </head>
 <body>
-<p align="center">
-아이디와 비밀번호가 정확하지 않습니다.
-<form align="center" action="loginForm.do"  method="get">
-<input type="submit" value="로그인다시하기"> 
-</form>
-<form align="center" action="inputForm.do" method="get">
-<input type="submit" value="회원가입"> 
-</form>
-</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center" id="vv">
+<h3>아이디또는 비밀번호가 정확하지 않습니다.</h3>
+<br>
+<br>
+<br>
+<a href="loginForm.do" class="SideButton">로그인하기</a> &nbsp; &nbsp; ┃ &nbsp; &nbsp; <a href="inputForm.do" class="SideButton">회원가입</a>
+</div>
 </body>
 </html>

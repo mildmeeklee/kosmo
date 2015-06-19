@@ -8,6 +8,14 @@
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/schedule.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		if(${check} == 1){
+		alert("이미 작성한 스케줄표가 있습니다.");
+		}
+	})
+</script>
 </head>
 <link href="css/View.css" rel="stylesheet" type="text/css">
 <body>
@@ -70,18 +78,18 @@
 		<br>
 <div id="schedulet">		
 <form action="schedulesave.do" method="POST">	
-<table border="1"  align="center">
+<table border="1"  align="center" style="word-break:break-all;">
 	<tr>
 		<td > </td>
-		<td width="200"><b>MON</b></td>
-		<td width="200"><b>TUE</b></td>
-		<td width="200"><b>WED</b></td>
-		<td width="200"><b>THU</b></td>
-		<td width="200"><b>FRI</b></td>
+		<td width="100"><b>MON</b></td>
+		<td width="100"><b>TUE</b></td>
+		<td width="100"><b>WED</b></td>
+		<td width="100"><b>THU</b></td>
+		<td width="100"><b>FRI</b></td>
 	</tr>
 	 
 	<tr >
-		<td>1400-1500</td>
+		<td width="60">1400-1500</td>
 		<td name="MON_1400_1500" id="MON_1400_1500">
 		<input type="hidden" class="col" name ="MON_1400_1500" value=""></td>
 		<td name="TUE_1400_1500" >
@@ -210,34 +218,47 @@
 <table>	
 	 	<c:forEach var="programInfo" items="${programInfo}">
 	 		<c:if test="${programInfo.p_group =='헬스'}">
-			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
-							시간 :: ${programInfo.p_position} |<br>강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+			<tr>	
+				<td>[ㅡ${programInfo.p_group}ㅡ]</td>	
+				<td><b>시간 ::</b> ${programInfo.p_position} | <b>강사 ::</b> ${programInfo.p_teacher}</td>  
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
 						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
 			</tr>
 			<tr>
+				<td align="center"><input type="button" class="programselect" value="${programInfo.p_name}"><br>
+				<td>${programInfo.p_content}</td>
+			</tr>
+			<tr>
+				<td height="2" background="black" colspan="2"></td>
 			</tr>
 			</c:if>
 			
 			<c:if test="${programInfo.p_group =='요가'}">
-			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
-							시간 :: ${programInfo.p_position} |<br> 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+				<tr>	
+				<td>[ㅡ${programInfo.p_group}ㅡ]</td>	
+				<td><b>시간 ::</b> ${programInfo.p_position} | <b>강사 ::</b> ${programInfo.p_teacher}</td>  
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
 						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
 			</tr>
+			<tr>
+				<td align="center"><input type="button" class="programselect" value="${programInfo.p_name}"><br>
+				<td>${programInfo.p_content}</td>
+			</tr>
 			</c:if>
 			
 			<c:if test="${programInfo.p_group =='PT'}">
-			<tr>	<td>[ㅡ${programInfo.p_group}ㅡ]</td>
-					<td><input type="button" class="programselect" value="${programInfo.p_name}"><br>
-							시간 :: ${programInfo.p_position} |<br> 강사 :: ${programInfo.p_teacher} | ${programInfo.p_content}</td>
+				<tr>	
+				<td>[ㅡ${programInfo.p_group}ㅡ]</td>	
+				<td><b>시간 ::</b> ${programInfo.p_position} | <b>강사 ::</b> ${programInfo.p_teacher}</td>  
 					<td><input type="hidden"  class ="programselect1" 
 						value="${programInfo.p_position}" title="${programInfo.p_group}" 
 						name="${programInfo.p_name}" id="${programInfo.p_num}"></td>
+			</tr>
+			<tr>
+				<td align="center"><input type="button" class="programselect" value="${programInfo.p_name}"><br>
+				<td>${programInfo.p_content}</td>
 			</tr>
 			</c:if> 
 		</c:forEach> 

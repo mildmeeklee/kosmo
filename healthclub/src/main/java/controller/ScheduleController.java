@@ -43,22 +43,25 @@ public class ScheduleController {
 			m.addAttribute("programInfo", pi1);
 			return "schedule/main";
 		}
-		return "login/loginForm";
+		return "redirect:loginForm.do";
 	}
 
 	/**
 	 * ������ page ����� -> ������ DB�� ����
 	 */
 	@RequestMapping(value = "schedulesave.do", method = RequestMethod.POST)
-	public String schedulesave(ScheduleInfo si, HttpSession session) {
+	public String schedulesave(ScheduleInfo si, HttpSession session, Model m) {
 
 		String id = (String) session.getAttribute("id");
-
+		int check;
+		
 		String idCk = dao1.selcetOne(id);
 		if (id.equals(idCk)) {
-
+			
+			check = 1;
+			m.addAttribute("check", check);
 			System.out.println("�ش� ���̵�� ����� �������� �ֽ��ϴ�.");
-			return "login/loginForm";
+			return "schedule/main";
 		}
 			si.setSchedule_id(id);
 			dao1.insert(si);
